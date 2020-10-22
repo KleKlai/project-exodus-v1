@@ -91,7 +91,7 @@
             <div class="container">
                 <div class="row featured">
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="module mid">
                             <a href="#featuredArtworks" class="btn btn-link">
                                 <img src="{{ asset('/images/insidelinkimage.png') }}" class="img-circle img-thumbnail">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="module mid">
                             <a href="#featuredArtists" class="btn btn-link">
                                 <img src="{{ asset('/images/insidelinkimage.png') }}" class="img-circle img-thumbnail">
@@ -109,14 +109,14 @@
                         </div>
                     </div>
 
-                    <!-- <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="module mid">
                             <a href="#featuredGalleries" class="btn btn-link">
                                 <img src="{{ asset('/images/insidelinkimage.png') }}" class="img-circle img-thumbnail">
                                 <h2>Galleries</h2>
                             </a>
                         </div>
-                    </div> -->
+                    </div>
 
             </div>
 
@@ -129,44 +129,23 @@
             {{--  Featured Artworks  --}}
             <div class="h-divider" id="featuredArtworks"></div>
 
-            <div class="title">ARTWORKS</div>
+            <div class="title">FEATURED ARTWORKS</div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md">
                     <a href="">
                         <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');">
                             <p>ARTWORK TITLE HERE</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md">
                     <a href="">
                         <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
                             <p>THIS IS A VERY LONG VERY LOOONGARTWORK TITLE HERE</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
-                            <p>ARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');">
-                            <p>ARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
-                            <p>THIS IS A VERY LONG VERY LOOONGARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
+                <div class="col-md">
                     <a href="">
                         <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
                             <p>ARTWORK TITLE HERE</p>
@@ -180,49 +159,28 @@
 
             {{--  Featured Artist  --}}
             <div class="h-divider" id="featuredArtists"></div>
-            <div class="title">ARTISTS</div>
+            <div class="title">FEATURED ARTISTS</div>
             <div class="row">
-                <div class="col-md-4">
-                    <a href="/artistprofile">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');"></div>
-                        <div class="picture-title link">ARTIST NAME</div>
-                    </a>
-                         
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');"></div>
-                        <div class="picture-title link">ARTIST NAME</div>
-                    </a>
-                         
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');"></div>
-                        <div class="picture-title link">ARTIST NAME</div>
-                    </a>
-                         
-                </div>
-                <div class="col-md-4">
+                <div class="col-md">
                     <a href="">
                         <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');"></div>
                         <div class="picture-title link">ARTIST NAME</div>
                     </a>
-                         
+                        <p>Gallery assigned, museum assigned.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md">
                     <a href="">
                         <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');"></div>
                         <div class="picture-title link">ARTIST NAME</div>
                     </a>
-                         
+                        <p>Gallery assigned, museum assigned.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md">
                     <a href="">
                         <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');"></div>
                         <div class="picture-title link">ARTIST NAME</div>
                     </a>
-                         
+                        <p>Gallery assigned, museum assigned.</p>
                 </div>
             </div>
             <div class="container" style="text-align: center;">

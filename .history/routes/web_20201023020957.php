@@ -109,14 +109,6 @@ Route::get('artists', function() {
     return view('artists');
 });
 
-Route::get('gallerydetails', function() {
-    return view('gallerydetails');
-});
-
-Route::get('artistprofile', function() {
-    return view('artistprofile');
-});
-
 Route::get('Bakaw', 'Museum\BakawController@index')->name('bakaw.index');
 Route::get('Balangay', 'Museum\BalangayController@index')->name('balangay.index');
 Route::get('Dabakan', 'Museum\DabakanController@index')->name('dabakan.index');

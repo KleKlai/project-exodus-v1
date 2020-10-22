@@ -62,6 +62,10 @@ a:hover {
     width: 100%;
 }
 
+.nav-link {
+    color:black;
+}
+
 .nav-link:hover {
     text-decoration: underline !important;
     color: #c48935 !important;
@@ -245,7 +249,7 @@ div#columns small a {
     figure.slider { 
       position: relative; width: 500%;
       font-size: 0; animation: 30s slidy infinite;
-      height: 700px;
+      height: 600px;
     }
     figure.slider figure { 
       width: 20%; height: auto;

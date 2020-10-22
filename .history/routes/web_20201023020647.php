@@ -102,19 +102,11 @@ Route::get('galleries', function() {
 });
 
 Route::get('artworks', function() {
-    return view('artworks');
+    return view('welcome');
 });
 
 Route::get('artists', function() {
-    return view('artists');
-});
-
-Route::get('gallerydetails', function() {
-    return view('gallerydetails');
-});
-
-Route::get('artistprofile', function() {
-    return view('artistprofile');
+    return view('welcome');
 });
 
 Route::get('Bakaw', 'Museum\BakawController@index')->name('bakaw.index');

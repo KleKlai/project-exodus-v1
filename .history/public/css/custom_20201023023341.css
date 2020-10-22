@@ -245,7 +245,7 @@ div#columns small a {
     figure.slider { 
       position: relative; width: 500%;
       font-size: 0; animation: 30s slidy infinite;
-      height: 700px;
+      height: 600px;
     }
     figure.slider figure { 
       width: 20%; height: auto;

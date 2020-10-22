@@ -37,7 +37,7 @@
 
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/artworks">Artworks <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ route('artworks') }}">Artworks <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/artists">Artists</a>
@@ -183,7 +183,7 @@
             <div class="title">ARTISTS</div>
             <div class="row">
                 <div class="col-md-4">
-                    <a href="/artistprofile">
+                    <a href="">
                         <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');"></div>
                         <div class="picture-title link">ARTIST NAME</div>
                     </a>
