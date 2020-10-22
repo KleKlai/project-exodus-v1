@@ -10,6 +10,10 @@ class Reserve extends Model
         'id', 'created_at', 'updated_at'
     ];
 
+    protected $casts = [
+        'validity' => 'datetime'
+    ];
+
     public function art()
     {
         return $this->belongsTo('App\Model\Art');
@@ -17,6 +21,6 @@ class Reserve extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User',);
     }
 }

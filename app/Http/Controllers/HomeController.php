@@ -12,6 +12,7 @@ use SweetAlert;
 use App\Model\Art;
 use App\Model\Profile\Type;
 use App\Model\Support\Ticket;
+use App\Model\Art\Reserve;
 
 class HomeController extends Controller
 {
@@ -36,6 +37,8 @@ class HomeController extends Controller
         $user       = User::all()->count();
         $artwork    = Art::all()->count();
         $ticket     = Ticket::all()->count();
+        $reserve    = Reserve::where('sold', null)->count();
+        $sold       = Reserve::where('sold', true)->count();
 
         $gallery    = Type::select('name')->get();
 
@@ -51,7 +54,9 @@ class HomeController extends Controller
             'artwork',
             'ticket',
             'table',
-            'gallery'
+            'gallery',
+            'reserve',
+            'sold'
         ));
     }
 }

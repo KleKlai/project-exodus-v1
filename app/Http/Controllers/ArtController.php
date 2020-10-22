@@ -134,6 +134,8 @@ class ArtController extends Controller
 
         $status = Status::all('name');
 
+        $art = Art::with('reserve')->where('id', $art->id)->first();
+
         return view('art.show', compact(['art', 'status']));
     }
 

@@ -6,6 +6,10 @@
         + Artworks
     </a>
 
+    <a href="{{ route('art.reserve.index') }}" class="btn btn-link">
+        Reservation List
+    </a>
+
     @foreach($data as $data)
         <a href="{{ route('art.show', $data) }}" class="text-decoration-none" style="color: black">
             <div class="card card-body mb-2">

@@ -68,4 +68,9 @@ class Art extends Model
     {
         return $this->hasOne('App\Model\Art\Reserve');
     }
+
+    public function sold()
+    {
+        return $this->hasOne('App\Model\Art\Sold');
+    }
 }

@@ -101,7 +101,7 @@
                             @foreach($art as $art)
                                 <li>
                                     <a href="{{ route('art.show', $art) }}">
-                                        {{ $art->name }}
+                                        {{ $art->title }}
                                     </a>
                                 </li>
                             @endforeach

@@ -90,4 +90,20 @@ class User extends Authenticatable
         return $this->hasMany('App\Model\Art\Reserve');
     }
 
+    public function sold()
+    {
+        return $this->hasMany('App\Model\Art\Sold');
+    }
+
+    //Accessors
+    public function getNameAttribute($value)
+    {
+        return ucwords($value);
+    }
+
+    public function getGalleryAttribute($value)
+    {
+        return ucwords($value);
+    }
+
 }

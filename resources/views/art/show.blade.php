@@ -8,9 +8,11 @@
         </div>
         <div class="col">
 
-            <div class="btn btn-primary btn-lg  btn-block mb-2">
-                {{ strtoupper($art->status) }}
-            </div>
+            @canany(['update art', 'update art-status'])
+                <div class="btn btn-primary btn-lg  btn-block mb-2">
+                    {{ strtoupper($art->status) }}
+                </div>
+            @endcan
 
             <div class="card">
                 <div class="card-header">
@@ -121,7 +123,20 @@
                     <a href="{{ route('art.watch', $art->id) }}">
                         <i class="fa fa-eye" style="font-size:25px; padding: 10px;"></i>
                     </a>  --}}
-                    <a href="{{ route('art.reserve', $art) }}" class="btn btn-success btn-lg @if(!empty($art->reserve)) disabled @endif" style="float:right;">Reserve</a>
+
+                    @if(empty($art->reserve))
+                        <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn-lg" style="float:right;">
+                            Reserve
+                        </a>
+                    @elseif($art->reserve->user_id == Auth::user()->id)
+                        <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-success btn-lg float-right">
+                            Cancel Reservation
+                        </a>
+                    @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
+                        <a href="javascript:void();" class="btn btn-success float-right disabled">
+                            Reserve
+                        </a>
+                    @endif
                 </div>
             </div>
 
