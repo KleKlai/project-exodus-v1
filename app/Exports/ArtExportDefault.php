@@ -2,13 +2,13 @@
 
 namespace App\Exports;
 
-use App\User;
+use App\Model\Art;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 
-class UserExport implements FromCollection, WithHeadings, ShouldAutoSize
+class ArtExportDefault implements FromCollection, WithHeadings, ShouldAutoSize
 {
 
     public function _construct()
@@ -18,7 +18,8 @@ class UserExport implements FromCollection, WithHeadings, ShouldAutoSize
 
     public function collection()
     {
-        return User::withTrashed()->get();
+
+        return Art::all();
     }
 
     public function registerEvents(): array
@@ -33,7 +34,7 @@ class UserExport implements FromCollection, WithHeadings, ShouldAutoSize
 
     public function headings(): array
     {
-        $table = \DB::getSchemaBuilder()->getColumnListing('users');
+        $table = \DB::getSchemaBuilder()->getColumnListing('art');
 
         //Remove Element in Array
         $table = \array_diff($table, ["password", "remember_token"]);

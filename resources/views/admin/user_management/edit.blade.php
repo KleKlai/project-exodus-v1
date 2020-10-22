@@ -40,11 +40,11 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Gallery</label>
                             <div class="col-sm-10">
-                                <select name="category" class="form-control" name="category"
+                                <select name="gallery" class="form-control"
                                 {{ (!empty($user->category)) ? 'disabled' : ''}}>
                                     <option value="">-</option>
                                     @foreach($gallery as $gallery)
-                                        <option value="{{ $gallery->name }}" {{ ($user->category == $gallery->name) ? 'selected' : '' }}>{{ $gallery->name }}</option>
+                                        <option value="{{ $gallery->name }}" {{ ($user->gallery == $gallery->name) ? 'selected' : '' }}>{{ $gallery->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -59,7 +59,8 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Tags</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput">
+                                <input type="text" class="form-control" value="{{ $user->tagList }}" name="tag">
+                                <small id="emailHelp" class="form-text text-muted">Separate each tag with comma (,)</small>
                             </div>
                         </div>
 

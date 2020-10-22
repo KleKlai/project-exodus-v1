@@ -28,7 +28,14 @@ class CreateTicketsTable extends Migration
             $table->timestamps();
         });
 
-        DB::statement("ALTER TABLE tickets AUTO_INCREMENT = 14000;");
+        if(env('DB_CONNECTION') == 'mysql')
+        {
+            DB::statement("ALTER TABLE tickets AUTO_INCREMENT = 14000;");
+
+        } else if (env('DB_CONNECTION') == 'pgsql')
+        {
+            DB::update("ALTER SEQUENCE tickets_id_seq RESTART 325200;");
+        }
     }
 
     /**

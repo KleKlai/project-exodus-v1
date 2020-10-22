@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Mail;
 use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
 use App\Mail\DeleteUserMail;
+use App\Services\UserServices;
 use App\Model\Art;
 use App\User;
 use Auth;
@@ -47,7 +48,7 @@ class UserController extends Controller
     {
 
         //Get all user art
-        $art = Art::where('user_id', $user->id)->with('user')->select('uuid', 'name')->get();
+        $art = Art::where('user_id', $user->id)->with('user')->select('uuid', 'title')->get();
 
         $login = Activity::where('causer_id', $user->id)
             ->where('log_name', 'Login')
@@ -99,29 +100,20 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
 
-        // Custom Validate to add subcategory request
-        $subcategory = null;
+        // comma deliminated to array
+        $tags = explode (",", $request->tag);
 
-        if(!empty($request['gallery'])){
-            $subcategory = $request['gallery'];
-        }
-
-        if(!empty($request['regional'])){
-            $subcategory = $request['regional'];
-        }
-
-        if(!empty($request['special'])){
-            $subcategory = $request['special'];
-        }
+        $user->retag($tags);
 
         $user->update([
             'name'          => $request->name,
             'email'         => $request->email,
             'mobile'        => $request->mobile,
-            'category'      => $request->category,
-            'subcategory'   => $subcategory,
+            'gallery'       => $request->gallery,
             'bio'           => $request->bio,
         ]);
+
+        UserServices::assignMuseum($user);
 
         //Detach all user roles first
         $user->roles()->detach();
@@ -131,7 +123,7 @@ class UserController extends Controller
 
         flash('Save')->success();
 
-        return back();
+        return redirect()->route('user.show', $user);
     }
 
     /**

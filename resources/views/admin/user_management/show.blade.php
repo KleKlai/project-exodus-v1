@@ -54,9 +54,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Category</label>
+                        <label class="col-sm-2 col-form-label">Gallery</label>
                         <div class="col-sm-10">
-                            <input type="text" disabled class="form-control-plaintext" value="{{ $user->category }}">
+                            <input type="text" disabled class="form-control-plaintext" value="{{ $user->gallery ?? 'none' }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -71,6 +71,15 @@
                         <div class="col-sm-10">
                             @foreach($user->getRoleNames() as $role)
                                 <span class="badge badge-success">{{ strtoupper($role) }}</span>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Tags</label>
+                        <div class="col-sm-10">
+                            @foreach($user->tagArray as $tag)
+                                <span class="badge badge-warning">{{ strtoupper($tag) }}</span>
                             @endforeach
                         </div>
                     </div>

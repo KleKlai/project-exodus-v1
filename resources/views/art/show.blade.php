@@ -40,7 +40,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-8">
                              <label class="text-muted" for="name">Artwork Title:</label>
-                             <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->name }}</h2>
+                             <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->title }}</h2>
                             {{-- <input type="text" class="form-control-plaintext" value="{{ $art->name }}" readonly> --}}
                         {{-- </div>
                         <div class="form-group col-md-8"> --}}
@@ -108,21 +108,20 @@
                        </div>
                    </div>
 
-                    <div class="form-group">
+                    {{--  <div class="form-group">
                         <label class="text-muted" for="Tag">Tag:</label>
                         <p class="badge badge-success">{{ $art->tag }}</p>
-                    </div>
+                    </div>  --}}
                 </div>
                 <div class="card-footer">
-                    <a href="#">
+                    {{--  <a href="#">
                         <i class="fa fa-heart-o" style="font-size:25px;  color: red;"></i>
                     </a>
 
                     <a href="{{ route('art.watch', $art->id) }}">
                         <i class="fa fa-eye" style="font-size:25px; padding: 10px;"></i>
-                    </a>
-
-                    <a href="{{ route('art.reserve', $art) }}" class="btn btn-success btn-lg" style="float:right;">Reserve</a>
+                    </a>  --}}
+                    <a href="{{ route('art.reserve', $art) }}" class="btn btn-success btn-lg @if(!empty($art->reserve)) disabled @endif" style="float:right;">Reserve</a>
                 </div>
             </div>
 

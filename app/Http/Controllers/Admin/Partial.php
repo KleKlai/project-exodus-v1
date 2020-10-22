@@ -17,7 +17,7 @@ class Partial extends Controller
 
     public function trashUser()
     {
-        $data = User::select('id','uuid', 'name', 'category', 'deleted_at')
+        $data = User::select('id','uuid', 'name', 'gallery', 'deleted_at')
                 ->onlyTrashed()
                 ->get();
 
@@ -25,7 +25,7 @@ class Partial extends Controller
     }
 
     public function restore($id)
-    {   
+    {
         $user = User::onlyTrashed()->find($id);
         $user->restore();
 
@@ -39,7 +39,7 @@ class Partial extends Controller
         $user = User::onlyTrashed()->find($id);
 
         //Revoke all Roles
-        $user->roles()->detach();   
+        $user->roles()->detach();
         //Revoke all permission first
         $user->revokePermissionTo($user->getAllPermissions());
         $user->forceDelete();

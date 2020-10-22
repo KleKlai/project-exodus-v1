@@ -3,22 +3,24 @@
 namespace App\Exports;
 
 use App\Model\Art;
+use Illuminate\Support\Arr;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 
-class ArtExport implements FromCollection, WithHeadings, ShouldAutoSize
+class ArtExportCustom implements FromCollection, WithHeadings, ShouldAutoSize
 {
 
-    public function _construct()
+    public function __construct(array $request)
     {
-
+        $this->data = $request;
+        $this->data = Arr::except($this->data, ["_token", "format"]);
     }
 
     public function collection()
     {
-        return Art::all();
+        return Art::select($this->data)->get();
     }
 
     public function registerEvents(): array
@@ -33,11 +35,6 @@ class ArtExport implements FromCollection, WithHeadings, ShouldAutoSize
 
     public function headings(): array
     {
-        $table = \DB::getSchemaBuilder()->getColumnListing('art');
-
-        //Remove Element in Array
-        $table = \array_diff($table, ["password", "remember_token"]);
-
-        return $table;
+        return $this->data;
     }
 }

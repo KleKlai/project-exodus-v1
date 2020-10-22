@@ -3,14 +3,16 @@
 @section('content')
 <div class="container">
     <form action="{{ route('art.update', $art)}}" method="POST" enctype="multipart/form-data">
+        <div class="card card-body">
+
         @csrf
         @method('PATCH')
 
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $art->name) }}" name="name" required>
+            <label for="title">Title</label>
+            <input type="text" class="form-control @error('title') is-invalid @enderror" value="{{ old('title', $art->title) }}" name="title" required>
 
-            @error('name')
+            @error('title')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
@@ -193,24 +195,49 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea name="description" class="form-control @error('description') is-invalid @enderror" rows="5" required>{{ old('description', $art->description) }}</textarea>
+        <div class="row">
+            <div class="col-7">
 
-            @error('description')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" class="form-control @error('description') is-invalid @enderror" rows="5" required>{{ old('description', $art->description) }}</textarea>
+
+                        @error('description')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attachment">Change Artwork Photo</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input @error('file') is-invalid @enderror" name="file" onchange="readURL(this);" aria-describedby="Product Image" value="{{ old('attachment', $art->attachment) }}">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            <small class="form-text text-muted">{{ "Leave blank if you don't want attachment to be changed." }}</small>
+
+                            @error('file')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+            </div>
+            <div class="col-5">
+                <h4 class="">Preview</h4>
+                <img class="picture" src="{{ url('storage/artwork/'.$art->attachment) }}" alt="Artwork {{ $art->attachment }}" height="300px">
+            </div>
         </div>
 
         <div class="row">
             <div class="form-group col-md-6">
                 <div class="mt-2">
-                    <a href="{{ route('art.show', $art) }}" class="btn border-none">Cancel</a>
+                    <a href="{{ url()->previous() }}" class="btn border-none">Cancel</a>
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>
+        </div>
         </div>
     </form>
 </div>

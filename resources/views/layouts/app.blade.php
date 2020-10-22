@@ -70,6 +70,7 @@
                                 <a class="dropdown-item" href="{{ route('user.trash') }}">Garbage</a>
                                 <a class="dropdown-item" href="{{ url('syslog') }}">System Log</a>
                                 <a class="dropdown-item" href="{{ route('artist.category.index') }}">Profile Category</a>
+                                <a class="dropdown-item" href="{{ route('export') }}">Export</a>
                             </div>
                         </li>
                         <li class="nav-item active">
@@ -123,9 +124,6 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('my.profile', Auth::user()) }}">
                                         {{ __('Profile') }}
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        {{ __('My Artwork') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

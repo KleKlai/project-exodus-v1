@@ -51,7 +51,7 @@ class ProfileCatSeeder extends Seeder
         ]);
 
         Type::create([
-            'name'          => 'Irinugyun',
+            'name'          => 'Irinugyun Artist',
         ]);
 
         Type::create([
@@ -71,7 +71,7 @@ class ProfileCatSeeder extends Seeder
         ]);
 
         Type::create([
-            'name'          => 'Talaandig Soil Paintings',
+            'name'          => 'Talaandig Soil Painters',
         ]);
 
         Type::create([

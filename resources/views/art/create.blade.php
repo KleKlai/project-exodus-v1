@@ -6,10 +6,10 @@
         @csrf
 
         <div class="form-group">
-            <label for="name">Title</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" required>
+            <label for="title">Title</label>
+            <input type="text" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" name="title" required>
 
-            @error('name')
+            @error('title')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>

@@ -8,6 +8,7 @@ use App\Services\FileUpload as Upload;
 use App\Http\Requests\ArtStoreRequest;
 use App\Model\Art\Status;
 use App\Model\Art\Watch;
+use App\Model\Art\Reserve;
 use Log;
 use DB;
 use Auth;
@@ -45,7 +46,7 @@ class ArtController extends Controller
      */
     public function index()
     {
-        $data = Art::with('user')->get();
+        $data = Art::with('user')->orderBy('created_at', 'DESC')->get();
 
         return view('art.index', compact('data'));
     }
@@ -171,9 +172,20 @@ class ArtController extends Controller
      */
     public function update(ArtStoreRequest $request, Art $art)
     {
-        $art->update($request->all());
+        if($request->hasFile('file'))
+        {
+            // Delete old artwork
+            if(\Storage::exists('public/artwork/'.$art->attachment)){
+                \Storage::delete('public/artwork/'.$art->attachment);
+            }
 
-        return redirect()->route('art.index');
+            $file_name = Upload::ArtUploadFile($request);
+            $request->merge(['attachment' => $file_name]);
+        }
+
+        $art->update($request->except(['file']));
+
+        return redirect()->route('art.show', $art);
     }
 
     /**

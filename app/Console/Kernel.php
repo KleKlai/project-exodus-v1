@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\DatabaseBackUp'
     ];
 
     /**
@@ -27,6 +27,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
         $schedule->command('activitylog:clean --days=30')->monthly();
         $schedule->command('cache:forget laravelspatie.permission.cache')->monthly();
+        $schedule->command('database:backup')->daily();
     }
 
     /**

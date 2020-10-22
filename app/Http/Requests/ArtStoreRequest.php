@@ -24,7 +24,7 @@ class ArtStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'          => ['required', 'string'],
+            'title'         => ['required', 'string'],
             'subject'       => ['required', 'string'],
             'city'          => ['required', 'string'],
             'category'      => ['required', 'string'],

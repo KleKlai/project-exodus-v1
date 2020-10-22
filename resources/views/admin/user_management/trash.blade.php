@@ -8,7 +8,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">Category</th>
+                <th scope="col">Gallery</th>
                 <th scope="col">Deleted</th>
                 <th scope="col"></th>
             </tr>
@@ -19,7 +19,7 @@
                     <tr>
                         <td>{{ $key+1 }}</td>
                         <td>{{ $data->name }}</td>
-                        <td>{{ $data->category }}</td>
+                        <td>{{ $data->gallery }}</td>
                         <td data-toggle="tooltip" data-placement="top" title="{{ $data->deleted_at }}">
                             {{ $data->deleted_at->diffForHumans() }}
                         </td>

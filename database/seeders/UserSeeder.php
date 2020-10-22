@@ -20,7 +20,6 @@ class UserSeeder extends Seeder
         $Super_admin = User::create([
             'name'          =>  'Super Admin User',
             'mobile'        =>  '09952247045',
-            'category'    =>  'N/A',
             'email'         =>  'system_admin@min-art.org',
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'password'      =>   Hash::make('bxtr1605'),
@@ -29,7 +28,6 @@ class UserSeeder extends Seeder
         $Admin = User::create([
             'name'          =>  'Administrator User',
             'mobile'        =>  '09952247045',
-            'category'    =>  'N/A',
             'email'         =>  'admin@min-art.org',
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'password'      =>   Hash::make('bxtr1605'),
@@ -38,7 +36,6 @@ class UserSeeder extends Seeder
         $Curator = User::create([
             'name'          =>  'Curator User',
             'mobile'        =>  '09952247045',
-            'category'    =>  'N/A',
             'email'         =>  'curator@min-art.org',
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'password'      =>   Hash::make('bxtr1605'),
@@ -47,7 +44,6 @@ class UserSeeder extends Seeder
         $Artist = User::create([
             'name'          =>  'Artist User',
             'mobile'        =>  '09952247045',
-            'category'    =>  'N/A',
             'email'         =>  'artist@min-art.org',
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'password'      =>   Hash::make('bxtr1605'),
@@ -56,7 +52,6 @@ class UserSeeder extends Seeder
         $Maynard = User::create([
             'name'          =>  'Maynard Magallen',
             'mobile'        =>  '09952247045',
-            'category'      =>  'N/A',
             'email'         =>  'maynard@min-art.org',
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'password'      =>   Hash::make('bxtr1605'),

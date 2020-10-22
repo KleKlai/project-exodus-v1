@@ -14,4 +14,9 @@ class Reserve extends Model
     {
         return $this->belongsTo('App\Model\Art');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

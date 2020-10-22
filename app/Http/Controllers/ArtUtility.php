@@ -61,9 +61,9 @@ class ArtUtility extends Controller
 
             DB::beginTransaction();
 
-            $art->update([
-                'reserve'   => true
-            ]);
+            // $art->update([
+            //     'reserve'   => true
+            // ]);
 
             Reserve::create([
                 'art_id'    => $art->id,

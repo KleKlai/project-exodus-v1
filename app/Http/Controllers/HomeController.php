@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use App\Services\UserServices;
 use App\User;
 use SweetAlert;
 use App\Model\Art;
@@ -43,8 +44,7 @@ class HomeController extends Controller
         //Remove Element in Array
         $table = \array_diff($table, ["password", "remember_token"]);
 
-        \Auth::user()->tag('Apple,Banana,Cherry');
-
+        UserServices::assignMuseum(\Auth::user());
 
         return view('home', compact(
             'user',

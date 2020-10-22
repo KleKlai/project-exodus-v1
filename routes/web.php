@@ -116,5 +116,11 @@ Route::get('Lullaby', 'Museum\LullabyController@index')->name('lullaby.index');
 Route::get('Tambol', 'Museum\TambolController@index')->name('tambol.index');
 Route::get('Vinta', 'Museum\VintaController@index')->name('vinta.index');
 
-Route::get('export/user', 'Admin\Export\Exports@UserExport')->name('user.export');
-Route::get('export/art', 'Admin\Export\Exports@ArtExport')->name('art.export');
+Route::get('export', 'Admin\Export\Exports@index')->name('export');
+
+Route::get('export/default/user', 'Admin\Export\Exports@UserExportDefault')->name('user.export.default');
+Route::get('export/default/art', 'Admin\Export\Exports@ArtExportDefault')->name('art.export.default');
+Route::post('export/custom/user', 'Admin\Export\Exports@UserExportCustom')->name('user.export.custom');
+Route::post('export/custom/art', 'Admin\Export\Exports@ArtExportCustom')->name('art.export.custom');
+
+Route::post('import/user', 'Admin\Import\UsersImportController@import')->name('user.import');
