@@ -60,42 +60,42 @@
             <div class="row">
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide1.png');">
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');">
                             <p>ARTWORK TITLE HERE</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide2.png');">
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
                             <p>THIS IS A VERY LONG VERY LOOONGARTWORK TITLE HERE</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide3.png');">
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
                             <p>ARTWORK TITLE HERE</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide4.png');">
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');">
                             <p>ARTWORK TITLE HERE</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide5.png');">
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
                             <p>THIS IS A VERY LONG VERY LOOONGARTWORK TITLE HERE</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide1.png');">
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
                             <p>ARTWORK TITLE HERE</p>
                         </div>
                     </a>
@@ -109,47 +109,47 @@
             <div class="h-divider" id="featuredArtists"></div>
             <div class="title">ARTISTS</div>
             <div class="row">
-            <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide1.png');">
-                        <p>Artist name</p>
-                        </div>
+                <div class="col-md-4">
+                    <a href="/artistprofile">
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');"></div>
+                        <div class="picture-title link">ARTIST NAME</div>
                     </a>
+                         
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
-                        <p>Artist name</p>
-                        </div>
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');"></div>
+                        <div class="picture-title link">ARTIST NAME</div>
                     </a>
+                         
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
-                        <p>Artist name</p>
-                        </div>
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');"></div>
+                        <div class="picture-title link">ARTIST NAME</div>
                     </a>
+                         
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');">
-                        <p>Artist name</p>
-                        </div>
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');"></div>
+                        <div class="picture-title link">ARTIST NAME</div>
                     </a>
+                         
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
-                        <p>Artist name</p>
-                        </div>
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');"></div>
+                        <div class="picture-title link">ARTIST NAME</div>
                     </a>
+                         
                 </div>
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
-                            <p>Artist name</p>
-                        </div>
+                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');"></div>
+                        <div class="picture-title link">ARTIST NAME</div>
                     </a>
+                         
                 </div>
             </div>
             <div class="container mb-5" style="text-align: center;">
