@@ -21,6 +21,7 @@ class UsersImport implements ToCollection, WithHeadingRow
         foreach($rows as $row)
         {
             $user = User::create([
+                'id'                => $row['id'],
                 'name'              => $row['name'],
                 'email'             => $row['email'],
                 'email_verified_at' => $row['email_verified_at'],

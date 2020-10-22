@@ -31,10 +31,8 @@ class ArtsImport implements ToModel, WithHeadingRow
             'price'         => $row['price'],
             'description'   => $row['description'],
             'attachment'    => $row['attachment'],
-            'tag'           => $row['tag'],
-            'favorite'      => $row['favorite'],
             'status'        => $row['status'],
-            'remark'        => $row['remark'],
+            'remark'        => $row['remarks'],
         ]);
     }
 }

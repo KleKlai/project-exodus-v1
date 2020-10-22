@@ -69,7 +69,3 @@
 @include('services.home_modal')
 
 @endsection
-
-@section('script')
-
-@endsection
