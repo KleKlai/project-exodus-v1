@@ -4,12 +4,12 @@
     
 <div class="container">
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-2 d-none d-lg-block">
             <div class="col">
-                <img src="{{ asset('/images/logo/logo.png')}}" alt="Mindanao Art Logo">
+                <img src="/images/logo.png" alt="Mindanao Art Logo">
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md">
 
             <h2>
                 <a class="back" href="/">
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md d-none d-lg-block">
             <img class="picture" src="/images/image3.png" alt="Image3">
         </div>
     </div>
