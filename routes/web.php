@@ -128,3 +128,4 @@ Route::post('export/custom/user', 'Admin\Export\Exports@UserExportCustom')->name
 Route::post('export/custom/art', 'Admin\Export\Exports@ArtExportCustom')->name('art.export.custom');
 
 Route::post('import/user', 'Admin\Import\UsersImportController@import')->name('user.import');
+Route::post('import/art', 'Admin\Import\ArtImportController@import')->name('art.import');

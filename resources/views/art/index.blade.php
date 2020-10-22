@@ -10,6 +10,10 @@
         Reservation List
     </a>
 
+    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#artImport">
+        Import
+    </button>
+
     @foreach($data as $data)
         <a href="{{ route('art.show', $data) }}" class="text-decoration-none" style="color: black">
             <div class="card card-body mb-2">
@@ -20,5 +24,7 @@
     @endforeach
 
 </div>
+
+@include('services.art_management_modal')
 
 @endsection
