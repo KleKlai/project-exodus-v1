@@ -13,7 +13,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -37,7 +38,7 @@
         @else
         <nav class="navbar navbar-expand-lg navbar-light mt-4 mb-5">
             <div class="container">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="/home">
                     <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -51,7 +52,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
-                        @can('admin')
+                        @can('Administrator')
                         <li class="nav-item dropdown">=
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component

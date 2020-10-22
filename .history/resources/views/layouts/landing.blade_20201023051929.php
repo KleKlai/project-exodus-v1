@@ -49,13 +49,6 @@
                 </ul>
 
                 <ul class="navbar-nav">
-                    @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home">
-                            Home
-                        </a>
-                    </li>
-                    @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
@@ -64,6 +57,12 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">
+                            Home
+                        </a>
+                    </li>
                     @endauth
                 </ul>
 

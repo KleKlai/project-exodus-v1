@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@can('administrator')
 <div class="container">
 
     <div class="row mt-2">
@@ -62,19 +61,9 @@
     </div>
 
 </div>
-@endcan
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-
-            <div id="columns">
-               
-
-            </div>
-
-        </div>
-    </div>
+    Dari ka mic
 </div>
 
 @include('services.home_modal')

@@ -13,7 +13,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -47,11 +48,10 @@
                 @auth
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                        
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
-                        @can('admin')
+                        @can('administrator')
                         <li class="nav-item dropdown">=
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component
@@ -80,7 +80,7 @@
                             </div>
                         </li>
                         @endcan
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{ route('ticket.index') }}">Support</a>
                         </li>
                         <li class="nav-item dropdown">

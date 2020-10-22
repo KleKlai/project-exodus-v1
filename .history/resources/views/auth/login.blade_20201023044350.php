@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-2">
-            <div class="col">
+            <div class="col" style="text-aling:center;">
                 <img src="{{ asset('/images/logo/logo.png')}}" alt="Mindanao Art Logo">
             </div>
         </div>
