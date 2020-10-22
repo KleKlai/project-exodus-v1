@@ -8,39 +8,24 @@
                 <figcaption>
                     <a href="/artistprofile" class="link">Artist Name</a>
                     <p>Artwork Title</p>
-                    <div>Gallery Name Located/Assigned</div>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
                     <div>Price</div>
                 </figcaption>
             </figure>
                 
             <figure>
                 <img src="{{ asset('/images/image2.png') }}">
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title</p>
-                    <div>Gallery Name Located/Assigned</div>
-                    <div>Price</div>
-                </figcaption>
+                <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
             </figure>
                 
             <figure>
                 <img src="{{ asset('/images/image3.png') }}">
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title</p>
-                    <div>Gallery Name Located/Assigned</div>
-                    <div>Price</div>
-                </figcaption>
+                <figcaption>Belle, based on 1770’s French court fashion</figcaption>
             </figure>
             
             <figure>
                 <img src="{{ asset('/images/TBH_RWSX-53.jpg') }}">
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title</p>
-                    <div>Gallery Name Located/Assigned</div>
-                    <div>Price</div>
-                </figcaption>
+                <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
             </figure>
                 
             <figure>
@@ -75,12 +60,7 @@
                 
             <figure>
                 <img src="{{ asset('/images/image2.png') }}">
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title</p>
-                    <div>Gallery Name Located/Assigned</div>
-                    <div>Price</div>
-                </figcaption>
+                <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
             </figure>
                 
             <figure>

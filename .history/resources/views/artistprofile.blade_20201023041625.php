@@ -14,12 +14,14 @@
             <div class="title">ARTWORKS</div>
             <div id="columns">
                 <figure>
-                    <a href="/"><img src="{{ asset('/images/image1.png') }}"></a>
+                    <a href="">
+                        <img src="{{ asset('/images/image1.png') }}">
+                    </a>
                     <figcaption>
                         <a href="/artistprofile" class="link">Artist Name</a>
-                        <p>Artwork Title</p>
-                        <div>Gallery Name Located/Assigned</div>
-                        <div>Price</div>
+                        <p>Artwork Title, Year</p>
+                        <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                        <div>price</div>
                     </figcaption>
                 </figure>
 

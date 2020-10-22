@@ -164,7 +164,7 @@ a:hover {
 
 /* PINTEREST LIKE IMAGES */
 #columns {
-    column-width: 250px;
+    column-width: 160px;
     column-gap: 15px;
     width: 90%;
     max-width: 1100px;
@@ -211,16 +211,8 @@ div#columns small a {
 }
 
 @media screen and (max-width: 750px) { 
-    #columns {
-        column-gap: 0px; 
-    }
+    #columns { column-gap: 0px; }
     #columns figure { width: 100%; }
-}
-
-@media screen and (max-width: 512px) {
-    #columns {
-        column-width: 160px;
-    }
 }
 /* END PINTEREST LIKE IMAGES */
 

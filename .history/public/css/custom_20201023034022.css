@@ -213,14 +213,9 @@ div#columns small a {
 @media screen and (max-width: 750px) { 
     #columns {
         column-gap: 0px; 
-    }
-    #columns figure { width: 100%; }
-}
-
-@media screen and (max-width: 512px) {
-    #columns {
         column-width: 160px;
     }
+    #columns figure { width: 100%; }
 }
 /* END PINTEREST LIKE IMAGES */
 
