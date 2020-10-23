@@ -52,6 +52,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
+
+                        @canany(['read util','create util','delete util'])
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component
@@ -66,6 +68,7 @@
                                 <a class="dropdown-item" href="{{ route('art.status.index') }}">Status</a>
                             </div>
                         </li>
+                        @endcan
 
 
                         @canany(['read user', 'update user', 'delete user', 'recover user'])
@@ -84,6 +87,7 @@
                                 </div>
                             </li>
                         @endcan
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('ticket.index') }}">Support</a>
                         </li>

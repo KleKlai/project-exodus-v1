@@ -15,7 +15,7 @@ class ProfileCatSeeder extends Seeder
     public function run()
     {
         Type::create([
-            'name'          => 'Agusan Artist Association (AAA)',
+            'name'          => "Agusan Artists' Assocciation AAA",
         ]);
 
         Type::create([
@@ -23,7 +23,7 @@ class ProfileCatSeeder extends Seeder
         ]);
 
         Type::create([
-            'name'          => 'Datu Bago',
+            'name'          => 'Datu Bago Gallery',
         ]);
 
         Type::create([
@@ -35,7 +35,7 @@ class ProfileCatSeeder extends Seeder
         ]);
 
         Type::create([
-            'name'          => 'Gall Down South',
+            'name'          => 'Gallery Down South',
         ]);
 
         Type::create([
@@ -47,15 +47,15 @@ class ProfileCatSeeder extends Seeder
         ]);
 
         Type::create([
-            'name'          => 'Iligan Visual Artists (IVA)',
+            'name'          => 'Hini-GALAay',
         ]);
 
         Type::create([
-            'name'          => 'Irinugyun Artist',
+            'name'          => 'Irinugyun Artist Group',
         ]);
 
         Type::create([
-            'name'          => 'Likha KARAGA',
+            'name'          => 'Likha-KARAGA',
         ]);
 
         Type::create([
@@ -75,7 +75,7 @@ class ProfileCatSeeder extends Seeder
         ]);
 
         Type::create([
-            'name'          => 'TheBauHaus',
+            'name'          => 'TheBauHaus Gallery',
         ]);
 
         Type::create([

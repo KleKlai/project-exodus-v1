@@ -39,7 +39,7 @@
                 </button>
             </div>
 
-            <form method="POST" action="{{ url('art.status', $art) }}">
+            <form method="POST" action="{{ url('art.status', $art ?? '') }}">
                 @csrf
                 @method('PATCH')
 
@@ -47,11 +47,13 @@
                     <div class="form-group">
                         <label class="text-muted" for="name">Status</label>
                         <select name="status" class="form-control @error('status') is-invalid @enderror">
+                        @if(!empty($status))
                             @foreach($status as $data)
                                 <option value="{{ $data->name }}" {{ ($data->name == $art->status ? 'selected' : '') }}>
                                     {{ $data->name }}
                                 </option>
                             @endforeach
+                        @endif
                         </select>
 
                         @error('status')
