@@ -136,7 +136,9 @@ class ArtController extends Controller
 
         $art = Art::with('reserve')->where('id', $art->id)->first();
 
-        return view('art.show', compact(['art', 'status']));
+        $recommended_art = Art::all();
+
+        return view('art.show', compact(['art', 'status', 'recommended_art']));
     }
 
     /**

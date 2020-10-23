@@ -36,8 +36,7 @@
         <div id="pattern">
             <img src="/images/spattern.png" alt="">
         </div>
-        @guest
-        @else
+
         <nav class="navbar navbar-expand-lg navbar-light mt-4 mb-5">
             <div class="container">
                 <a class="navbar-brand" href="/">
@@ -47,18 +46,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                @auth
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
-<<<<<<< HEAD
-
-=======
-                        @canany(['read util','create util','delete util'])
->>>>>>> 5b9880a475c4ef955cf39ef4368ecb2da37646e7
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component
@@ -73,7 +66,7 @@
                                 <a class="dropdown-item" href="{{ route('art.status.index') }}">Status</a>
                             </div>
                         </li>
-                        @endcan
+
 
                         @canany(['read user', 'update user', 'delete user', 'recover user'])
                             <li class="nav-item dropdown">
@@ -110,10 +103,10 @@
                                     <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
                                     <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
                                 </div>
-                            </li>
-                        </ul>  --}}
+                            </li>  --}}
+                        </ul>
                     </div>
-                @endauth
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -180,7 +173,6 @@
                 </div>
             </div>
         </nav>
-        @endguest
 
         <div class="container">
             @include('flash::message')

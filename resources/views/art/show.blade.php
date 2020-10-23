@@ -41,16 +41,16 @@
                         <div class="form-group col-md-8">
                              <label class="text-muted" for="name">Artwork Title:</label>
                              <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->name }}</h2>
-                           
+
                             <label class="text-muted"for="name">Artist:</label>
                             <a href="{{ route('user.show', $art->user->uuid) }}">
                                 <h5 class="text-justify" style="padding-left: 10px;">{{ $art->user->name }}</h5>
                             </a>
                         </div>
                     </div>
-                  
+
                     <div class="form-row">
-                       
+
                         <div class="form-group col-md-4">
                              <label class="text-muted" for="height">Dimension:</label>
                              <h5 class="text-justify" style="padding-left: 10px;">{{ $art->height .' x '.$art->width.' x '.$art->depth }}</h5>
@@ -73,15 +73,19 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#">
-                        <i class="fa fa-heart-o" style="font-size:25px;  color: red;"></i>
-                    </a>
-
-                    <a href="{{ route('art.watch', $art->id) }}">
-                        <i class="fa fa-eye" style="font-size:25px; padding: 10px;"></i>
-                    </a>
-
-                    <a href="{{ route('art.reserve', $art) }}" class="btn btn-success btn-lg" style="float:right;">Reserve</a>
+                    @if(empty($art->reserve))
+                        <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn-lg" style="float:right;">
+                            Reserve
+                        </a>
+                    @elseif($art->reserve->user_id == Auth::user()->id)
+                        <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-success btn-lg float-right">
+                            Cancel Reservation
+                        </a>
+                    @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
+                        <a href="javascript:void();" class="btn btn-success float-right disabled">
+                            Reserve
+                        </a>
+                    @endif
                 </div>
             </div>
 
@@ -108,207 +112,18 @@
     </div>
 </div>
 
-<div id="columns">
-            <figure>
-                <a href=""><img src="{{ url($art->attachment) }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">{{ $art->user->name }}</a>
-                    <p>{{ $art->name }}</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>₱{{ number_format($art->price, 2) }}</div>
-                </figcaption>
-            </figure>
-                
-            <figure>
-                <a href=""><img src="{{ url($art->attachment) }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">{{ $art->user->name }}</a>
-                    <p>{{ $art->name }}</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>₱{{ number_format($art->price, 2) }}</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
-                <figcaption>
-                    <a href="/artistprofile" class="link">Artist Name</a>
-                    <p>Artwork Title, Year</p>
-                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
-                    <div>Price</div>
-                </figcaption>
-
-
-<!-- Update Art Modal -->
-<div class="modal fade" id="updateArtModal" tabindex="-1" role="dialog" aria-labelledby="updateArtModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="updateArtModal">Change Status</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <form method="POST" action="{{ url('art/status', $art) }}">
-                @csrf
-                @method('PATCH')
-
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label class="text-muted" for="name">Status</label>
-                        <select name="status" class="form-control @error('status') is-invalid @enderror">
-                            @foreach($status as $data)
-                                <option value="{{ $data->name }}" {{ ($data->name == $art->status ? 'selected' : '') }}>
-                                    {{ $data->name }}
-                                </option>
-                            @endforeach
-                        </select>
-
-                        @error('status')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label class="text-muted" for="remark">Remarks</label>
-                        <textarea class="form-control @error('remark') is-invalid @enderror" name="remark" name="remark" rows="2"></textarea>
-
-                        @error('remark')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link text-decoration-none" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-
-            </form>
+        <div id="columns">
+            @foreach($recommended_art as $artwork)
+                <figure>
+                    <a href=""><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
+                    <figcaption>
+                        <p>{{ $artwork->name }}</p>
+                        <div>₱{{ number_format($artwork->price, 2) }}</div>
+                    </figcaption>
+                </figure>
+            @endforeach
         </div>
-    </div>
-</div>
+
+@include('services.art_management_modal')
+
 @endsection
