@@ -24,7 +24,7 @@
             </div>
 
             {{-- Content --}}
-            <div class="container">
+            {{--  <div class="container">
                 <div class="row featured">
 
                     <div class="col-md-6">
@@ -45,9 +45,8 @@
                         </div>
                     </div>
 
-            </div>
-
-        </div>
+                </div>
+            </div>  --}}
 
 
 
