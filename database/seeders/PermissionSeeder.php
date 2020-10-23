@@ -30,6 +30,7 @@ class PermissionSeeder extends Seeder
         $update_art         = Permission::create(['name' => 'update art']);
         $update_art_status  = Permission::create(['name' => 'update art-status']);
         $delete_art         = Permission::create(['name' => 'delete art']);
+        $import_at          = Permission::create(['name' => 'import art']);
 
 
         //TODO: Art Utilities

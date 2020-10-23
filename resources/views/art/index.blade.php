@@ -14,9 +14,11 @@
         </a>
     @endcan
 
-    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#artImport">
-        Import
-    </button>
+    @can('import art')
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#artImport">
+            Import
+        </button>
+    @endcan
 
     @foreach($data as $data)
         <a href="{{ route('art.show', $data) }}" class="text-decoration-none" style="color: black">
