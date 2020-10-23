@@ -8,11 +8,9 @@
         </div>
         <div class="col">
 
-            @canany(['update art', 'update art-status'])
-                <div class="btn btn-primary btn-lg  btn-block mb-2">
-                    {{ strtoupper($art->status) }}
-                </div>
-            @endcan
+            <div class="btn btn-primary btn-lg  btn-block mb-2">
+                {{ strtoupper($art->status) }}
+            </div>
 
             <div class="card">
                 <div class="card-header">
@@ -42,61 +40,21 @@
                     <div class="form-row">
                         <div class="form-group col-md-8">
                              <label class="text-muted" for="name">Artwork Title:</label>
-                             <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->title }}</h2>
-                            {{-- <input type="text" class="form-control-plaintext" value="{{ $art->name }}" readonly> --}}
-                        {{-- </div>
-                        <div class="form-group col-md-8"> --}}
+                             <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->name }}</h2>
+                           
                             <label class="text-muted"for="name">Artist:</label>
                             <a href="{{ route('user.show', $art->user->uuid) }}">
                                 <h5 class="text-justify" style="padding-left: 10px;">{{ $art->user->name }}</h5>
-                                {{-- <input type="text" class="form-control-plaintext" value="{{ $art->user->name }}" readonly> --}}
                             </a>
                         </div>
                     </div>
-                    {{-- <div class="form-row">
-                    <div class="form-group col-md-4">
-                         <label class="text-muted" for="subject">Subject:</label>
-                        <input type="text" class="form-control-plaintext" value="{{ $art->subject }}" readonly>
-                    </div>
-
-                    <div class="form-group col-md-4">
-                         <label class="text-muted" for="city">City:</label>
-                        <input type="text" class="form-control-plaintext" value="{{ $art->city }}" readonly>
-                    </div>
-
-                    <div class="form-group col-md-4">
-                         <label class="text-muted" for="category">Category:</label>
-                        <input type="text" class="form-control-plaintext" value="{{ $art->category }}" readonly>
-                    </div>
-                    </div> --}}
-
-                    {{-- <div class="form-row">
-                        <div class="form-group col-md-4">
-                             <label class="text-muted" for="style">Style:</label>
-                            <input type="text" class="form-control-plaintext" value="{{ $art->style }}" readonly>
-                        </div>
-
-                        <div class="form-group col-md-4">
-                             <label class="text-muted" for="medium">Medium:</label>
-                            <input type="text" class="form-control-plaintext" value="{{ $art->medium }}" readonly>
-                        </div>
-
-                        <div class="form-group col-md-4">
-                             <label class="text-muted" for="material">Material:</label>
-                            <input type="text" class="form-control-plaintext" value="{{ $art->material }}" readonly>
-                        </div>
-                    </div> --}}
-
+                  
                     <div class="form-row">
-                        {{-- <div class="form-group col-md-4">
-                             <label class="text-muted" for="size">Size:</label>
-                            <input type="text" class="form-control-plaintext" value="{{ $art->size }}" readonly>
-                        </div> --}}
+                       
                         <div class="form-group col-md-4">
                              <label class="text-muted" for="height">Dimension:</label>
                              <h5 class="text-justify" style="padding-left: 10px;">{{ $art->height .' x '.$art->width.' x '.$art->depth }}</h5>
-                            {{-- <input type="text" class="form-control-plaintext" value="{{ $art->height .' x '.$art->width.' x '.$art->depth }}" readonly> --}}
-                        </div>
+                            </div>
                     </div>
                     <div class="form-group">
                         <label class="text-muted" for="description">Description:</span></label>
@@ -106,39 +64,27 @@
                         <label class="text-muted" for="price">Price:</label>
                        <div class="input-group mb-2">
                            <h3 class="text-justify">₱{{ number_format($art->price, 2) }}</h3>
-                           {{-- <input type="text" class="form-control-plaintext" value="₱ {{ $art->price }}" readonly> --}}
-                       </div>
+                          </div>
                    </div>
 
-                    {{--  <div class="form-group">
+                    <div class="form-group">
                         <label class="text-muted" for="Tag">Tag:</label>
                         <p class="badge badge-success">{{ $art->tag }}</p>
-                    </div>  --}}
+                    </div>
                 </div>
                 <div class="card-footer">
-                    {{--  <a href="#">
+                    <a href="#">
                         <i class="fa fa-heart-o" style="font-size:25px;  color: red;"></i>
                     </a>
 
                     <a href="{{ route('art.watch', $art->id) }}">
                         <i class="fa fa-eye" style="font-size:25px; padding: 10px;"></i>
-                    </a>  --}}
+                    </a>
 
-                    @if(empty($art->reserve))
-                        <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn-lg" style="float:right;">
-                            Reserve
-                        </a>
-                    @elseif($art->reserve->user_id == Auth::user()->id)
-                        <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-success btn-lg float-right">
-                            Cancel Reservation
-                        </a>
-                    @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
-                        <a href="javascript:void();" class="btn btn-success float-right disabled">
-                            Reserve
-                        </a>
-                    @endif
+                    <a href="{{ route('art.reserve', $art) }}" class="btn btn-success btn-lg" style="float:right;">Reserve</a>
                 </div>
             </div>
+
 
             <div class="card mt-2 {{ ($art->status == 'Pending') ? 'd-none' : '' }}" >
                 <div class="card-header">Remark</div>
@@ -146,7 +92,6 @@
                     {{ $art->remark ?? 'No Remarks'}}
                 </div>
             </div>
-
 
             @if (!empty($art->remarks))
                 <div class="card mt-2">
@@ -162,6 +107,157 @@
         </div>
     </div>
 </div>
+
+<div id="columns">
+            <figure>
+                <a href=""><img src="{{ url($art->attachment) }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">{{ $art->user->name }}</a>
+                    <p>{{ $art->name }}</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>₱{{ number_format($art->price, 2) }}</div>
+                </figcaption>
+            </figure>
+                
+            <figure>
+                <a href=""><img src="{{ url($art->attachment) }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">{{ $art->user->name }}</a>
+                    <p>{{ $art->name }}</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>₱{{ number_format($art->price, 2) }}</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <a href=""><img src="{{ asset('/images/image1.png') }}"></a>
+                <figcaption>
+                    <a href="/artistprofile" class="link">Artist Name</a>
+                    <p>Artwork Title, Year</p>
+                    <a href="/gallerydetails" class="link">Gallery Name Located</a>
+                    <div>Price</div>
+                </figcaption>
+
 
 <!-- Update Art Modal -->
 <div class="modal fade" id="updateArtModal" tabindex="-1" role="dialog" aria-labelledby="updateArtModal" aria-hidden="true">

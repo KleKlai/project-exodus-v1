@@ -24,12 +24,15 @@
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
     <!-- Flash Message CSS -->
     {{--  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  --}}
 </head>
 <body>
     <div id="app">
-        
+
         <div id="pattern">
             <img src="/images/spattern.png" alt="">
         </div>
@@ -47,12 +50,12 @@
                 @auth
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
-                        @can('admin')
-                        <li class="nav-item dropdown">=
+
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component
                             </a>
@@ -79,7 +82,7 @@
                                 <a class="dropdown-item" href="{{ route('export') }}">Export</a>
                             </div>
                         </li>
-                        @endcan
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('ticket.index') }}">Support</a>
                         </li>
@@ -113,7 +116,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                            
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -195,8 +198,14 @@
 
     @yield('script')
 
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" defer></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+    </script>
 
     <script>
         $('#flash-overlay-modal').modal();

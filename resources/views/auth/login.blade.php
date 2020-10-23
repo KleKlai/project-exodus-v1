@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    
+
 <div class="container">
-    <div class="row">
+    <div class="row  login">
         <div class="col-md-2">
-            <div class="col">
+            <div class="col mb-5">
                 <img src="{{ asset('/images/logo/logo.png')}}" alt="Mindanao Art Logo">
             </div>
         </div>
         <div class="col-md-5">
 
-            <h2>
+            <h2 class="mb-5">
                 <a class="back" href="/">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
@@ -44,12 +44,12 @@
                             @enderror
                     </div>
 
-                    
+
                     <div class="form-check">
                         <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                         <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     </div>
-                    
+
                     @if (Route::has('password.request'))
                         <div>
                             <a href="{{ route('password.request') }}" style="font-size: 12px;">
@@ -60,7 +60,7 @@
 
                     <button class="mt-4" type="submit">{{ __('SUBMIT >>>') }}</button>
 
-                    
+
                 </form>
             </div>
         </div>

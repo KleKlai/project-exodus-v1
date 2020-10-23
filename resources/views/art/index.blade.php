@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
+
     <a href="{{ route('art.create') }}" class="btn btn-link">
         + Artworks
     </a>

@@ -10,7 +10,7 @@
 
     @include('services.art_component_modal')
 
-    <table class="table mt-3">
+    <table id="myTable" class="table mt-3">
         <thead>
             <tr>
                 <th scope="col">#</th>
