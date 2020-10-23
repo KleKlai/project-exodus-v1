@@ -54,11 +54,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
-<<<<<<< HEAD
-
-=======
                         @canany(['read util','create util','delete util'])
->>>>>>> 5b9880a475c4ef955cf39ef4368ecb2da37646e7
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component
