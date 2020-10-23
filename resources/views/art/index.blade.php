@@ -3,18 +3,23 @@
 @section('content')
 
 <div class="container">
+    @can('create art')
+        <a href="{{ route('art.create') }}" class="btn btn-link">
+            + Artworks
+        </a>
+    @endcan
 
-    <a href="{{ route('art.create') }}" class="btn btn-link">
-        + Artworks
-    </a>
+    @can(['read reservation', 'cancel reservation', 'sold reservation'])
+        <a href="{{ route('art.reserve.index') }}" class="btn btn-link">
+            Reservation List
+        </a>
+    @endcan
 
-    <a href="{{ route('art.reserve.index') }}" class="btn btn-link">
-        Reservation List
-    </a>
-
-    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#artImport">
-        Import
-    </button>
+    @can('import art')
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#artImport">
+            Import
+        </button>
+    @endcan
 
     @foreach($data as $data)
         <a href="{{ route('art.show', $data) }}" class="text-decoration-none" style="color: black">

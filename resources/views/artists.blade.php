@@ -3,24 +3,16 @@
 @section('landing')
 <div class="container mt-5">
     <div class="row">
+
+        @foreach($user as $artist)
         <div class="col-md-4">
-            <a href="/artistprofile">
-                <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');"></div>
-                <p class="picture-title link">ARTIST NAME</p>
+            <a href="{{ route('landing.artist.profile', $artist) }}">
+                <div class="picture-container background-image" style="background-image: url('{{ url('storage/artwork/'.$artist->art->first()->attachment) }}');"></div>
+                <p class="picture-title link">{{ $artist->name }}</p>
             </a>
         </div>
-        <div class="col-md-4">
-            <a href="/artistprofile">
-                <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');"></div>
-                <p class="picture-title link">ARTIST NAME</p>
-            </a>
-        </div>
-        <div class="col-md-4">
-            <a href="/artistprofile">
-                <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');"></div>
-                <p class="picture-title link">ARTIST NAME</p>
-            </a>
-        </div>
+        @endforeach
+
     </div>
 </div>
 @endsection

@@ -30,6 +30,7 @@ class PermissionSeeder extends Seeder
         $update_art         = Permission::create(['name' => 'update art']);
         $update_art_status  = Permission::create(['name' => 'update art-status']);
         $delete_art         = Permission::create(['name' => 'delete art']);
+        $import_at          = Permission::create(['name' => 'import art']);
 
 
         //TODO: Art Utilities
@@ -59,6 +60,14 @@ class PermissionSeeder extends Seeder
         $utilities = [
             'read site statistics'
         ];
+
+        $reservation = [
+            'read reservation', 'cancel reservation', 'sold reservation'
+        ];
+
+        foreach($reservation as $reserve) {
+            Permission::create(['name' => $reserve]);
+        }
 
         foreach($utilities as $utilities) {
             Permission::create(['name' => $utilities]);
@@ -100,6 +109,9 @@ class PermissionSeeder extends Seeder
 
         //TODO: General Utilities
         $admin->givePermissionTo('read site statistics');
+
+        //TODO: Reservation
+        $admin->givePermissionTo('read reservation', 'cancel reservation', 'sold reservation');
         /**
          * Curator
          */

@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -97,25 +93,20 @@ Route::resource('conversation', 'Help\Ticket\ConversationController');
 
 
 // TODO: Sub Musuem
+Route::get('/', 'Landing\LandingController@index')->name('welcome');
+
 Route::get('galleries', function() {
     return view('galleries');
-});
-
-Route::get('artworks', function() {
-    return view('artworks');
-});
-
-Route::get('artists', function() {
-    return view('artists');
 });
 
 Route::get('gallerydetails', function() {
     return view('gallerydetails');
 });
 
-Route::get('artistprofile', function() {
-    return view('artistprofile');
-});
+Route::get('artworks', 'Landing\LandingController@artwork')->name('landing.artworks');
+Route::get('artist', 'Landing\LandingController@artist')->name('landing.artists');
+Route::get('artist/profile/{user}', 'Landing\LandingController@artistProfile')->name('landing.artist.profile');
+
 
 Route::get('Bakaw', 'Museum\BakawController@index')->name('bakaw.index');
 Route::get('Balangay', 'Museum\BalangayController@index')->name('balangay.index');

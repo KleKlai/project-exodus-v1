@@ -41,13 +41,14 @@
 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/artworks">Artworks <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/artists">Artists</a>
+                        <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
                     </li>
                 </ul>
 
+                @guest
                 <ul class="navbar-nav">
                     @auth
                     <li class="nav-item">
@@ -66,6 +67,7 @@
                     @endif
                     @endauth
                 </ul>
+                @endguest
 
             </div>
         </nav>

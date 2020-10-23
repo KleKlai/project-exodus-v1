@@ -21,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $guarded = [
-        'id', 'uuid','created_at', 'updated_at', 'deleted_at',
+        'uuid','created_at', 'updated_at', 'deleted_at',
     ];
 
     /**
@@ -77,7 +77,7 @@ class User extends Authenticatable
 
     public function art()
     {
-        return $this->hasMany('App\Artwork');
+        return $this->hasMany('App\Model\Art');
     }
 
     public function watch()
