@@ -60,6 +60,14 @@ class PermissionSeeder extends Seeder
             'read site statistics'
         ];
 
+        $reservation = [
+            'read reservation', 'cancel reservation', 'sold reservation'
+        ];
+
+        foreach($reservation as $reserve) {
+            Permission::create(['name' => $reserve]);
+        }
+
         foreach($utilities as $utilities) {
             Permission::create(['name' => $utilities]);
         }
@@ -100,6 +108,9 @@ class PermissionSeeder extends Seeder
 
         //TODO: General Utilities
         $admin->givePermissionTo('read site statistics');
+
+        //TODO: Reservation
+        $admin->givePermissionTo('read reservation', 'cancel reservation', 'sold reservation');
         /**
          * Curator
          */

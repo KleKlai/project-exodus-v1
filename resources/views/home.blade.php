@@ -4,7 +4,7 @@
 
 <div class="container">
 
-    @can(['read util'])
+    @can(['read site statistics'])
         <div class="row mt-2">
             <div class="col-2">
                 <div class="card">

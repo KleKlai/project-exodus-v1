@@ -6,6 +6,7 @@
         + Artworks
     </a>
 
+    @can(['read reservation', 'cancel reservation', 'sold reservation'])
     <a href="{{ route('art.reserve.index') }}" class="btn btn-link">
         Reservation List
     </a>
