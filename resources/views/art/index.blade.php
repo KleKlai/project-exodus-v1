@@ -2,14 +2,17 @@
 
 @section('content')
 <div class="container">
-    <a href="{{ route('art.create') }}" class="btn btn-link">
-        + Artworks
-    </a>
+    @can('create art')
+        <a href="{{ route('art.create') }}" class="btn btn-link">
+            + Artworks
+        </a>
+    @endcan
 
     @can(['read reservation', 'cancel reservation', 'sold reservation'])
-    <a href="{{ route('art.reserve.index') }}" class="btn btn-link">
-        Reservation List
-    </a>
+        <a href="{{ route('art.reserve.index') }}" class="btn btn-link">
+            Reservation List
+        </a>
+    @endcan
 
     <button type="button" class="btn btn-link" data-toggle="modal" data-target="#artImport">
         Import
