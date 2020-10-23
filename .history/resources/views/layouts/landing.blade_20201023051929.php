@@ -27,7 +27,7 @@
         <div id="pattern">
             <img src="/images/spattern.png" alt="">
         </div>
-
+        
         <nav class="navbar navbar-expand-lg navbar-light mt-4 mb-5">
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
@@ -41,22 +41,14 @@
 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/artworks">Artworks <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
+                        <a class="nav-link" href="/artists">Artists</a>
                     </li>
                 </ul>
 
-                @guest
                 <ul class="navbar-nav">
-                    @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home">
-                            Home
-                        </a>
-                    </li>
-                    @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
@@ -65,9 +57,14 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">
+                            Home
+                        </a>
+                    </li>
                     @endauth
                 </ul>
-                @endguest
 
             </div>
         </nav>

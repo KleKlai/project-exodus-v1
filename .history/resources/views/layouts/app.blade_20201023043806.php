@@ -13,7 +13,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -35,7 +36,7 @@
         </div>
         @guest
         @else
-        <nav class="navbar navbar-expand-lg navbar-light mt-4 mb-5">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
@@ -47,12 +48,11 @@
                 @auth
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                        
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
-                        @can('admin')
-                        <li class="nav-item dropdown">=
+                        <li class="nav-item dropdown">
+
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component
                             </a>
@@ -65,12 +65,11 @@
                                 <a class="dropdown-item" href="{{ route('art.subject.index') }}">Subject</a>
                                 <a class="dropdown-item" href="{{ route('art.status.index') }}">Status</a>
                             </div>
-                        </li>
-
+                            </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Management
-                            </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Management
+                        </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="{{ route('user.index') }}">User</a>
                                 <a class="dropdown-item" href="{{ route('user.trash') }}">Garbage</a>
@@ -79,8 +78,7 @@
                                 <a class="dropdown-item" href="{{ route('export') }}">Export</a>
                             </div>
                         </li>
-                        @endcan
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="{{ route('ticket.index') }}">Support</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -113,7 +111,14 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

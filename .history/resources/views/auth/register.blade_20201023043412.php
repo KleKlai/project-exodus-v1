@@ -4,7 +4,7 @@
 <div class="container">
 <div class="row">
 
-    <div class="col-2">
+    <div class="col-2 d-none d-lg-block">
         <div class="col">
             <img src="/images/logo/logo.png" alt="Mindanao Art Logo">
         </div>
@@ -65,8 +65,8 @@
         </div>
     </div>
 
-    <div class="col-md-5">
-        <img class="picture" src="/images/image2.png" alt="Image2" style="width: 100%">
+    <div class="col-md-5 d-none d-lg-block">
+        <img class="picture" src="/images/image2.png" alt="Image2">
     </div>
 
 </div>

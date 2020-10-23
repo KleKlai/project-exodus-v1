@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@can('administrator')
 <div class="container">
 
     @can(['read util'])
@@ -58,10 +59,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
     @endcan
-</div>
+
 
 @include('services.home_modal')
 
