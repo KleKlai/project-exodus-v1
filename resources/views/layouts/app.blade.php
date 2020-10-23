@@ -24,6 +24,9 @@
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
     <!-- Flash Message CSS -->
     {{--  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  --}}
 </head>
@@ -51,7 +54,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('art.index') }}">Art</a>
                         </li>
+<<<<<<< HEAD
+
+=======
                         @canany(['read util','create util','delete util'])
+>>>>>>> 5b9880a475c4ef955cf39ef4368ecb2da37646e7
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Art Component
@@ -199,8 +206,14 @@
 
     @yield('script')
 
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" defer></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+    </script>
 
     <script>
         $('#flash-overlay-modal').modal();

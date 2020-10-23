@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card card-body">
         <h3>Reservation</h3>
-        <table class="table table-hover text-center">
+        <table id="myTable" class="table table-hover text-center">
             <thead>
                 <tr>
                     <th scope="col">#</th>

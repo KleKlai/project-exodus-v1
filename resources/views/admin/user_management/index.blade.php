@@ -11,7 +11,7 @@
     <div class="container mt-2">
         <div class="row">
             <div class="col">
-                <table class="table table-hover text-center">
+                <table id="myTable" class="table table-hover text-center">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>

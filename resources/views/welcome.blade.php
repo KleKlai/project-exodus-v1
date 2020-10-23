@@ -29,7 +29,7 @@
 
                     <div class="col-md-6">
                         <div class="module mid">
-                            <a href="#featuredArtworks" class="btn btn-link">
+                            <a href="#featuredArtworks" class="btn btn-link" style="width: 100%;">
                                 <img src="{{ asset('/images/insidelinkimage.png') }}" class="img-circle img-thumbnail">
                                 <h2>Artworks</h2>
                             </a>

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container">
 
     @can(['read site statistics'])
@@ -62,6 +61,22 @@
         </div>
     @endcan
 
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <div id="columns">
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
 @include('services.home_modal')
 

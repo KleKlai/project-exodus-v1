@@ -86,6 +86,102 @@
                 </div>
             </div>
         </div>
+         <!-- FOOTER -->
+         <footer class="footer-area footer--light">
+                <div class="footer-big">
+                    <!-- start .container -->
+                    <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
+                        <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                            <h4 class="footer-widget-title"><b>Mindanao Art</b></h4>
+                                <a href="#">Artworks</a>
+                                <br>
+                                <a href="#">Artists</a>
+                                <br>
+                                <a href="#">Museums</a>
+                                <br>
+                                <a href="#">Galleries</a>
+                                <br>
+                                <a href="#">Regional Groups</a>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                        </div>
+                        <!-- end /.col-md-3 -->
+
+                        <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                            <h4 class="footer-widget-title"><b>Museums</b></h4>
+                                <a href="#">Dabakan</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Lamin</a>
+                                <br>
+                                <a href="#">Kaban</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Balangay</a>
+                                <br>
+                                <a href="#">Kulintang</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Vinta</a>
+                                <br>
+                                <a href="#">Heart</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Bakaw</a>
+                                <br>
+                                <a href="#">Lullaby</a>
+                                <br>
+                                <a href="#">Tambol</a>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                        </div>
+
+                        <div class="col-md-2 col-sm-3">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                                <br>
+                                <a href="#">Artist Handbook</a>
+                                <br>
+                                <a href="#">User Guides</a>
+                                <br>
+                                <a href="#">About us</a>
+                                <br>
+                                <a href="#">FAQs</a>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                        </div>
+                        <!-- end /.col-md-3 -->
+
+                        <div class="col-md-4" style="text-align: right;">
+                            <div class="footer-widget">
+                                <div class="footer-menu footer-menu--1">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                    <a href="#">support@mindanaoart.com</a>
+                                    <br>
+                                    <h6><b>Copyright 2020. Mindanao Art</b></h6>
+                                </div>
+                                <!-- end /.footer-menu -->
+                            </div>
+                            <!-- Ends: .footer-widget -->
+                        </div>
+                        <!-- end /.col-md-3 -->
+                    </div>
+                    <!-- end /.row -->
+                    <!-- end /.container -->
+                </div>
+            </footer>
+            <!-- end /.FOOTER -->
 
 
 
