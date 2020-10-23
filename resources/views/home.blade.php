@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@can('administrator')
+
 <div class="container">
 
     @can(['read util'])
