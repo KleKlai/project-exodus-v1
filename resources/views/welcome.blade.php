@@ -60,7 +60,7 @@
             <div class="row">
                 @foreach($arts as $art)
                     <div class="col-md-4">
-                        <a href="">
+                        <a href="{{ route('art.show', $art) }}">
                             <div class="picture-container background-image" style="background-image: url('{{ url('storage/artwork/'.$art->attachment) }}');">
                                 <p>{{ $art->title }}</p>
                             </div>
@@ -76,15 +76,19 @@
             <div class="h-divider" id="featuredArtists"></div>
             <div class="title">ARTISTS</div>
             <div class="row">
-                @foreach($user as $artist)
+                @forelse($user as $artist)
                 <div class="col-md-4">
-                    <a href="">
+                    <a href="{{ route('landing.artist.profile', $artist) }}">
                         <div class="picture-container background-image" style="background-image: url('{{ url('storage/artwork/'.$artist->art->first()->attachment) }}');">
                         <p>{{ $artist->name }}</p>
                         </div>
                     </a>
                 </div>
-                @endforeach
+                @empty
+                <div class="col-md4">
+                    <h3>Insufficient Data</h3>
+                </div>
+                @endforelse
             </div>
             <div class="container mb-5" style="text-align: center;">
             <a href="/artists" type="button" class="btn-link">View All</a>

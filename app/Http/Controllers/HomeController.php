@@ -49,6 +49,10 @@ class HomeController extends Controller
 
         UserServices::assignMuseum(\Auth::user());
 
+        // if(\Auth::user()->hasRole('Standard')){
+        //     return redirect('/');
+        // }
+
         return view('home', compact(
             'user',
             'artwork',
