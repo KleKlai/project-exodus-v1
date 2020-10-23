@@ -77,7 +77,7 @@ class User extends Authenticatable
 
     public function art()
     {
-        return $this->hasMany('App\Artwork');
+        return $this->hasMany('App\Model\Art');
     }
 
     public function watch()

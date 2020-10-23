@@ -22,8 +22,8 @@
                     </figure>
                 </figure>
             </div>
-                            
-            {{-- Content --}}    
+
+            {{-- Content --}}
             <div class="container">
                 <div class="row featured">
 
@@ -58,48 +58,15 @@
 
             <div class="title">ARTWORKS</div>
             <div class="row">
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide1.png');">
-                            <p>ARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide2.png');">
-                            <p>THIS IS A VERY LONG VERY LOOONGARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide3.png');">
-                            <p>ARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide4.png');">
-                            <p>ARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide5.png');">
-                            <p>THIS IS A VERY LONG VERY LOOONGARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide1.png');">
-                            <p>ARTWORK TITLE HERE</p>
-                        </div>
-                    </a>
-                </div>
+                @foreach($arts as $art)
+                    <div class="col-md-4">
+                        <a href="">
+                            <div class="picture-container background-image" style="background-image: url('{{ url('storage/artwork/'.$art->attachment) }}');">
+                                <p>{{ $art->title }}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
             <div class="container" style="text-align: center;">
                 <a href="/artworks" type="button" class="btn-link">View All</a>
@@ -109,48 +76,15 @@
             <div class="h-divider" id="featuredArtists"></div>
             <div class="title">ARTISTS</div>
             <div class="row">
-            <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/covers/slide1.png');">
-                        <p>Artist name</p>
-                        </div>
-                    </a>
-                </div>
+                @foreach($user as $artist)
                 <div class="col-md-4">
                     <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
-                        <p>Artist name</p>
+                        <div class="picture-container background-image" style="background-image: url('{{ url('storage/artwork/'.$artist->art->first()->attachment) }}');">
+                        <p>{{ $artist->name }}</p>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
-                        <p>Artist name</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-53.jpg');">
-                        <p>Artist name</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-54.jpg');">
-                        <p>Artist name</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <div class="picture-container background-image" style="background-image: url('/images/TBH_RWSX-55.jpg');">
-                            <p>Artist name</p>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
             <div class="container mb-5" style="text-align: center;">
             <a href="/artists" type="button" class="btn-link">View All</a>
