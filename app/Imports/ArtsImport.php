@@ -32,7 +32,7 @@ class ArtsImport implements ToModel, WithHeadingRow
             'description'   => $row['description'],
             'attachment'    => $row['attachment'],
             'status'        => $row['status'],
-            'remark'        => $row['remarks'],
+            'remark'        => $row['remarks']
         ]);
     }
 }
