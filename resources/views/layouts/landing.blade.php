@@ -167,7 +167,7 @@
                                 <br>
                                 <br>
                                 <br>
-                                    <a href="#">support@mindanaoart.com</a>
+                                    <a href="#">secretariat@mindanaoart.com</a>
                                     <br>
                                     <h6><b>Copyright 2020. Mindanao Art</b></h6>
                                 </div>

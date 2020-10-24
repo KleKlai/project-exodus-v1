@@ -93,7 +93,10 @@ Route::resource('conversation', 'Help\Ticket\ConversationController');
 
 
 // TODO: Sub Musuem
-Route::get('/', 'Landing\LandingController@index')->name('welcome');
+// Route::get('/', 'Landing\LandingController@index')->name('welcome');
+Route::get('/', function () {
+    return view('welcome-temp');
+});
 
 Route::get('galleries', function() {
     return view('galleries');

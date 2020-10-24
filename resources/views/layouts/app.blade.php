@@ -91,7 +91,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('ticket.index') }}">Support</a>
                         </li>
-                        {{--  <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Museum
                             </a>
@@ -107,7 +107,7 @@
                                     <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
                                     <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
                                 </div>
-                            </li>  --}}
+                            </li>
                         </ul>
                     </div>
 
@@ -121,7 +121,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> f6ec9eb75ab210900d7aaeb2b0474bbc404bcdf5
                         @auth
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
