@@ -1,7 +1,7 @@
 @extends('layouts.plain')
 
 @section('content')
-    <div class="mb-4">
+    <div>
         <div id="pattern">
             <img src="/images/spattern.png" alt="">
         </div>
@@ -19,10 +19,10 @@
         </div>
 
         <div class="text-center font-bold text-2xl">
-            <h1 class="uppercase text-4xl">Catalogs</h1>
+            <h1 class="uppercase text-4xl">Catalogue</h1>
             <div class="leading-7">
-                <div>Download Artwork Catalogs to view Artwork listings</div>
-                <div>and details in six different Galleries of Davao.</div>
+                <div>Download artwork catalogs to view artwork listings</div>
+                <div>and details of six different galleries in the Davao Region.</div>
             </div>
             <a href="#" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true">Download Catalog</a>
         </div>
@@ -39,28 +39,27 @@
                 Mindanao Art 2020 speakers
             </div>
             <div class="container mt-3">
-
                 <div class="video-container mb-4">
-                    <iframe width="904" height="509" src="https://www.youtube.com/embed/r3TZxgBmEZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/r3TZxgBmEZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div class="video-container mb-4">
-                    <iframe width="904" height="509" src="https://www.youtube.com/embed/m47vH3bhCsI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/m47vH3bhCsI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div class="video-container mb-4">
-                    <iframe width="904" height="599" src="https://www.youtube.com/embed/WyraGm8_5js" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/WyraGm8_5js" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div class="video-container mb-4">
-                    <iframe width="904" height="599" src="https://www.youtube.com/embed/rV6Wz_6osTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/rV6Wz_6osTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid" style="background-color: lightgray;">
-            <div class="container p-4 flex">
-                <h6><b>Copyright 2020. Mindanao Art</b></h6>
+        <div class="p-4 flex bg-gray-400">
+            <div class="container text-right font-bold">
+                Copyright 2020. Mindanao Art
             </div>
         </div>
     </div>
