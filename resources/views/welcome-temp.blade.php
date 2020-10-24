@@ -1,7 +1,7 @@
 @extends('layouts.plain')
 
 @section('content')
-    <div class="mb-4">
+    <div>
         <div id="pattern">
             <img src="/images/spattern.png" alt="">
         </div>
@@ -59,11 +59,28 @@
                         <source src="/videos/baste_speech.mp4" type="video/mp4">
                     </video>
                 </div> --}}
+                <div class="video-container mb-4">
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/r3TZxgBmEZw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-container mb-4">
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/m47vH3bhCsI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-container mb-4">
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/WyraGm8_5js" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-container mb-4">
+                    <iframe width="535" height="307" src="https://www.youtube.com/embed/rV6Wz_6osTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 
-        <div class="container p-4 flex">
-            Copyright 2020. Mindanao Art
+        <div class="p-4 flex bg-gray-400">
+            <div class="container text-right font-bold">
+                Copyright 2020. Mindanao Art
+            </div>
         </div>
     </div>
 @endsection
