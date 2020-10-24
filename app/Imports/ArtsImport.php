@@ -3,6 +3,7 @@
 namespace App\Imports;
 
 use App\Model\Art;
+use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
