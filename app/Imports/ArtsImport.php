@@ -3,7 +3,7 @@
 namespace App\Imports;
 
 use App\Model\Art;
-use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 class ArtsImport implements ToCollection, WithHeadingRow
