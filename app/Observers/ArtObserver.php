@@ -22,7 +22,7 @@ class ArtObserver
 
         // Todo: Make Notification
         $message = Auth::user()->name . ' submitted art ' . $art->name;
-        Notify::Admin(Auth::user()->name, $message); //Notify Admin for submission
+        // Notify::Admin(Auth::user()->name, $message); //Notify Admin for submission
     }
 
     /**

@@ -35,7 +35,7 @@ class ArtsImport implements ToCollection, WithHeadingRow
                 'description'   => $row['description'],
                 'attachment'    => $row['attachment'],
                 'status'        => $row['status'],
-                'remark'        => $row['remarks']
+                'remark'        => $row['remarks'],
             ]);
         }
     }
