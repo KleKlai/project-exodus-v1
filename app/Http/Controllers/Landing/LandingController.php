@@ -36,6 +36,7 @@ class LandingController extends Controller
 
     public function artistProfile(User $user)
     {
+
         $art = Art::where('user_id', $user->id)->get();
 
         return view('artistprofile', compact('art', 'user'));
