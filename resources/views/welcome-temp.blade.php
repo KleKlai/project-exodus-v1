@@ -7,7 +7,7 @@
         </div>
 
         <div class="container flex space-x-10 my-4 justify-center">
-            <a href="#catalogs" class="link text-center leading-4">Download Catalogs</a>
+            <a href="#catalogs" class="link text-center leading-4">Download Catalogue</a>
             <a href="#appointment" class="link text-center leading-4">Schedule Appointment</a>
             <a href="#speakers" class="link text-center leading-4">Watch Videos</a>
         </div>
@@ -21,7 +21,7 @@
         <div class="text-center font-bold text-2xl">
             <h1 class="uppercase text-4xl">Catalogue</h1>
             <div class="leading-7">
-                <div>Download artwork catalogs to view artwork listings</div>
+                <div>Download artwork catalogue to view artwork listings</div>
                 <div>and details of six different galleries in the Davao Region.</div>
             </div>
             <a href="#" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true">Download Catalog</a>
