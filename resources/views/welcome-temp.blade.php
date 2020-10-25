@@ -30,7 +30,7 @@
         <div class="mt-5" id="appointment">
             <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                 <div class="text-4xl">Visit Mindanao Art 2020 Exhibit via Appointment.</div>
-                <a href="#" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true">Schedule Appointment</a>
+                <a href="/appointment" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true">Schedule Appointment</a>
             </div>
         </div>
 
