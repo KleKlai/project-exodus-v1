@@ -40,7 +40,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-8">
                              <label class="text-muted" for="name">Artwork Title:</label>
-                             <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->name }}</h2>
+                             <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->title }}</h2>
 
                             <label class="text-muted"for="name">Artist:</label>
                             <a href="{{ route('user.show', $art->user->uuid) }}">
