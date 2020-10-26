@@ -98,6 +98,10 @@ Route::get('/', function () {
     return view('welcome-temp');
 });
 
+Route::get('/appointment', function () {
+    return view('appointment');
+});
+
 Route::get('galleries', function() {
     return view('galleries');
 });
