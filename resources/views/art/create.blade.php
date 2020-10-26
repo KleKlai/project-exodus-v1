@@ -204,9 +204,15 @@
                     @enderror
                 </div>
 
-                <div class="mt-2">
-                    <a href="{{ url()->previous() }}" class="btn border-none">Cancel</a>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                <div class="mt-2 button-group">
+                    <a href="/art" class="btn border-none">Cancel</a>
+                    <button type="submit" class="btn btn-primary button-one-submit">
+                        Save
+                    </button>
+                </div>
+
+                <div class="loading mt-2 alert alert-success" role="alert">
+                    <i class="spinner fa fa-spinner fa-spin"></i> Saving... Please Wait.
                 </div>
             </div>
 

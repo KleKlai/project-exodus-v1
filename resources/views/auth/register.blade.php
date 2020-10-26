@@ -4,22 +4,12 @@
 <div class="container">
 
     <div class="row">
-
-        <div class="col-2">
-            <div class="col mb-5">
-                <img src="{{ asset('/images/logo/logo.png')}}" alt="Mindanao Art Logo">
-            </div>
-        </div>
+        <div class="col-lg-2"></div>
 
 
-        <div class="col-md-5">
+        <div class="col-lg-4">
 
             <h2 class="mb-5">
-                <a class="back" href="/">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                    </svg>
-                </a>
                 Register
             </h2>
 
@@ -61,16 +51,17 @@
                         <input id="password-confirm" type="password" class="mininput" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
                     </div>
 
-                    <button type="submit">{{ __('SUBMIT >>>') }}
-                    </button>
+                    <button class="mt-3" type="submit">{{ __('SUBMIT') }}</button>
+                    <div>Already have an account? <a href="/login" class="link">Login</a></div>
                 </form>
             </div>
         </div>
 
 
-        <div class="col-md-5">
+        <div class="col-lg-4 d-none d-lg-block">
             <img class="picture" src="/images/image2.png" alt="Image2" style="width: 100%">
         </div>
+        <div class="col-lg-2"></div>
 
     </div>
 
