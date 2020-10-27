@@ -62,7 +62,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('art.index') }}">Artists</a>
+                            <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -81,10 +81,6 @@
                                 <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
                                 <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
                             </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ticket.index') }}">Support</a>
                         </li>
 
                         @canany(['read util','create util','delete util'])
@@ -227,15 +223,9 @@
                         <div class="footer-widget">
                             <div class="footer-menu footer-menu--1">
                             <h4 class="footer-widget-title"><b>Mindanao Art</b></h4>
-                                <a href="#">Artworks</a>
+                                <a class="link" href="{{ route('art.index') }}">Artworks</a>
                                 <br>
-                                <a href="#">Artists</a>
-                                <br>
-                                <a href="#">Museums</a>
-                                <br>
-                                <a href="#">Galleries</a>
-                                <br>
-                                <a href="#">Regional Groups</a>
+                                <a class="link" href="{{ route('landing.artists') }}">Artists</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -247,25 +237,25 @@
                         <div class="footer-widget">
                             <div class="footer-menu footer-menu--1">
                             <h4 class="footer-widget-title"><b>Museums</b></h4>
-                                <a href="#">Dabakan</a>
+                                <a class="link" href="{{ route('dabakan.index') }}">Dabakan</a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#">Lamin</a>
+                                <a class="link" href="{{ route('lamin.index') }}">Lamin</a>
                                 <br>
-                                <a href="#">Kaban</a>
+                                <a class="link" href="{{ route('kaban.index') }}">Kaban</a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#">Balangay</a>
+                                <a class="link" href="{{ route('balangay.index') }}">Balangay</a>
                                 <br>
-                                <a href="#">Kulintang</a>
+                                <a class="link" href="{{ route('kulintang.index') }}">Kulintang</a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#">Vinta</a>
+                                <a class="link" href="{{ route('vinta.index') }}">Vinta</a>
                                 <br>
-                                <a href="#">Heart</a>
+                                <a class="link" href="{{ route('heart.index') }}">Heart</a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#">Bakaw</a>
+                                <a class="link" href="{{ route('bakaw.index') }}">Bakaw</a>
                                 <br>
-                                <a href="#">Lullaby</a>
+                                <a class="link" href="{{ route('lullaby.index') }}">Lullaby</a>
                                 <br>
-                                <a href="#">Tambol</a>
+                                <a class="link" href="{{ route('tambol.index') }}">Tambol</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -276,13 +266,15 @@
                         <div class="footer-widget">
                             <div class="footer-menu footer-menu--1">
                                 <br>
-                                <a href="#">Artist Handbook</a>
+                                <a class="link" href="#">Artist Handbook</a>
                                 <br>
-                                <a href="#">User Guides</a>
+                                <a class="link" href="#">User Guides</a>
                                 <br>
-                                <a href="#">About us</a>
+                                <a class="link" href="#">About us</a>
                                 <br>
-                                <a href="#">FAQs</a>
+                                <a class="link" href="{{ route('ticket.index') }}">Support</a>
+                                <br>
+                                <a class="link" href="/faqs">FAQs</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -299,7 +291,7 @@
                                 <br>
                                 <br>
                                 <br>
-                                    <a href="#">secretariat@mindanaoart.com</a>
+                                    secretariat@mindanaoart.com
                                     <br>
                                     <h6><b>Copyright 2020. Mindanao Art</b></h6>
                                 </div>

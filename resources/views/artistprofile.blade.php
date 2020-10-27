@@ -12,7 +12,7 @@
             @endforeach
             <p>{{ $user->bio ?? ''}}</p>
 
-            <div class="h-divider"><div>
+            <div class="h-divider"></div>
 
             <div class="title">ARTWORKS</div>
             <div id="columns">

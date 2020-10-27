@@ -31,33 +31,6 @@
     @endforeach
 
 
-    <table id="myTable" class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Category</th>
-                <th scope="col">Status</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-
-                @forelse($data as $data)
-                    <tr>
-                        <td>{{ $data->title }}</td>
-                        <td>{{ $data->category }}</td>
-                        <td>{{ $data->status }}</td>
-                        <td>
-                            <a class="btn btn-info" href="{{ route('art.show', $data) }}">view</a>
-                        </td>
-                    </tr>
-                @empty
-                    <tr>
-                        <td colspan="12" class="text-center">No Data</td>
-                    </tr>
-                @endforelse
-        </tbody>
-    </table>
 
 </div>
 

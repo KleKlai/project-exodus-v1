@@ -25,6 +25,7 @@
     </head>
     <body>
         {{-- Navigation --}}
+
         <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/BakawCover.png')">
 
             <div class="nav-container">
@@ -67,6 +68,8 @@
                     </div>
                 </nav>
             </div>
+
+
         </div>
 
 
