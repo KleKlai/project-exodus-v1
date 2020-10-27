@@ -31,7 +31,7 @@ class ArtController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth', ['only' => ['create', 'store', 'edit', 'update','delete']]);
+        $this->middleware('auth', ['only' => ['index', 'create', 'store', 'edit', 'update','delete']]);
 
         $this->middleware('permission:create art', ['only' => ['create', 'store']]);
 
