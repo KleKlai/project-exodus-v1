@@ -25,8 +25,9 @@
     </head>
     <body>
         {{-- Navigation --}}
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/galleries/thebauhaus.png')">
-            
+
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/BakawCover.png')">
+
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.25);">
                     <a class="navbar-brand" href="#">
@@ -67,6 +68,8 @@
                     </div>
                 </nav>
             </div>
+
+
         </div>
 
 

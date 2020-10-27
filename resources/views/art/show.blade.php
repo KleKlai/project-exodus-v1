@@ -7,10 +7,11 @@
             <img class="picture mb-1 mx-auto d-block artwork-picture" src="{{ url('storage/artwork/'.$art->attachment) }}" alt="art Picture" style="">
         </div>
         <div class="col">
-
-            <div class="btn btn-primary btn-lg  btn-block mb-2">
-                {{ strtoupper($art->status) }}
-            </div>
+            @canany(['update art', 'update art-status', 'delete art'])
+                <div class="btn btn-primary btn-lg  btn-block mb-2">
+                    {{ strtoupper($art->status) }}
+                </div>
+            @endcan
 
             <div class="card">
                 <div class="card-header">
@@ -53,7 +54,7 @@
 
                         <div class="form-group col-md-4">
                              <label class="text-muted" for="height">Dimension:</label>
-                             <h5 class="text-justify" style="padding-left: 10px;">{{ $art->height .' x '.$art->width.' x '.$art->depth }}</h5>
+                             <h5 class="text-justify" style="padding-left: 10px;">{{ $art->height .'cm x '.$art->width.'cm x '.$art->depth .'cm'}}</h5>
                             </div>
                     </div>
                     <div class="form-group">
@@ -79,12 +80,12 @@
                                 Reserve
                             </a>
                         @elseif($art->reserve->user_id == Auth::user()->id)
-                            <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-success btn-lg float-right">
+                            <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-danger btn-lg float-right">
                                 Cancel Reservation
                             </a>
                         @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
-                            <a href="javascript:void();" class="btn btn-success float-right disabled">
-                                Reserve
+                            <a href="javascript:void();" class="btn btn-warning float-right disabled">
+                                Reserved
                             </a>
                         @endif
                     @endauth

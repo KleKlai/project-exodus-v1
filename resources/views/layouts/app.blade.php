@@ -27,6 +27,9 @@
     <!-- Datatables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"rel="stylesheet"/>
+
     <!-- Flash Message CSS -->
     {{--  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  --}}
 </head>
@@ -37,20 +40,47 @@
             <img src="/images/spattern.png" alt="">
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light mt-4 mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light mt-4">
             <div class="container">
+
                 <a class="navbar-brand" href="/">
                     <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('art.index') }}">Art</a>
+                            <a class="nav-link" href="{{ route('art.index') }}">Artworks</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Museum
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
+                                <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
+                                <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
+                                <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
+                                <a class="dropdown-item" href="{{ route('lullaby.index') }}">Lullaby</a>
+                                <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
+                                <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
+                                <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
+                                <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
+                            </div>
                         </li>
 
                         @canany(['read util','create util','delete util'])
@@ -70,12 +100,13 @@
                         </li>
                         @endcan
 
-
                         @canany(['read user', 'update user', 'delete user', 'recover user'])
                             <li class="nav-item dropdown">
+
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Management
                                 </a>
+
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="{{ route('user.index') }}">User</a>
                                     @can('recover user')
@@ -85,36 +116,9 @@
                                     <a class="dropdown-item" href="{{ route('artist.category.index') }}">Profile Category</a>
                                     <a class="dropdown-item" href="{{ route('export') }}">Export</a>
                                 </div>
+
                             </li>
                         @endcan
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ticket.index') }}">Support</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Museum
-                            </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
-                                    <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
-                                    <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
-                                    <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
-                                    <a class="dropdown-item" href="{{ route('lullaby.index') }}">Lullaby</a>
-                                    <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
-                                    <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
-                                    <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
-                                    <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
-                                    <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
 
                     </ul>
 
@@ -173,6 +177,15 @@
                                     @endif
                                 </div>
                             </li>
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
                         @endauth
                     </ul>
                 </div>
@@ -199,6 +212,99 @@
 
             @yield('content')
         </main>
+
+
+
+         <footer class="footer-area footer--light">
+                <div class="footer-big container ">
+                    <!-- start .container -->
+                    <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
+                        <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                            <h4 class="footer-widget-title"><b>Mindanao Art</b></h4>
+                                <a class="link" href="{{ route('art.index') }}">Artworks</a>
+                                <br>
+                                <a class="link" href="{{ route('landing.artists') }}">Artists</a>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                        </div>
+                        <!-- end /.col-md-3 -->
+
+                        <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                            <h4 class="footer-widget-title"><b>Museums</b></h4>
+                                <a class="link" href="{{ route('dabakan.index') }}">Dabakan</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="link" href="{{ route('lamin.index') }}">Lamin</a>
+                                <br>
+                                <a class="link" href="{{ route('kaban.index') }}">Kaban</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="link" href="{{ route('balangay.index') }}">Balangay</a>
+                                <br>
+                                <a class="link" href="{{ route('kulintang.index') }}">Kulintang</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="link" href="{{ route('vinta.index') }}">Vinta</a>
+                                <br>
+                                <a class="link" href="{{ route('heart.index') }}">Heart</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="link" href="{{ route('bakaw.index') }}">Bakaw</a>
+                                <br>
+                                <a class="link" href="{{ route('lullaby.index') }}">Lullaby</a>
+                                <br>
+                                <a class="link" href="{{ route('tambol.index') }}">Tambol</a>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                        </div>
+
+                        <div class="col-md-2 col-sm-3">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                                <br>
+                                <a class="link" href="#">Artist Handbook</a>
+                                <br>
+                                <a class="link" href="#">User Guides</a>
+                                <br>
+                                <a class="link" href="#">About us</a>
+                                <br>
+                                <a class="link" href="{{ route('ticket.index') }}">Support</a>
+                                <br>
+                                <a class="link" href="/faqs">FAQs</a>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                        </div>
+                        <!-- end /.col-md-3 -->
+
+                        <div class="col-md-4" style="text-align: right;">
+                            <div class="footer-widget">
+                                <div class="footer-menu footer-menu--1">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                    secretariat@mindanaoart.com
+                                    <br>
+                                    <h6><b>Copyright 2020. Mindanao Art</b></h6>
+                                </div>
+                                <!-- end /.footer-menu -->
+                            </div>
+                            <!-- Ends: .footer-widget -->
+                        </div>
+                        <!-- end /.col-md-3 -->
+                    </div>
+                    <!-- end /.row -->
+                    <!-- end /.container -->
+                </div>
+            </footer>
     </div>
 
     @yield('script')
@@ -210,6 +316,17 @@
         $(document).ready( function () {
             $('#myTable').DataTable();
         } );
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imageView')
+                        .attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
 
     <script>

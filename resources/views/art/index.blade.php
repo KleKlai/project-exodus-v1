@@ -30,6 +30,8 @@
         </a>
     @endforeach
 
+
+
 </div>
 
 @include('services.art_management_modal')
