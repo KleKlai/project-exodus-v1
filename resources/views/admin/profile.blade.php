@@ -71,16 +71,18 @@
                     @enderror
                 </div>
             </div>
-            <div class="form-group col-md-6">
-                <label for="inputAddress">Gallery</label>
-                <select name="category" class="form-control" name="category"
-                {{ (!empty($user->category)) ? 'disabled' : ''}}>
-                    <option value="">-</option>
-                    @foreach($gallery as $gallery)
-                        <option value="{{ $gallery->name }}" {{ ($user->category == $gallery->name) ? 'selected' : '' }}>{{ $gallery->name }}</option>
-                    @endforeach
-                </select>
-            </div>
+            @role('Artist')
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Gallery</label>
+                    <select name="category" class="form-control" name="category"
+                    {{ (!empty($user->category)) ? 'disabled' : ''}}>
+                        <option value="">-</option>
+                        @foreach($gallery as $gallery)
+                            <option value="{{ $gallery->name }}" {{ ($user->category == $gallery->name) ? 'selected' : '' }}>{{ $gallery->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            @endrole
         </div>
         <div class="form-group">
             <label for="inputAddress2">Biography</label>

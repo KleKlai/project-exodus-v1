@@ -9,6 +9,7 @@ use App\Http\Requests\ArtStoreRequest;
 use App\Model\Art\Status;
 use App\Model\Art\Watch;
 use App\Model\Art\Reserve;
+use App\Services\UserServices;
 use Log;
 use DB;
 use Auth;
@@ -46,7 +47,16 @@ class ArtController extends Controller
      */
     public function index()
     {
-        $data = Art::with('user')->orderBy('created_at', 'DESC')->get();
+        if(Auth::user()->hasRole(['Admin', 'Super-admin', 'Curator']))
+        {
+            $data = Art::orderBy('created_at', 'DESC')->get();
+
+        } else {
+
+            UserServices::assignMuseum(\Auth::user());
+
+            $data = Art::where('user_id', Auth::user()->id)->orderBy('created_at', 'DESC')->get();
+        }
 
         return view('art.index', compact('data'));
     }

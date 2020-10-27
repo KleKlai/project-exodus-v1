@@ -9,11 +9,6 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-//Register Component
-use App\Model\Register\Gallery;
-use App\Model\Register\Regional;
-use App\Model\Register\Special;
-
 //Roles and Permission
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
@@ -85,4 +80,5 @@ class RegisterController extends Controller
 
         return $user;
     }
+
 }

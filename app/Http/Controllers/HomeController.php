@@ -47,12 +47,6 @@ class HomeController extends Controller
         //Remove Element in Array
         $table = \array_diff($table, ["password", "remember_token"]);
 
-        UserServices::assignMuseum(\Auth::user());
-
-        // if(\Auth::user()->hasRole('Standard')){
-        //     return redirect('/');
-        // }
-
         return view('home', compact(
             'user',
             'artwork',
