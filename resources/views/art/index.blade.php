@@ -41,7 +41,7 @@
                                 <td>{{ $data->status }}</td>
                                 <td>{{ $data->category }}</td>
                                 <td>
-                                    <a href="{{ route('user.show', $data) }}"><i class="fa fa-angle-right"></i></a>
+                                    <a href="{{ route('art.show', $data) }}"><i class="fa fa-angle-right"></i></a>
                                 </td>
                             </tr>
                         @empty
