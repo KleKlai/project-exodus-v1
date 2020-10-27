@@ -39,7 +39,7 @@
                 </button>
             </div>
 
-            <form method="POST" action="{{ url('art.status', $art ?? '') }}">
+            <form method="POST" action="{{ url('art/status', $art ?? '') }}">
                 @csrf
                 @method('PATCH')
 

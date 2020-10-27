@@ -23,7 +23,7 @@ class ReserveController extends Controller
 
     public function index()
     {
-        $data = Reserve::with(['art', 'user'])->where('sold', false)->get();
+        $data = Reserve::with(['art', 'user'])->where('sold', null)->get();
 
         return view('art.reserve', compact('data'));
     }

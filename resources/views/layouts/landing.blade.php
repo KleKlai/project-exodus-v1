@@ -51,12 +51,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+                    @auth
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('art.index') }}">Artworks</a>
-                        </li>
+                        @can('read art')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('art.index') }}">Artworks</a>
+                            </li>
+                        @endcan
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
@@ -118,6 +121,7 @@
                         @endcan
 
                     </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
