@@ -73,19 +73,26 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    @if(empty($art->reserve))
+                    @auth
+                        @if(empty($art->reserve))
+                            <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn-lg" style="float:right;">
+                                Reserve
+                            </a>
+                        @elseif($art->reserve->user_id == Auth::user()->id)
+                            <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-success btn-lg float-right">
+                                Cancel Reservation
+                            </a>
+                        @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
+                            <a href="javascript:void();" class="btn btn-success float-right disabled">
+                                Reserve
+                            </a>
+                        @endif
+                    @endauth
+                    @guest
                         <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn-lg" style="float:right;">
                             Reserve
                         </a>
-                    @elseif($art->reserve->user_id == Auth::user()->id)
-                        <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-success btn-lg float-right">
-                            Cancel Reservation
-                        </a>
-                    @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
-                        <a href="javascript:void();" class="btn btn-success float-right disabled">
-                            Reserve
-                        </a>
-                    @endif
+                    @endguest
                 </div>
             </div>
 
@@ -115,7 +122,7 @@
         <div id="columns">
             @foreach($recommended_art as $artwork)
                 <figure>
-                    <a href=""><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
+                    <a href="{{ route('art.show', $artwork) }}"><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
                     <figcaption>
                         <p>{{ $artwork->name }}</p>
                         <div>₱{{ number_format($artwork->price, 2) }}</div>

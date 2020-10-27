@@ -61,7 +61,13 @@
         </div>
     @endcan
 
-    </div>
+    <figure>
+        <a href=""><img src="images/image1.png"></a>
+        <figcaption>
+            <p>test</p>
+            <div>₱{{ number_format(10000, 2) }}</div>
+        </figcaption>
+    </figure>
 
 </div>
 
