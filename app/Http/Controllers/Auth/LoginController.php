@@ -43,14 +43,14 @@ class LoginController extends Controller
 
         if(\Auth::user()->hasAnyRole(['Super-admin', 'Admin']))
         {
-            return redirect()->route('home');
+            return '/home';
 
         } else if(\Auth::user()->hasAnyRole(['Curator', 'Artist']))
         {
-            return redirect()->route('art.index');
+            return '/art';
 
         } else {
-            return redirect()->route('/');
+            return '/';
         }
     }
 }

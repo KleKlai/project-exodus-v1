@@ -61,29 +61,17 @@
         </div>
     @endcan
 
-    <figure>
-        <a href=""><img src="images/image1.png"></a>
-        <figcaption>
-            <p>test</p>
-            <div>₱{{ number_format(10000, 2) }}</div>
-        </figcaption>
-    </figure>
-
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-
-            <div id="columns">
-
-
-            </div>
-
-        </div>
-    </div>
+<div id="columns">
+    @foreach($artCollection as $artwork)
+        <figure>
+            <a href="{{ route('art.show', $artwork) }}"><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
+            <figcaption>
+                <p>{{ $artwork->title }}</p>
+            </figcaption>
+        </figure>
+    @endforeach
 </div>
-
-@include('services.home_modal')
 
 @endsection

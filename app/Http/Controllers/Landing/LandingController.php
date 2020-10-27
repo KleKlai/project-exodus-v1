@@ -29,7 +29,7 @@ class LandingController extends Controller
 
     public function artist()
     {
-        $user   = User::with('art')->role('Artist')->get();
+        $user   = User::with('art')->has('art')->role('Artist')->latest()->get();
 
         return view('artists', compact('user'));
     }

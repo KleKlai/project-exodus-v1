@@ -44,7 +44,7 @@
                              <h2 class="text-justify" style="padding-left: 10px; font-weight: bold;">{{ $art->title }}</h2>
 
                             <label class="text-muted"for="name">Artist:</label>
-                            <a href="{{ route('user.show', $art->user->uuid) }}">
+                            <a href="{{ route('landing.artist.profile', $art->user) }}">
                                 <h5 class="text-justify" style="padding-left: 10px;">{{ $art->user->name }}</h5>
                             </a>
                         </div>
@@ -125,7 +125,7 @@
                 <figure>
                     <a href="{{ route('art.show', $artwork) }}"><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
                     <figcaption>
-                        <p>{{ $artwork->name }}</p>
+                        <p>{{ $artwork->title }}</p>
                         <div>₱{{ number_format($artwork->price, 2) }}</div>
                     </figcaption>
                 </figure>

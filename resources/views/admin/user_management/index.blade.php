@@ -41,7 +41,7 @@
                                         @endforeach
                                     </td>
                                     <td>
-                                        <a href="{{ route('user.show', $data) }}"> <i class="fa fa-id-card-o"></i> </a>
+                                        <a href="{{ route('user.show', $data) }}"><i class="fa fa-id-card"></i> </a>
                                     </td>
                                 </tr>
                             @empty

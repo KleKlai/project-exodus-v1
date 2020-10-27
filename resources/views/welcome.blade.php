@@ -2,26 +2,6 @@
 
 
 @section('landing')
-    {{-- Cover --}}
-    {{-- <div id="captioned-gallery">
-        <figure class="slider row">
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover1.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover2.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover3.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover4.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover5.jpg') }}" class="img-fluid" alt>
-            </figure>
-        </figure>
-    </div> --}}
     <img src="/images/covers/cover6.png" alt="cover" class="w-screen">
 
     <div class="container mt-5 mb-4 px-24" id="catalogs">
@@ -86,7 +66,7 @@
             @endforelse
         </div>
         <div class="container mb-5" style="text-align: center;">
-        <a href="/artists" type="button" class="btn-link">View All</a>
+        <a href="{{ route('landing.artists') }}" type="button" class="btn-link">View All</a>
         </div>
     </div>
 

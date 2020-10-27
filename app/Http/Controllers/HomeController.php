@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -42,19 +42,16 @@ class HomeController extends Controller
 
         $gallery    = Type::select('name')->get();
 
-        $table = \DB::getSchemaBuilder()->getColumnListing('users');
-
-        //Remove Element in Array
-        $table = \array_diff($table, ["password", "remember_token"]);
+        $artCollection    = Art::all();
 
         return view('home', compact(
             'user',
             'artwork',
             'ticket',
-            'table',
             'gallery',
             'reserve',
-            'sold'
+            'sold',
+            'artCollection'
         ));
     }
 }

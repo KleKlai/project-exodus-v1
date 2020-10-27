@@ -54,73 +54,75 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav">
+                    @auth
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('art.index') }}">Artworks</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Museum
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
-                                <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
-                                <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
-                                <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
-                                <a class="dropdown-item" href="{{ route('lullaby.index') }}">Lullaby</a>
-                                <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
-                                <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
-                                <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
-                                <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
-                                <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
-                            </div>
-                        </li>
-
-                        @canany(['read util','create util','delete util'])
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Art Component
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{ route('art.category.index') }}">Category</a>
-                                <a class="dropdown-item" href="{{ route('art.material.index') }}">Material</a>
-                                <a class="dropdown-item" href="{{ route('art.medium.index') }}">Medium</a>
-                                <a class="dropdown-item" href="{{ route('art.size.index') }}">Size</a>
-                                <a class="dropdown-item" href="{{ route('art.style.index') }}">Style</a>
-                                <a class="dropdown-item" href="{{ route('art.subject.index') }}">Subject</a>
-                                <a class="dropdown-item" href="{{ route('art.status.index') }}">Status</a>
-                            </div>
-                        </li>
-                        @endcan
-
-                        @canany(['read user', 'update user', 'delete user', 'recover user'])
-                            <li class="nav-item dropdown">
-
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Management
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ route('user.index') }}">User</a>
-                                    @can('recover user')
-                                        <a class="dropdown-item" href="{{ route('user.trash') }}">Garbage</a>
-                                    @endcan
-                                    <a class="dropdown-item" href="{{ url('syslog') }}">System Log</a>
-                                    <a class="dropdown-item" href="{{ route('artist.category.index') }}">Profile Category</a>
-                                    <a class="dropdown-item" href="{{ route('export') }}">Export</a>
-                                </div>
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('art.index') }}">Artworks</a>
                             </li>
-                        @endcan
 
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Museum
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
+                                    <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
+                                    <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
+                                    <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
+                                    <a class="dropdown-item" href="{{ route('lullaby.index') }}">Lullaby</a>
+                                    <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
+                                    <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
+                                    <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
+                                    <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
+                                    <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
+                                </div>
+                            </li>
+
+                            @canany(['read util','create util','delete util'])
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Art Component
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('art.category.index') }}">Category</a>
+                                    <a class="dropdown-item" href="{{ route('art.material.index') }}">Material</a>
+                                    <a class="dropdown-item" href="{{ route('art.medium.index') }}">Medium</a>
+                                    <a class="dropdown-item" href="{{ route('art.size.index') }}">Size</a>
+                                    <a class="dropdown-item" href="{{ route('art.style.index') }}">Style</a>
+                                    <a class="dropdown-item" href="{{ route('art.subject.index') }}">Subject</a>
+                                    <a class="dropdown-item" href="{{ route('art.status.index') }}">Status</a>
+                                </div>
+                            </li>
+                            @endcan
+
+                            @canany(['read user', 'update user', 'delete user', 'recover user'])
+                                <li class="nav-item dropdown">
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Management
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="{{ route('user.index') }}">User</a>
+                                        @can('recover user')
+                                            <a class="dropdown-item" href="{{ route('user.trash') }}">Garbage</a>
+                                        @endcan
+                                        <a class="dropdown-item" href="{{ url('syslog') }}">System Log</a>
+                                        <a class="dropdown-item" href="{{ route('artist.category.index') }}">Profile Category</a>
+                                        <a class="dropdown-item" href="{{ route('export') }}">Export</a>
+                                    </div>
+
+                                </li>
+                            @endcan
+
+                        </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -189,6 +191,7 @@
                         @endauth
                     </ul>
                 </div>
+
             </div>
         </nav>
 
