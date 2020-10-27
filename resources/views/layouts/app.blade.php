@@ -58,9 +58,11 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav">
 
+                            @can('read art')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('art.index') }}">Artworks</a>
                             </li>
+                            @endcan
 
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
