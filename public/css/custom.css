@@ -381,12 +381,6 @@ figure.slider figure figcaption {
 
 /* REGISTRATION */
 
-.form-check-input {
-    position: absolute;
-    margin-top: 0.3rem;
-    margin-left: -7.2rem;
-}
-
 .mininput {
     padding: 5px;
     width: 100%;

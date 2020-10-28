@@ -21,38 +21,34 @@
         </button>
     @endcan
 
-    <div class="row">
-        <div class="col">
-            <table id="myTable" class="table table-hover text-center">
-                <thead>
+    <table id="myTable" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+                <th scope="col">Category</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+                @forelse($data as $key => $data)
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Category</th>
-                        <th scope="col"></th>
+                        <td>{{ $key+1 }}</td>
+                        <td>{{ $data->title }}</td>
+                        <td>{{ $data->status }}</td>
+                        <td>{{ $data->category }}</td>
+                        <td>
+                            <a href="{{ route('art.show', $data) }}"><i class="fa fa-angle-right"></i></a>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                        @forelse($data as $key => $data)
-                            <tr>
-                                <td>{{ $key+1 }}</td>
-                                <td>{{ $data->title }}</td>
-                                <td>{{ $data->status }}</td>
-                                <td>{{ $data->category }}</td>
-                                <td>
-                                    <a href="{{ route('art.show', $data) }}"><i class="fa fa-angle-right"></i></a>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="12" class="text-center">No Data</td>
-                            </tr>
-                        @endforelse
-                </tbody>
-            </table>
-        </div>
-    </div>
+                @empty
+                    <tr>
+                        <td colspan="12" class="text-center">No Data</td>
+                    </tr>
+                @endforelse
+        </tbody>
+    </table>
 
 </div>
 

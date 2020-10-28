@@ -14,5 +14,32 @@
         @endforeach
 
     </div>
+
+    <table id="myTable" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+                @forelse($user as $key => $artist)
+                    <tr>
+                        <td>{{ $key+1 }}</td>
+                        <td>{{ $artist->name }}</td>
+                        <td>
+                            <a href="{{ route('landing.artist.profile', $artist) }}"><i class="fa fa-angle-right"></i></a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="12" class="text-center">No Data</td>
+                    </tr>
+                @endforelse
+        </tbody>
+    </table>
 </div>
+
+
 @endsection
