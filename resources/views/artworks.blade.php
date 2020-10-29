@@ -1,6 +1,6 @@
-@extends('layouts.landing')
+@extends('layouts.app')
 
-@section('landing')
+@section('content')
 
         <div id="columns">
 

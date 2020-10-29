@@ -30,7 +30,7 @@
 
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.25);">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
                     </a>
 
@@ -41,6 +41,9 @@
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
                         <ul class="navbar-nav mr-auto">
+                            {{--  <li class="nav-item">
+                                <a class="nav-link" href="{{ route('bakaw.index') }}">Home<span class="sr-only">(current)</span></a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/artworks">Artworks <span class="sr-only">(current)</span></a>
                             </li>
@@ -49,6 +52,23 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/galleries">Galleries</a>
+                            </li>  --}}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Museum
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
+                                    <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
+                                    <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
+                                    <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
+                                    <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
+                                    <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
+                                    <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
+                                    <a class="dropdown-item" href="{{ route('tambol.index') }}">Talaandig</a>
+                                    <a class="dropdown-item" href="{{ route('lullaby.index') }}">Uyayi</a>
+                                    <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
+                                </div>
                             </li>
                         </ul>
 
@@ -192,7 +212,7 @@
                 <a href="/galleries" type="button" class="btn-link">View All</a>
             </div>
 
-            <div class="h-divider">
+            <div class="h-divider"></div>
 
             <div class="title">VISIT MINDANAO MUSEUMS</div>
             <div class="row">

@@ -429,6 +429,10 @@ button:focus {
     color: #b78032;
 }
 
+#artist-table {
+    /* display: none; */
+}
+
 /* END REGISTRATION */
 
 
