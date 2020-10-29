@@ -22,7 +22,7 @@
 
 
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-3">
                             <p class="text-muted">Artist:</p>
                         </div>
                         <div class="col">
@@ -31,9 +31,9 @@
                             </a>
                         </div>
                     </div>
-
+                    @if (!empty($art->remarks))
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-3">
                             <p class="text-muted">Gallery:</p>
                         </div>
                         <div class="col">
@@ -42,9 +42,10 @@
                             </a>
                         </div>
                     </div>
+                    @endif
 
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-3">
                             <p class="text-muted">Dimension:</p>
                         </div>
                         <div class="col">

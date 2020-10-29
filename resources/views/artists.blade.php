@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container mt-5">
-    <div class="btn-group" role="group" aria-label="Basic example">
+    {{--  <div class="btn-group" role="group" aria-label="Basic example">
         <button id="show-cards" type="button" class="btn btn-secondary">Cards</button>
         <button is="show-table" type="button" class="btn btn-secondary">Table</button>
-    </div>
+    </div>  --}}
 
 
     <div id="artist-cards" class="row">
@@ -21,7 +21,7 @@
 
     </div>
 
-    <div id="artist-table">
+    {{--  <div id="artist-table">
 
         <table id="myTable" class="table table-hover text-center">
             <thead>
@@ -48,7 +48,7 @@
             </tbody>
         </table>
 
-    </div>
+    </div>  --}}
 </div>
 
 

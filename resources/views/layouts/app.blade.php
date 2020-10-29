@@ -249,19 +249,19 @@
                             <div class="footer-menu footer-menu--1">
                             <h4 class="footer-widget-title"><b>Museums</b></h4>
                                 <a class="link" href="{{ route('bakaw.index') }}">Bakaw</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a class="link" href="{{ route('balangay.index') }}">Balangay</a>
                                 <br>
                                 <a class="link" href="{{ route('dabakan.index') }}">Dabakan</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a class="link" href="{{ route('heart.index') }}">Heart</a>
                                 <br>
                                 <a class="link" href="{{ route('kaban.index') }}">Kaban</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a class="link" href="{{ route('kulintang.index') }}">Kulintang</a>
                                 <br>
                                 <a class="link" href="{{ route('lamin.index') }}">Lamin</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a class="link" href="{{ route('tambol.index') }}">Talaandig</a>
                                 <br>
                                 <a class="link" href="{{ route('lullaby.index') }}">Uyayi</a>
