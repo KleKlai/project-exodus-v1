@@ -38,6 +38,16 @@
                     </div>
 
                     <div class="form-group row">
+                        <input id="mobile" type="number" class="mininput @error('mobile') is-invalid @enderror" name="mobile" placeholder="9xxxxxxxxx"  maxlength="10" value="{{ old('mobile') }}" required autocomplete="email">
+
+                        @error('mobile')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group row">
                             <input id="password" type="password" class="mininput @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="new-password">
 
                             @error('password')
