@@ -71,19 +71,20 @@
                     @enderror
                 </div>
             </div>
-            @role('Artist')
-                <div class="form-group col-md-6">
-                    <label for="inputAddress">Gallery</label>
-                    <select name="category" class="form-control" name="category"
-                    {{ (!empty($user->category)) ? 'disabled' : ''}}>
-                        <option value="">-</option>
-                        @foreach($gallery as $gallery)
-                            <option value="{{ $gallery->name }}" {{ ($user->category == $gallery->name) ? 'selected' : '' }}>{{ $gallery->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            @endrole
+        @role('Artist')
+            <div class="form-group col-md-6">
+                <label for="inputAddress">Gallery</label>
+                <select name="category" class="form-control" name="category"
+                {{ (!empty($user->category)) ? 'disabled' : ''}}>
+                    <option value="">-</option>
+                    @foreach($gallery as $gallery)
+                        <option value="{{ $gallery->name }}" {{ ($user->category == $gallery->name) ? 'selected' : '' }}>{{ $gallery->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+        @endrole
         </div>
+        @role('Artist')
         <div class="form-group">
             <label for="inputAddress2">Biography</label>
             <textarea name="bio" class="form-control @error('bio') is-invalid @enderror" name="bio" rows="4" style="white-space: pre-wrap;">{{ $user->bio }}</textarea>
@@ -94,6 +95,7 @@
                 </span>
             @enderror
         </div>
+        @endrole
         <button type="submit" class="btn btn-outline-success">Save</button>
     </form>
 
