@@ -163,12 +163,12 @@
             <p class="text-justify">The Lamin is a unique but fast disappearing feature in Meranaw architecture – it is a room placed at the very top of the Torogan, and from outside looks like a turret with a large, round window ornately adorned with the Meranaw okir. The daughters of the datus or sultans who occupied the Torogan were kept cloistered in the Lamin, their elevated position both to keep them away from the mundane world and to showcase them for all to see. The decline of this architectural feature is the result of changing social realities, changes that the Meranaw hardly pay enough attention to. This virtual museum is intended to remind people of this now relic architectural feature, hoping it stimulates introspection. As a museum, it is also intended to show that same gesture of elevating and showcasing art. The design was originally envisioned as a weaving center in Marawi.</p>
         </div>
 
-            <div class="mt-5" id="appointment">
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>

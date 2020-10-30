@@ -163,12 +163,12 @@
             <p class="text-justify">Another piece envisioned to be built in Bukidnon, “Tambol” is designed after a Talaandig percussion instrument. The drum is inverted to have the hide face downwards, both to remind people of the need to be rooted, and to keep that rootedness dynamic, vibrant, beating. The designer was inspired by a drum made by a Talaandig craftsman, but he could not afford the piece. Instead he drew inspiration from its image and the design is now to be made into an Art space and theatre center for the Talaandig people</p>
         </div>
 
-            <div class="mt-5" id="appointment">
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>

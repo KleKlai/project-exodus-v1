@@ -164,12 +164,12 @@
             <p class="text-justify">The designer also sees it as a representation of a phase in his own creative journey. Originally entitled ‘Bangkapayapaan,’ the design was first conceived as an art installation piece, and meant as a resonse to the 2018 Zamboanga Siege. It was first installed in Davao’s Abreeza Mall before being made into a public monument in General Santos City. “Uyayi” is the  scaled up version of the concept, developed as possible design for another Artspace in Davao City.</p>
         </div>
 
-            <div class="mt-5" id="appointment">
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>

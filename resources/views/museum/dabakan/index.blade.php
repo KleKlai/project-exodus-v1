@@ -163,12 +163,12 @@
             <p class="text-justify">The instrument which inspired “Dabakan” is at once classic and cutting edge. Its form is a feat of timeless human genius, the instrument’s scale and detail always making it imposing. Its loud, unmistakable sound resonates in primeval forests to proclaim humanity. The resonance of the Dabakan connected people across distances, the same way waves of technological advancement connect people today. It is hoped that the artworks exhibited in “Dabakan” will have the same unmistakable impact on the community as this percussion instrument.</p>
         </div>
 
-            <div class="mt-5" id="appointment">
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>

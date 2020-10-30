@@ -163,12 +163,12 @@
             <p class="text-justify">Making use of the iconic symbol of Zamboanga as inspiration, “Vinta” is envisioned to stand in the city’s equally famous boulevard, its coloured glass sails sparkling in the Zamboanga sunset. Zamboanga City with its many Spanish era structures and relic Chavacano culture has a tendency to be stagnant. The eye-catching “Vinta” is intended to stir some life into that stagnation, taking the beautiful local’s colourful culture forward.</p>
         </div>
 
-            <div class="mt-5" id="appointment">
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>

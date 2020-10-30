@@ -163,12 +163,12 @@
             <p class="text-justify">Originally titled “The Heart Museum,” Tapayan  is the first in the suite of museums which gives special attention to locale. It is specifically envisioned to stand in Bukidnon, the geographical heart of Mindanao, and is formed with the figure of seven jars, each representing Bukidnon’s seven indigenous cultures. It is hoped that the beating Mindanao’s creative heart begins in this geographical heart, and that, as older starter is added to a fresh brew, the growth of Mindanao’s art be inoculated into maturity by the province’s – and Mindanao’s – many beautiful traditions.</p>
         </div>
 
-            <div class="mt-5" id="appointment">
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>

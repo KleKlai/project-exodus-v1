@@ -162,13 +162,13 @@
             <div class="title">BAKAW MUSEUM</div>
             <p class="text-justify">“Bakaw” explores an image rich in symbolic potential but hardly utilized in the arts – the mangrove. Exposed rootedness is the most evident idea, the usually hidden roots revealed to form an image that arrests attention. This exposure has allowed an entire ecosystem to thrive: their rootedness has allowed mangroves to survive in harsh conditions, and their survival has benefited their areas, an approach which people would hopefully emulate. Mangroves once lined the banks of the Davao river and the shores of the gulf, and like the city’s great hero Datu Bago, it served to protect the area, blocking houses from storm surges. But coloniality came, and like the memory of Datu Bago, the mangrove began disappearing. This rich narrative has inspired the designer in many other designs, including office tables and lamps.</p>
         </div>
-
+{{--
             <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>

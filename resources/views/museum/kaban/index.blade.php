@@ -163,12 +163,12 @@
             <p class="text-justify">Shaped like a giant box (with motifs reminiscent of the ornately designed Meranaw Baor), the Kaban has for many cultures been the container of valuable things, from expensive commodities to precious mementos. As people today continue to lose the ability to hold things dear, the significance of Kaban, and the tradition of keeping treasures, is increasingly fading , a trend that should be resisted. The design itself is precious to the designer, who first envisioned it in 2008 as a museum for artist Kublai Millan. It is being launched for the public to see for the first time in Mindanao Art, an event he and Millan worked together on.</p>
         </div>
 
-            <div class="mt-5" id="appointment">
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div>
+            </div> --}}
 
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
