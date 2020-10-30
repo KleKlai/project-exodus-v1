@@ -13,7 +13,7 @@
             <div>Download artwork catalogs to view artwork listings</div>
             <div>and details of six different galleries in the Davao Region.</div>
         </div>
-        <a href="#" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true">Download Catalog</a>
+        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalog</a>
     </div>
 
     <div class="mt-5" id="appointment">
@@ -47,7 +47,7 @@
         </div>
 
         {{--  Featured Artist  --}}
-        <div class="h-divider" id="featuredArtists"></div>
+        {{--  <div class="h-divider" id="featuredArtists"></div>
         <div class="title">ARTISTS</div>
         <div class="row">
             @forelse($user as $artist)
@@ -66,7 +66,7 @@
         </div>
         <div class="container mb-5" style="text-align: center;">
         <a href="{{ route('landing.artists') }}" type="button" class="btn-link">View All</a>
-        </div>
+        </div>  --}}
 
         <div class="h-divider"></div>
 

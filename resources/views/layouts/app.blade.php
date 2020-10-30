@@ -65,9 +65,9 @@
                             <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks</a>
                         </li>
 
-                        <li class="nav-item">
+                        {{--  <li class="nav-item">
                             <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
-                        </li>
+                        </li>  --}}
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
