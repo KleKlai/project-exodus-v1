@@ -96,7 +96,7 @@
             <div class="col-md-4 mb-4">
                 <a href="{{ route('heart.index') }}">
                     <div class="picture-container background-image" style="background-image: url('/images/covers/HeartCover.png');">
-                        <p class="picture-inner-title">HEART</p>
+                        <p class="picture-inner-title">TAPAYAN</p>
                     </div>
                 </a>
             </div>
@@ -124,7 +124,7 @@
             <div class="col-md-4 mb-4">
                 <a href="{{ route('tambol.index') }}">
                     <div class="picture-container background-image" style="background-image: url('/images/covers/TalaandigCover.png');">
-                        <p class="picture-inner-title">TALAANDIG</p>
+                        <p class="picture-inner-title">TAMBOL</p>
                     </div>
                 </a>
             </div>

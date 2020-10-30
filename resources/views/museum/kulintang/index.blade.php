@@ -44,18 +44,17 @@
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
                         <ul class="navbar-nav mr-auto">
-                            {{--  <li class="nav-item">
-                                <a class="nav-link" href="{{ route('bakaw.index') }}">Home<span class="sr-only">(current)</span></a>
+                            @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">Home<span class="sr-only">(current)</span></a>
+                            </li>
+                            @endauth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/artworks">Artworks <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/artists">Artists</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/galleries">Galleries</a>
-                            </li>  --}}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Museum
@@ -64,11 +63,11 @@
                                     <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
                                     <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
                                     <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
-                                    <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
+                                    <a class="dropdown-item" href="{{ route('heart.index') }}">Tapayan</a>
                                     <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
                                     <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
                                     <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
-                                    <a class="dropdown-item" href="{{ route('tambol.index') }}">Talaandig</a>
+                                    <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
                                     <a class="dropdown-item" href="{{ route('lullaby.index') }}">Uyayi</a>
                                     <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
                                 </div>
@@ -161,9 +160,17 @@
             <div class="h-divider" id="featuredGalleries"></div>
 
             <div class="title">KULINTANG MUSEUM</div>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <p class="text-justify">A feature which links Mindanao to the musical traditions of many Southeast Asian cultures, the Kulintang is a set of many individual instruments which play as one, the musician himself becoming part of the set. This traditional percussion set will resonate with many cultures in Mindanao, and using it as design inspiration will hopefully elicit more insights from communities about its significance. The design of the structure in particular has connections with Davao’s Kalumon Performance Collective, one of whose performers shared with the designer his dream of a Kulintang-shaped building. If built, it will also be an expansion of the vision started by Kublai Milan in his Agong House.</p>
+        </div>
 
+            <div class="mt-5" id="appointment">
+                <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
+                    <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
+                    <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
+                </div>
+            </div>
+
+        <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
             <div class="title">VISIT MINDANAO MUSEUMS</div>
@@ -192,7 +199,7 @@
                 <div class="col-md-4 mb-4">
                     <a href="{{ route('heart.index') }}">
                         <div class="picture-container background-image" style="background-image: url('/images/covers/HeartCover.png');">
-                            <p class="picture-inner-title">HEART</p>
+                            <p class="picture-inner-title">TAPAYAN</p>
                         </div>
                     </a>
                 </div>
@@ -220,7 +227,7 @@
                 <div class="col-md-4 mb-4">
                     <a href="{{ route('tambol.index') }}">
                         <div class="picture-container background-image" style="background-image: url('/images/covers/TalaandigCover.png');">
-                            <p class="picture-inner-title">TALAANDIG</p>
+                            <p class="picture-inner-title">TAMBOL</p>
                         </div>
                     </a>
                 </div>
@@ -241,22 +248,9 @@
                 </div>
             </div>
 
-            <div class="newsletter">
-                <div class="container row">
-                    <div class="col-md-10">
-                        <span class="text">Get the latest art stories and collections by simply 'Subscribe'</span>
-
-                    </div>
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-outline-dark text-white border-white">Subcribe</button>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <footer class="footer-area footer--light">
+        <footer class="footer-area footer--light mt-3">
             <div class="footer-big container ">
                 <!-- start .container -->
                 <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
@@ -284,7 +278,7 @@
                             <br>
                             <a class="link" href="{{ route('dabakan.index') }}">Dabakan</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a class="link" href="{{ route('heart.index') }}">Heart</a>
+                            <a class="link" href="{{ route('heart.index') }}">Tapayan</a>
                             <br>
                             <a class="link" href="{{ route('kaban.index') }}">Kaban</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -292,7 +286,7 @@
                             <br>
                             <a class="link" href="{{ route('lamin.index') }}">Lamin</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a class="link" href="{{ route('tambol.index') }}">Talaandig</a>
+                            <a class="link" href="{{ route('tambol.index') }}">Tambol</a>
                             <br>
                             <a class="link" href="{{ route('lullaby.index') }}">Uyayi</a>
                             <br>

@@ -77,11 +77,11 @@
                                 <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
                                 <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
                                 <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
-                                <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
+                                <a class="dropdown-item" href="{{ route('heart.index') }}">Tapayan</a>
                                 <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
                                 <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
                                 <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
-                                <a class="dropdown-item" href="{{ route('tambol.index') }}">Talaandig</a>
+                                <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
                                 <a class="dropdown-item" href="{{ route('lullaby.index') }}">Uyayi</a>
                                 <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
                             </div>
@@ -226,96 +226,96 @@
 
 
 
-         <footer class="footer-area footer--light">
-                <div class="footer-big container ">
-                    <!-- start .container -->
-                    <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
-                        <div class="col-md-3 col-sm-4">
-                        <div class="footer-widget">
-                            <div class="footer-menu footer-menu--1">
-                            <h4 class="footer-widget-title"><b>Mindanao Art</b></h4>
-                                <a class="link" href="{{ route('art.index') }}">Artworks</a>
-                                <br>
-                                <a class="link" href="{{ route('landing.artists') }}">Artists</a>
-                            </div>
-                            <!-- end /.footer-menu -->
+        <footer class="footer-area footer--light mt-3">
+            <div class="footer-big container ">
+                <!-- start .container -->
+                <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
+                    <div class="col-md-3 col-sm-4">
+                    <div class="footer-widget">
+                        <div class="footer-menu footer-menu--1">
+                        <h4 class="footer-widget-title"><b>Mindanao Art</b></h4>
+                            <a class="link" href="{{ route('art.index') }}">Artworks</a>
+                            <br>
+                            <a class="link" href="{{ route('landing.artists') }}">Artists</a>
                         </div>
-                        <!-- Ends: .footer-widget -->
-                        </div>
-                        <!-- end /.col-md-3 -->
-
-                        <div class="col-md-3 col-sm-4">
-                        <div class="footer-widget">
-                            <div class="footer-menu footer-menu--1">
-                            <h4 class="footer-widget-title"><b>Museums</b></h4>
-                                <a class="link" href="{{ route('bakaw.index') }}">Bakaw</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a class="link" href="{{ route('balangay.index') }}">Balangay</a>
-                                <br>
-                                <a class="link" href="{{ route('dabakan.index') }}">Dabakan</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a class="link" href="{{ route('heart.index') }}">Heart</a>
-                                <br>
-                                <a class="link" href="{{ route('kaban.index') }}">Kaban</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a class="link" href="{{ route('kulintang.index') }}">Kulintang</a>
-                                <br>
-                                <a class="link" href="{{ route('lamin.index') }}">Lamin</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a class="link" href="{{ route('tambol.index') }}">Talaandig</a>
-                                <br>
-                                <a class="link" href="{{ route('lullaby.index') }}">Uyayi</a>
-                                <br>
-                                <a class="link" href="{{ route('vinta.index') }}">Vinta</a>
-                            </div>
-                            <!-- end /.footer-menu -->
-                        </div>
-                        <!-- Ends: .footer-widget -->
-                        </div>
-
-                        <div class="col-md-2 col-sm-3">
-                        <div class="footer-widget">
-                            <div class="footer-menu footer-menu--1">
-                                <br>
-                                <a class="link" href="#">Artist Handbook</a>
-                                <br>
-                                <a class="link" href="#">User Guides</a>
-                                <br>
-                                <a class="link" href="#">About us</a>
-                                <br>
-                                <a class="link" href="{{ route('ticket.index') }}">Support</a>
-                                <br>
-                                <a class="link" href="/faqs">FAQs</a>
-                            </div>
-                            <!-- end /.footer-menu -->
-                        </div>
-                        <!-- Ends: .footer-widget -->
-                        </div>
-                        <!-- end /.col-md-3 -->
-
-                        <div class="col-md-4" style="text-align: right;">
-                            <div class="footer-widget">
-                                <div class="footer-menu footer-menu--1">
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                    secretariat@mindanaoart.com
-                                    <br>
-                                    <h6><b>Copyright 2020. Mindanao Art</b></h6>
-                                </div>
-                                <!-- end /.footer-menu -->
-                            </div>
-                            <!-- Ends: .footer-widget -->
-                        </div>
-                        <!-- end /.col-md-3 -->
+                        <!-- end /.footer-menu -->
                     </div>
-                    <!-- end /.row -->
-                    <!-- end /.container -->
+                    <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-md-3 -->
+
+                    <div class="col-md-3 col-sm-4">
+                    <div class="footer-widget">
+                        <div class="footer-menu footer-menu--1">
+                        <h4 class="footer-widget-title"><b>Museums</b></h4>
+                            <a class="link" href="{{ route('bakaw.index') }}">Bakaw</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="link" href="{{ route('balangay.index') }}">Balangay</a>
+                            <br>
+                            <a class="link" href="{{ route('dabakan.index') }}">Dabakan</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="link" href="{{ route('heart.index') }}">Tapayan</a>
+                            <br>
+                            <a class="link" href="{{ route('kaban.index') }}">Kaban</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="link" href="{{ route('kulintang.index') }}">Kulintang</a>
+                            <br>
+                            <a class="link" href="{{ route('lamin.index') }}">Lamin</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="link" href="{{ route('tambol.index') }}">Tambol</a>
+                            <br>
+                            <a class="link" href="{{ route('lullaby.index') }}">Uyayi</a>
+                            <br>
+                            <a class="link" href="{{ route('vinta.index') }}">Vinta</a>
+                        </div>
+                        <!-- end /.footer-menu -->
+                    </div>
+                    <!-- Ends: .footer-widget -->
+                    </div>
+
+                    <div class="col-md-2 col-sm-3">
+                    <div class="footer-widget">
+                        <div class="footer-menu footer-menu--1">
+                            <br>
+                            <a class="link" href="#">Artist Handbook</a>
+                            <br>
+                            <a class="link" href="#">User Guides</a>
+                            <br>
+                            <a class="link" href="#">About us</a>
+                            <br>
+                            <a class="link" href="{{ route('ticket.index') }}">Support</a>
+                            <br>
+                            <a class="link" href="/faqs">FAQs</a>
+                        </div>
+                        <!-- end /.footer-menu -->
+                    </div>
+                    <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-md-3 -->
+
+                    <div class="col-md-4" style="text-align: right;">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                                secretariat@mindanaoart.com
+                                <br>
+                                <h6><b>Copyright 2020. Mindanao Art</b></h6>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-md-3 -->
                 </div>
-            </footer>
+                <!-- end /.row -->
+                <!-- end /.container -->
+            </div>
+        </footer>
     </div>
 
     @yield('script')

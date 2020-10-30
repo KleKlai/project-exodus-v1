@@ -29,7 +29,7 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/BakawCover.png')">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Bakaw.png')">
 
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
@@ -44,18 +44,17 @@
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
                         <ul class="navbar-nav mr-auto">
-                            {{--  <li class="nav-item">
-                                <a class="nav-link" href="{{ route('bakaw.index') }}">Home<span class="sr-only">(current)</span></a>
+                            @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">Home<span class="sr-only">(current)</span></a>
+                            </li>
+                            @endauth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/artworks">Artworks <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/artists">Artists</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/galleries">Galleries</a>
-                            </li>  --}}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Museum
@@ -64,11 +63,11 @@
                                     <a class="dropdown-item" href="{{ route('bakaw.index') }}">Bakaw</a>
                                     <a class="dropdown-item" href="{{ route('balangay.index') }}">Balangay</a>
                                     <a class="dropdown-item" href="{{ route('dabakan.index') }}">Dabakan</a>
-                                    <a class="dropdown-item" href="{{ route('heart.index') }}">Heart</a>
+                                    <a class="dropdown-item" href="{{ route('heart.index') }}">Tapayan</a>
                                     <a class="dropdown-item" href="{{ route('kaban.index') }}">Kaban</a>
                                     <a class="dropdown-item" href="{{ route('kulintang.index') }}">Kulintang</a>
                                     <a class="dropdown-item" href="{{ route('lamin.index') }}">Lamin</a>
-                                    <a class="dropdown-item" href="{{ route('tambol.index') }}">Talaandig</a>
+                                    <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
                                     <a class="dropdown-item" href="{{ route('lullaby.index') }}">Uyayi</a>
                                     <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
                                 </div>
@@ -158,7 +157,20 @@
 
         {{-- Content --}}
         <div class="container">
+            <div class="h-divider" id="featuredGalleries"></div>
 
+            <div class="title">BAKAW MUSEUM</div>
+            <p class="text-justify">“Bakaw” explores an image rich in symbolic potential but hardly utilized in the arts – the mangrove. Exposed rootedness is the most evident idea, the usually hidden roots revealed to form an image that arrests attention. This exposure has allowed an entire ecosystem to thrive: their rootedness has allowed mangroves to survive in harsh conditions, and their survival has benefited their areas, an approach which people would hopefully emulate. Mangroves once lined the banks of the Davao river and the shores of the gulf, and like the city’s great hero Datu Bago, it served to protect the area, blocking houses from storm surges. But coloniality came, and like the memory of Datu Bago, the mangrove began disappearing. This rich narrative has inspired the designer in many other designs, including office tables and lamps.</p>
+        </div>
+
+            <div class="mt-5" id="appointment">
+                <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
+                    <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
+                    <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
+                </div>
+            </div>
+
+        <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
             <div class="title">VISIT MINDANAO MUSEUMS</div>
@@ -187,7 +199,7 @@
                 <div class="col-md-4 mb-4">
                     <a href="{{ route('heart.index') }}">
                         <div class="picture-container background-image" style="background-image: url('/images/covers/HeartCover.png');">
-                            <p class="picture-inner-title">HEART</p>
+                            <p class="picture-inner-title">TAPAYAN</p>
                         </div>
                     </a>
                 </div>
@@ -215,7 +227,7 @@
                 <div class="col-md-4 mb-4">
                     <a href="{{ route('tambol.index') }}">
                         <div class="picture-container background-image" style="background-image: url('/images/covers/TalaandigCover.png');">
-                            <p class="picture-inner-title">TALAANDIG</p>
+                            <p class="picture-inner-title">TAMBOL</p>
                         </div>
                     </a>
                 </div>
@@ -236,22 +248,9 @@
                 </div>
             </div>
 
-            <div class="newsletter">
-                <div class="container row">
-                    <div class="col-md-10">
-                        <span class="text">Get the latest art stories and collections by simply 'Subscribe'</span>
-
-                    </div>
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-outline-dark text-white border-white">Subcribe</button>
-
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <footer class="footer-area footer--light">
+        <footer class="footer-area footer--light mt-3">
             <div class="footer-big container ">
                 <!-- start .container -->
                 <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
@@ -279,7 +278,7 @@
                             <br>
                             <a class="link" href="{{ route('dabakan.index') }}">Dabakan</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a class="link" href="{{ route('heart.index') }}">Heart</a>
+                            <a class="link" href="{{ route('heart.index') }}">Tapayan</a>
                             <br>
                             <a class="link" href="{{ route('kaban.index') }}">Kaban</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -287,7 +286,7 @@
                             <br>
                             <a class="link" href="{{ route('lamin.index') }}">Lamin</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a class="link" href="{{ route('tambol.index') }}">Talaandig</a>
+                            <a class="link" href="{{ route('tambol.index') }}">Tambol</a>
                             <br>
                             <a class="link" href="{{ route('lullaby.index') }}">Uyayi</a>
                             <br>

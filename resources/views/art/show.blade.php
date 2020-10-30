@@ -8,17 +8,18 @@
         </div>
         <div class="col">
 
+            @canany(['update art', 'update art-status', 'delete art'])
+                <div class="btn btn-primary btn-lg  btn-block mb-2">
+                    {{ strtoupper($art->status) }}
+                </div>
+            @endcan
+
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">{{ $art->title }}</h2>
                     <h3 class="card-subtitle mb-2 text-muted">₱ {{ number_format($art->price, 2) }}</h3>
                 </div>
                 <div class="card-body">
-                    @canany(['update art', 'update art-status', 'delete art'])
-                        <div class="btn btn-primary btn-lg  btn-block mb-2">
-                            {{ strtoupper($art->status) }}
-                        </div>
-                    @endcan
 
 
                     <div class="row">
@@ -124,6 +125,12 @@
             <p class="text-justify">{{ $art->description }}</p>
         </div>
     </div>
+</div>
+
+<div class="container">
+    <div class="h-divider"></div>
+
+    <div class="title">View Other Artworks</div>
 </div>
 
 <div id="columns">
