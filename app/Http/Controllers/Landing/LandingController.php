@@ -23,7 +23,7 @@ class LandingController extends Controller
     public function artwork()
     {
         // $art = Art::all();
-        $art = Art::paginate(5);
+        $art = Art::paginate(8);
 
         return view('artworks', compact('art'));
     }
