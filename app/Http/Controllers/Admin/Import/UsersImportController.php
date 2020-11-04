@@ -25,6 +25,10 @@ class UsersImportController extends Controller
         $user = User::role('Standard')->get();
 
         foreach($user as $user){
+            //Detach all roles
+            $user->roles()->detach();
+
+            //Assign role as an artist
             $user->assignRole('Artist');
         }
 
