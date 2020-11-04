@@ -170,6 +170,57 @@
                 </div>
             </div> --}}
 
+            <div class="container">
+                <div class="h-divider" id="featuredGalleries"></div>
+
+                <div class="title">BAKAW GALLERIES</div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Gallery Down South</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Datu Bago Gallery</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">TheBauHaus Gallery</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Sining Mata Visual Art and Music School</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</p>
+                            </div>
+                        </a>
+                    </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Kulit Kultura</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
