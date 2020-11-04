@@ -69,11 +69,19 @@ class LandingController extends Controller
         ));
     }
 
-    public function artist()
+    public function artist(Request $request)
     {
-        $user   = User::with('art')->has('art')->role('Artist')->latest()->get();
+        $search = $request->get('search', 'all');
 
-        return view('artists', compact('user'));
+        // $user = User::with('art')->has('art')->role('Artist')->latest()->get();
+
+        if ($search == 'all') {
+            $user = User::with('art')->has('art')->role('Artist')->paginate(6);
+        } else {
+            $user = User::where('name', 'like', '%' . $request->get('search') . '%')->with('art')->has('art')->role('Artist')->paginate(6);
+        }
+
+        return view('artists', compact('user', 'search'));
     }
 
     public function artistProfile(User $user)
