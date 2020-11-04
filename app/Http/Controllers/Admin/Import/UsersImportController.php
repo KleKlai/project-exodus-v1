@@ -6,7 +6,7 @@ use App\Imports\UsersImport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
-use User;
+use App\User;
 
 class UsersImportController extends Controller
 {
