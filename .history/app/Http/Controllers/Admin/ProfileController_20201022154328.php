@@ -51,7 +51,7 @@ class ProfileController extends Controller
         $user->revokePermissionTo($user->getAllPermissions());
         $user->delete();
 
-        // Mail::to($user->email)->send(new ProfileDeleted($user));
+        Mail::to($user->email)->send(new ProfileDeleted($user));
 
 
         return back();

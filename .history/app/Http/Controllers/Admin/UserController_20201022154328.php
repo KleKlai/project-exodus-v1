@@ -78,7 +78,7 @@ class UserController extends Controller
         $roles      = Role::select('name')->get();
 
         $permission = (!empty($user->verified)) ? Permission::select('name')->get() : [] ;
-        $gallery   = Type::select('name')->orderBy('name', 'desc')->get();
+        $gallery   = Type::select('name')->get();
 
         return view('admin.user_management.edit', compact(
             [
