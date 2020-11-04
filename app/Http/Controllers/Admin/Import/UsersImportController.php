@@ -18,4 +18,15 @@ class UsersImportController extends Controller
 
         return redirect()->back();
     }
+
+    public function makeAllArtist()
+    {
+        $user = User::role('Standard')->get();
+
+        foreach($user as $user){
+            $user->assignRole('Artist');
+        }
+
+        return redirect()->back();
+    }
 }
