@@ -47,7 +47,7 @@
         </div>
 
         {{--  Featured Artist  --}}
-        {{--  <div class="h-divider" id="featuredArtists"></div>
+         <div class="h-divider" id="featuredArtists"></div>
         <div class="title">ARTISTS</div>
         <div class="row">
             @forelse($user as $artist)
@@ -66,7 +66,7 @@
         </div>
         <div class="container mb-5" style="text-align: center;">
         <a href="{{ route('landing.artists') }}" type="button" class="btn-link">View All</a>
-        </div>  --}}
+        </div>
 
         <div class="h-divider"></div>
 
