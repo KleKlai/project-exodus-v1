@@ -220,6 +220,86 @@
                 </div>
             </div>
 
+            <div class="container">
+                <div class="h-divider" id="featuredGalleries"></div>
+
+                <div class="title">VISIT MINDANAO MUSEUMS</div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('bakaw.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/BakawCover.png');">
+                                <p class="picture-inner-title">BAKAW</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('balangay.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/BalangayCover.png');">
+                                <p class="picture-inner-title">BALANGAY</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('dabakan.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/DabakanCover.png');">
+                                <p class="picture-inner-title">DABAKAN</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('heart.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/HeartCover.png');">
+                                <p class="picture-inner-title">TAPAYAN</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('kaban.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/KabanCover.png');">
+                                <p class="picture-inner-title">KABAN</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('kulintang.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/KulintangCover.png');">
+                                <p class="picture-inner-title">KULINTANG</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('lamin.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/LaminCover.png');">
+                                <p class="picture-inner-title">LAMIN</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('tambol.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/TalaandigCover.png');">
+                                <p class="picture-inner-title">TAMBOL</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('lullaby.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/UyayiCover.png');">
+                                <p class="picture-inner-title">UYAYI</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4"></div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('vinta.index') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/VintaCover.png');">
+                                <p class="picture-inner-title">VINTA</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
         <footer class="footer-area footer--light mt-3">
