@@ -22,6 +22,8 @@ class LandingController extends Controller
 
     public function artwork(Request $request)
     {
+        $art = Art::paginate(8);
+        
         $museum = $request->get('museum', 0);
         $gallery = urldecode($request->get('gallery', 'Gall Down South'));
 
