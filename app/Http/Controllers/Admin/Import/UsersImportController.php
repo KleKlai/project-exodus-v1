@@ -27,6 +27,8 @@ class UsersImportController extends Controller
             $user->assignRole('Artist');
         }
 
+        flash('Successfully changing all roles')->success();
+
         return redirect()->back();
     }
 }
