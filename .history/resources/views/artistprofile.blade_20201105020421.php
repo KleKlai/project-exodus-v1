@@ -20,7 +20,7 @@
                     <figure>
                         <a href="{{ route('art.show', $artwork) }}"><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
                         <figcaption>
-                            {{ $artwork->title }}
+                            <p>{{ $artwork->title }}</p>
                             <div>₱{{ number_format($artwork->price, 2) }}</div>
                         </figcaption>
                     </figure>

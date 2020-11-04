@@ -24,13 +24,13 @@
                     @if ($artwork->attachment)
                         <img src="{{ url('storage/artwork/'.$artwork->attachment) }}">
                         <figcaption>
-                            {{ $artwork->title }}
+                            <p>{{ $artwork->title }}</p>
                             <div>₱{{ number_format($artwork->price, 2) }}</div>
                         </figcaption>
                     @else
                         <img src="https://via.placeholder.com/300x300?text={{ $artwork->title }}">
                         <figcaption>
-                            {{ $artwork->title }}
+                            <p>{{ $artwork->title }}</p>
                             <div>₱{{ number_format($artwork->price, 2) }}</div>
                         </figcaption>
                     @endif
