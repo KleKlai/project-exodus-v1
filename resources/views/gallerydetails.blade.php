@@ -8,7 +8,7 @@
             <p>Museum Assigned</p>
             <p>Gallery description will be put here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-            <div class="h-divider">
+            <div class="h-divider"></div>
 
             <div class="title">Artworks in this Gallery</div>
             <div class="row">
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="h-divider" id="featuredArtists">
+            <div class="h-divider" id="featuredArtists"></div>
 
             <div class="title">Artist in this Gallery</div>
             <div class="row">
@@ -63,7 +63,7 @@
             </div>
 
 
-            <div class="h-divider">
+            {{--  <div class="h-divider"></div>
 
             <div class="title">Events</div>
             <div class="row">
@@ -81,9 +81,9 @@
                         <p>Gallery assigned, museum assigned. Gallery description will be put here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </a>
                 </div>
-            </div>
+            </div>  --}}
 
-            <div class="h-divider">
+            <div class="h-divider"></div>
 
             <div class="title">Explore More Galleries</div>
             <div class="row">

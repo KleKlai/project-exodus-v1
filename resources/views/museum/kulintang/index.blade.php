@@ -170,6 +170,49 @@
                 </div>
             </div> --}}
 
+            <div class="container">
+                <div class="h-divider" id="featuredGalleries"></div>
+
+                <div class="title">KULINTANG GALLERIES</div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Hini-GALAay</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Studio One Art Iligian</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Tinta Artist Iligan</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Irinugyun Artist Group</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="/gallerydetails">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Talaandig Soil Painters</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
