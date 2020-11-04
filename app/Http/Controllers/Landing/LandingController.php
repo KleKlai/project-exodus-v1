@@ -23,7 +23,7 @@ class LandingController extends Controller
     public function artwork(Request $request)
     {
         $art = Art::paginate(8);
-        
+
         $museum = $request->get('museum', 0);
         $gallery = urldecode($request->get('gallery', 'Gall Down South'));
 
@@ -58,6 +58,10 @@ class LandingController extends Controller
         ];
 
         $galleries = $galleries_arr[$museum];
+
+        if (!in_array($gallery, $galleries)) {
+            $gallery = $galleries[0];
+        }
 
         // $art = Art::all();
         $users = User::where('gallery', $gallery)->pluck('id');
