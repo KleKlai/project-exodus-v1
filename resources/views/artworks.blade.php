@@ -20,7 +20,13 @@
     <div id="columns">
         @foreach ($art as $artwork)
             <figure>
-                <a href="{{ route('art.show', $artwork) }}"><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
+                <a href="{{ route('art.show', $artwork) }}">
+                    @if ($artwork->attachment)
+                        <img src="{{ url('storage/artwork/'.$artwork->attachment) }}">
+                    @else
+                        <img src="https://via.placeholder.com/300x300?text={{ $artwork->title }}">
+                    @endif
+                </a>
             </figure>
         @endforeach
     </div>
