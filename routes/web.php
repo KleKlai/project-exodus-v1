@@ -136,4 +136,4 @@ Route::post('export/custom/art', 'Admin\Export\Exports@ArtExportCustom')->name('
 Route::post('import/user', 'Admin\Import\UsersImportController@import')->name('user.import');
 Route::post('import/art', 'Admin\Import\ArtImportController@import')->name('art.import');
 
-Route::get('user/change/role/artist','Admin\UsersImportController@makeAllArtist');
+Route::get('user/change/role/artist','Admin\Import\UsersImportController@makeAllArtist');
