@@ -36,7 +36,7 @@
 
         <div class="container flex flex-row items-center justify-center">
             @if ($user->previousPageUrl())
-                <a href="{{ $user->previousPageUrl() }}">
+                <a href="{{ $user->previousPageUrl() }}&search={{ $search }}">
                     <i class="fas fa-chevron-left text-xl flex items-center pt-1"></i>
                 </a>
             @else
@@ -48,7 +48,7 @@
             </div>
 
             @if ($user->nextPageUrl())
-                <a href="{{ $user->nextPageUrl() }}">
+                <a href="{{ $user->nextPageUrl() }}&search={{ $search }}">
                     <i class="fas fa-chevron-right text-xl pt-1"></i>
                 </a>
             @else
