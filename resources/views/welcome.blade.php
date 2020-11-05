@@ -148,8 +148,8 @@
 
             <div class="row gallery-list-container">
             @foreach($galleryList as $gallery)
-                    <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                        {{ $gallery }}
+                    <a href="{{ $gallery['link'] }}" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                        {{ $gallery['name'] }}
                     </a>
             @endforeach
             </div>
