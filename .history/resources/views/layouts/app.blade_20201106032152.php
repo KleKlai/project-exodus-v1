@@ -81,9 +81,9 @@
                                 <a class="dropdown-item" href="/gallerydetails?gallery=Irinugyun Artist">Irinugyun Artist Group</a>
                                 <a class="dropdown-item" href="/gallerydetails?gallery=Likha KARAGA">Likha-KARAGA</a>
                                 <a class="dropdown-item" href="/gallerydetails?gallery=Lumbayao Artist Collective">Lumbayao Artist Collective</a>
-                                <a class="dropdown-item" href="/gallerydetails?gallery={{ urlencode('Sining Mata Visual Art & Music School') }}">Sining Mata Visual Art & Music School</a>
+                                <a class="dropdown-item" href="/gallerydetails?gallery=Sining Mata Visual Art & Music School">Sining Mata Visual Art & Music School</a>
                                 <a class="dropdown-item" href="/gallerydetails?gallery=Studio One Art Iligan">Studio One Art Iligan</a>
-                                <a class="dropdown-item" href="/gallerydetails?gallery=Talaandig Soil Painters">Talaandig Soil Painters</a>
+                                <a class="dropdown-item" href="/gallerydetails?gallery=Talaandig Soil Paintings">Talaandig Soil Painters</a>
                                 <a class="dropdown-item" href="/gallerydetails?gallery=TheBauHaus">TheBauHaus Gallery</a>
                                 <a class="dropdown-item" href="/gallerydetails?gallery=The Gallery of the Peninsula and the Archipelago">The Gallery of the Peninsula and the Archipelago</a>
                                 <a class="dropdown-item" href="/gallerydetails?gallery=TINTA Artists Iligan">TINTA Artist Iligan</a>

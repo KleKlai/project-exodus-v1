@@ -131,16 +131,15 @@ Route::get('galleries', function() {
 });
 
 Route::get('gallerydetails', function(Request $gallery) {
-    $gallery_ = urldecode($gallery->get('gallery'));
-    if($gallery_ == 'Gall Down South') {
+    if($gallery->get('gallery') == 'Gall Down South') {
         $chosenGallery = 'Gallery Down South';
-        $users = User::where('gallery', $gallery_)->pluck('id');
+        $users = User::where('gallery', $gallery->get('gallery'))->pluck('id');
         $art = Art::whereIn('user_id', $users)->get();
         // dd($art);
         return view('gallerydetails', compact('art', 'chosenGallery'));
     }else{
-        $chosenGallery = $gallery_;
-        $users = User::where('gallery', $gallery_)->pluck('id');
+        $chosenGallery = $gallery->get('gallery');
+        $users = User::where('gallery', $gallery->get('gallery'))->pluck('id');
         $art = Art::whereIn('user_id', $users)->get();
         // dd($art);
         return view('gallerydetails', compact('art', 'chosenGallery'));

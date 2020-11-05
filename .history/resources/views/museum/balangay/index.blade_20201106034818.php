@@ -29,7 +29,7 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Dabakan.png')">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Balangay.png')">
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
                     <a class="navbar-brand" href="/">
@@ -60,22 +60,22 @@
                                     Galleries
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Agusan Artist Association (AAA)">Agusan Artists’ Assocciation AAA</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Alampat Gallery">Alampat Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Datu Bago">Datu Bago Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Gall Down South">Gallery Down South</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Good Times Café and Art Gallery (Zambo Norte)">Good Times Café and Art Gallery (Zambo Norte)</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Hini-GALAay">Hini-GALAay</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Irinugyun Artist">Irinugyun Artist Group</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Likha KARAGA">Likha-KARAGA</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Lumbayao Artist Collective">Lumbayao Artist Collective</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery={{ urlencode('Sining Mata Visual Art & Music School') }}">Sining Mata Visual Art & Music School</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Studio One Art Iligan">Studio One Art Iligan</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Talaandig Soil Painters">Talaandig Soil Painters</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=TheBauHaus">TheBauHaus Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=The Gallery of the Peninsula and the Archipelago">The Gallery of the Peninsula and the Archipelago</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=TINTA Artists Iligan">TINTA Artist Iligan</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Agusan Artists’ Assocciation AAA</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Alampat Gallery</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Datu Bago Gallery</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Gallery Down South</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Good Times Café and Art Gallery (Zambo Norte)</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Hini-GALAay</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Irinugyun Artist Group</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Likha-KARAGA</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Lumbayao Artist Collective</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Sining Mata Visual Art & Music School</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Studio One Art Iligan</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Talaandig Soil Painters</a>
+                                    <a class="dropdown-item" href="/gallerydetails">TheBauHaus Gallery</a>
+                                    <a class="dropdown-item" href="/gallerydetails">The Gallery of the Peninsula and the Archipelago</a>
+                                    <a class="dropdown-item" href="/gallerydetails">TINTA Artist Iligan</a>
                                 </div>
                             </li>
 
@@ -190,9 +190,9 @@
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
-            <div class="title">DABAKAN MUSEUM</div>
-            <p class="text-justify">The instrument which inspired “Dabakan” is at once classic and cutting edge. Its form is a feat of timeless human genius, the instrument’s scale and detail always making it imposing. Its loud, unmistakable sound resonates in primeval forests to proclaim humanity. The resonance of the Dabakan connected people across distances, the same way waves of technological advancement connect people today. It is hoped that the artworks exhibited in “Dabakan” will have the same unmistakable impact on the community as this percussion instrument.</p>
-        </div>
+            <div class="title">BALANGAY MUSEUM</div>
+            <p class="text-justify">While the small boat has a rich history and diverse significances in the cultures of these islands, the  “Balangay” is a poignant symbol of how Mindanao lost sight of its own histories because of contrived Filipino nationalism. Not content with robbing Butuan of its relic boats, the nation-state imagined from Manila even denied us the right to be who we are. In its eagerness to invent one civilization out of the archipelago, the Philippines imposed the boat as a metaphor for all pre-colonial settlements. In the process, it ignored the completely non-boat related genesis of many ancient settlements in Mindanao (in the case of terms like “ingod,” – both “village” and “world” – so much fruitful discourse needlessly silenced). Worse, the imposition threatened to erase the other beautiful metaphors which Mindanao’s cultures came to form around the boat: for the Obo Monuvu, the “ballangoy” is a gift, given by parents to their estranged children to encourage reconnection; while to the Ata it is the Skyboat of epics, descending from the heavens to take the hero and his chosen people to the realm of the gods. “Balangay” aims to reclaim all of that lost significance, and as it defies oppressive and deceptive Filipino homogenization, it celebrates the many beautiful ways of being Mindanawon.</p>
+
 
             {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
@@ -201,6 +201,27 @@
                 </div>
             </div> --}}
 
+            <div class="h-divider" id="featuredGalleries"></div>
+            <div class="title">GALLERIES</div>
+            
+            <div class="row gallery-list-container">
+                <a href="/gallerydetails?gallery=Agusan Artist Association (AAA)" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Agusan Artists Assocciation AAA
+                </a>
+                <a href="/gallerydetails?gallery=Alampat Gallery" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Alampat Gallery
+                </a>
+                <a href="/gallerydetails?gallery=Lumbayao Artist Collective" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Lumbayan Artist Collective
+                </a>
+                <a href="/gallerydetails?gallery=The Gallery of the Peninsula and the Archipelago" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    The Gallery of the Peninsula and the Archipelago
+                </a>
+                <a href="/gallerydetails?gallery=Good Times Café and Art Gallery (Zambo Norte)" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Good Times Cafe and Art Gallery
+                </a>
+            </div>
+        </div>
 
         <footer class="footer-area footer--light mt-3">
             <div class="footer-big container ">

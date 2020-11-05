@@ -29,8 +29,9 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Dabakan.png')">
-            <div class="nav-container">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Bakaw.png')">
+
+        <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
                     <a class="navbar-brand" href="/">
                         <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
@@ -183,6 +184,8 @@
                     </div>
                 </nav>
             </div>
+
+
         </div>
 
 
@@ -190,17 +193,42 @@
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
-            <div class="title">DABAKAN MUSEUM</div>
-            <p class="text-justify">The instrument which inspired “Dabakan” is at once classic and cutting edge. Its form is a feat of timeless human genius, the instrument’s scale and detail always making it imposing. Its loud, unmistakable sound resonates in primeval forests to proclaim humanity. The resonance of the Dabakan connected people across distances, the same way waves of technological advancement connect people today. It is hoped that the artworks exhibited in “Dabakan” will have the same unmistakable impact on the community as this percussion instrument.</p>
-        </div>
+            <div class="title">BAKAW MUSEUM</div>
+            <p class="text-justify">“Bakaw” explores an image rich in symbolic potential but hardly utilized in the arts – the mangrove. Exposed rootedness is the most evident idea, the usually hidden roots revealed to form an image that arrests attention. This exposure has allowed an entire ecosystem to thrive: their rootedness has allowed mangroves to survive in harsh conditions, and their survival has benefited their areas, an approach which people would hopefully emulate. Mangroves once lined the banks of the Davao river and the shores of the gulf, and like the city’s great hero Datu Bago, it served to protect the area, blocking houses from storm surges. But coloniality came, and like the memory of Datu Bago, the mangrove began disappearing. This rich narrative has inspired the designer in many other designs, including office tables and lamps.</p>
 
-            {{-- <div class="mt-5" id="appointment">
+            {{--
+            <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
             </div> --}}
 
+            
+            <div class="h-divider" id="featuredGalleries"></div>
+            <div class="title">GALLERIES</div>
+            
+            <div class="row gallery-list-container">
+                <a href="/gallerydetails?gallery=Datu Bago" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Datu Bago Gallery
+                </a>
+                <a href="/gallerydetails?gallery=Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc." class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.
+                </a>
+                <a href="/gallerydetails?gallery=Gall Down South" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Gallery Down South
+                </a>
+                <a href="/gallerydetails?gallery=Kulit Kultura" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Kulit Kultura
+                </a>
+                <a href="/gallerydetails?gallery=TheBauHaus" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    TheBauHaus Gallery
+                </a>
+                <a href="/gallerydetails?gallery={{ urlencode('Sining Mata Visual Art & Music School') }}" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Sining Mata Visual Art and Music School
+                </a>
+            </div>
+        </div>
 
         <footer class="footer-area footer--light mt-3">
             <div class="footer-big container ">

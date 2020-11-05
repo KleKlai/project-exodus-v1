@@ -29,7 +29,7 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Dabakan.png')">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Kulintang.png')">
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
                     <a class="navbar-brand" href="/">
@@ -60,22 +60,22 @@
                                     Galleries
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Agusan Artist Association (AAA)">Agusan Artists’ Assocciation AAA</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Alampat Gallery">Alampat Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Datu Bago">Datu Bago Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Gall Down South">Gallery Down South</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Good Times Café and Art Gallery (Zambo Norte)">Good Times Café and Art Gallery (Zambo Norte)</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Hini-GALAay">Hini-GALAay</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Irinugyun Artist">Irinugyun Artist Group</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Likha KARAGA">Likha-KARAGA</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Lumbayao Artist Collective">Lumbayao Artist Collective</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery={{ urlencode('Sining Mata Visual Art & Music School') }}">Sining Mata Visual Art & Music School</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Studio One Art Iligan">Studio One Art Iligan</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=Talaandig Soil Painters">Talaandig Soil Painters</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=TheBauHaus">TheBauHaus Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=The Gallery of the Peninsula and the Archipelago">The Gallery of the Peninsula and the Archipelago</a>
-                                    <a class="dropdown-item" href="/gallerydetails?gallery=TINTA Artists Iligan">TINTA Artist Iligan</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Agusan Artists’ Assocciation AAA</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Alampat Gallery</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Datu Bago Gallery</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Gallery Down South</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Good Times Café and Art Gallery (Zambo Norte)</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Hini-GALAay</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Irinugyun Artist Group</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Likha-KARAGA</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Lumbayao Artist Collective</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Sining Mata Visual Art & Music School</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Studio One Art Iligan</a>
+                                    <a class="dropdown-item" href="/gallerydetails">Talaandig Soil Painters</a>
+                                    <a class="dropdown-item" href="/gallerydetails">TheBauHaus Gallery</a>
+                                    <a class="dropdown-item" href="/gallerydetails">The Gallery of the Peninsula and the Archipelago</a>
+                                    <a class="dropdown-item" href="/gallerydetails">TINTA Artist Iligan</a>
                                 </div>
                             </li>
 
@@ -190,9 +190,9 @@
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
-            <div class="title">DABAKAN MUSEUM</div>
-            <p class="text-justify">The instrument which inspired “Dabakan” is at once classic and cutting edge. Its form is a feat of timeless human genius, the instrument’s scale and detail always making it imposing. Its loud, unmistakable sound resonates in primeval forests to proclaim humanity. The resonance of the Dabakan connected people across distances, the same way waves of technological advancement connect people today. It is hoped that the artworks exhibited in “Dabakan” will have the same unmistakable impact on the community as this percussion instrument.</p>
-        </div>
+            <div class="title">KULINTANG MUSEUM</div>
+            <p class="text-justify">A feature which links Mindanao to the musical traditions of many Southeast Asian cultures, the Kulintang is a set of many individual instruments which play as one, the musician himself becoming part of the set. This traditional percussion set will resonate with many cultures in Mindanao, and using it as design inspiration will hopefully elicit more insights from communities about its significance. The design of the structure in particular has connections with Davao’s Kalumon Performance Collective, one of whose performers shared with the designer his dream of a Kulintang-shaped building. If built, it will also be an expansion of the vision started by Kublai Milan in his Agong House.</p>
+
 
             {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
@@ -200,6 +200,28 @@
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
             </div> --}}
+            
+            <div class="h-divider" id="featuredGalleries"></div>
+            <div class="title">GALLERIES</div>
+            
+            <div class="row gallery-list-container">
+                <a href="/gallerydetails?gallery=Hini-GALAay" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Hini-GALAay
+                </a>
+                <a href="/gallerydetails?gallery=Studio One Art Iligan" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Studio One Art Iligian
+                </a>
+                <a href="/gallerydetails?gallery=TINTA Artists Iligan" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Tinta Artist Iligan
+                </a>
+                <a href="/gallerydetails?gallery=Irinugyun Artist" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Irinugyun Artist Group
+                </a>
+                <a href="/gallerydetails?gallery=Talaandig Soil Painters" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Talaandig Soil Painters
+                </a>
+            </div>
+        </div>
 
 
         <footer class="footer-area footer--light mt-3">

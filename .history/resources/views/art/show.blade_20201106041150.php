@@ -16,6 +16,9 @@
 
             <div class="card">
                 <div class="card-header">
+                    <h2 class="card-title">{{ $art->title }}</h2>
+                    <h3 class="card-subtitle mb-2 text-muted">₱ {{ number_format($art->price, 2) }}</h3>
+
                     @canany(['update art', 'update art-status', 'delete art'])
                     <div class="dropdown float-right">
                         <a href="javascript:void();" class="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,10 +38,6 @@
                         </div>
                     </div>
                     @endcan
-
-                    <h2 class="card-title">{{ $art->title }}</h2>
-                    <h3 class="card-subtitle mb-2 text-muted">₱ {{ number_format($art->price, 2) }}</h3>
-
                 </div>
                 <div class="card-body">
 

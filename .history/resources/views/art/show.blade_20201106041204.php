@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     @endcan
-
+                    
                     <h2 class="card-title">{{ $art->title }}</h2>
                     <h3 class="card-subtitle mb-2 text-muted">₱ {{ number_format($art->price, 2) }}</h3>
 

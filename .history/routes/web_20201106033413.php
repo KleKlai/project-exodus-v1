@@ -131,7 +131,7 @@ Route::get('galleries', function() {
 });
 
 Route::get('gallerydetails', function(Request $gallery) {
-    $gallery_ = urldecode($gallery->get('gallery'));
+    $gallery_ = urldecode($gallery->get('gallery', 'Gall Down South'));
     if($gallery_ == 'Gall Down South') {
         $chosenGallery = 'Gallery Down South';
         $users = User::where('gallery', $gallery_)->pluck('id');
