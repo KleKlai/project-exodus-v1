@@ -29,9 +29,10 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Balangay.png')">
-            <div class="nav-container">
-                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Bakaw.png')">
+            <nav class="navbar navbar-expand-lg navbar-light mt-4">
+                <div class="container">
+
                     <a class="navbar-brand" href="/">
                         <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
                     </a>
@@ -40,17 +41,20 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
-                        <ul class="navbar-nav mr-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav">
                             @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Home<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('home') }}">Home</a>
                             </li>
                             @endauth
+
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
                             </li>
@@ -105,6 +109,44 @@
                                     <a class="dropdown-item" href="/files/Min-art Catalog.pdf" download>Davao Region Catalogue</a>
                                 </div>
                             </li>
+
+                            @canany(['read util','create util','delete util'])
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Art Component
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('art.category.index') }}">Category</a>
+                                    <a class="dropdown-item" href="{{ route('art.material.index') }}">Material</a>
+                                    <a class="dropdown-item" href="{{ route('art.medium.index') }}">Medium</a>
+                                    <a class="dropdown-item" href="{{ route('art.size.index') }}">Size</a>
+                                    <a class="dropdown-item" href="{{ route('art.style.index') }}">Style</a>
+                                    <a class="dropdown-item" href="{{ route('art.subject.index') }}">Subject</a>
+                                    <a class="dropdown-item" href="{{ route('art.status.index') }}">Status</a>
+                                </div>
+                            </li>
+                            @endcan
+
+                            @canany(['read user', 'update user', 'delete user', 'recover user'])
+                                <li class="nav-item dropdown">
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Management
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="{{ route('user.index') }}">User</a>
+                                        @can('recover user')
+                                            <a class="dropdown-item" href="{{ route('user.trash') }}">Garbage</a>
+                                        @endcan
+                                        <a class="dropdown-item" href="{{ url('syslog') }}">System Log</a>
+                                        <a class="dropdown-item" href="{{ route('artist.category.index') }}">Profile Category</a>
+                                        <a class="dropdown-item" href="{{ route('export') }}">Export</a>
+                                    </div>
+
+                                </li>
+                            @endcan
+
                         </ul>
 
                         <!-- Right Side Of Navbar -->
@@ -141,7 +183,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         <i class="fa fa-bell"></i>
-                                        <span class="badge badge-secondary">{{ auth()->user()->unreadNotifications->count() }}</span>
+                                        <span class="badge badge-light">{{ auth()->user()->unreadNotifications->count() }}</span>
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -179,10 +221,10 @@
                             @endif
                             @endauth
                         </ul>
-
                     </div>
-                </nav>
-            </div>
+
+                </div>
+            </nav>
         </div>
 
 
@@ -190,9 +232,10 @@
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
-            <div class="title">BALANGAY MUSEUM</div>
-            <p class="text-justify">While the small boat has a rich history and diverse significances in the cultures of these islands, the  “Balangay” is a poignant symbol of how Mindanao lost sight of its own histories because of contrived Filipino nationalism. Not content with robbing Butuan of its relic boats, the nation-state imagined from Manila even denied us the right to be who we are. In its eagerness to invent one civilization out of the archipelago, the Philippines imposed the boat as a metaphor for all pre-colonial settlements. In the process, it ignored the completely non-boat related genesis of many ancient settlements in Mindanao (in the case of terms like “ingod,” – both “village” and “world” – so much fruitful discourse needlessly silenced). Worse, the imposition threatened to erase the other beautiful metaphors which Mindanao’s cultures came to form around the boat: for the Obo Monuvu, the “ballangoy” is a gift, given by parents to their estranged children to encourage reconnection; while to the Ata it is the Skyboat of epics, descending from the heavens to take the hero and his chosen people to the realm of the gods. “Balangay” aims to reclaim all of that lost significance, and as it defies oppressive and deceptive Filipino homogenization, it celebrates the many beautiful ways of being Mindanawon.</p>
-
+            <div class="title">UYAYI MUSEUM</div>
+            <p class="text-justify">Uyayi – Tagalog for lullaby – is envisioned as a structure reminiscent of both a dove and a boat. The design is intended to evoke peace, and the desire for peace in this island long disturbed by conflict. Within this space of peace, art can flourish and take sail to cross oceans. In that sense, too, the structure is meant to be reminiscent of a cradle, where imaginations can grow in peace.</p>
+            <p class="text-justify">The designer also sees it as a representation of a phase in his own creative journey. Originally entitled ‘Bangkapayapaan,’ the design was first conceived as an art installation piece, and meant as a resonse to the 2018 Zamboanga Siege. It was first installed in Davao’s Abreeza Mall before being made into a public monument in General Santos City. “Uyayi” is the  scaled up version of the concept, developed as possible design for another Artspace in Davao City.</p>
+        </div>
 
             {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
@@ -201,27 +244,6 @@
                 </div>
             </div> --}}
 
-            <div class="h-divider" id="featuredGalleries"></div>
-            <div class="title">GALLERIES</div>
-            
-            <div class="row gallery-list-container">
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Agusan Artists Assocciation AAA
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Alampat Gallery
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Lumbayan Artist Collective
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    The Gallery of the Peninsula and the Archipelago
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Good Times Cafe and Art Gallery
-                </a>
-            </div>
-        </div>
 
         <footer class="footer-area footer--light mt-3">
             <div class="footer-big container ">

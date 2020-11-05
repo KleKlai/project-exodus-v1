@@ -30,6 +30,7 @@
         {{-- Navigation --}}
 
         <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Balangay.png')">
+
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
                     <a class="navbar-brand" href="/">
@@ -57,30 +58,6 @@
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Galleries
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/gallerydetails">Agusan Artists’ Assocciation AAA</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Alampat Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Datu Bago Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Gallery Down South</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Good Times Café and Art Gallery (Zambo Norte)</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Hini-GALAay</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Irinugyun Artist Group</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Likha-KARAGA</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Lumbayao Artist Collective</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Sining Mata Visual Art & Music School</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Studio One Art Iligan</a>
-                                    <a class="dropdown-item" href="/gallerydetails">Talaandig Soil Painters</a>
-                                    <a class="dropdown-item" href="/gallerydetails">TheBauHaus Gallery</a>
-                                    <a class="dropdown-item" href="/gallerydetails">The Gallery of the Peninsula and the Archipelago</a>
-                                    <a class="dropdown-item" href="/gallerydetails">TINTA Artist Iligan</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Museum
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -94,15 +71,6 @@
                                     <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
                                     <a class="dropdown-item" href="{{ route('lullaby.index') }}">Uyayi</a>
                                     <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Download
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/files/Min-art Catalog.pdf" download>Davao Region Catalogue</a>
                                 </div>
                             </li>
                         </ul>
@@ -183,6 +151,8 @@
                     </div>
                 </nav>
             </div>
+
+
         </div>
 
 

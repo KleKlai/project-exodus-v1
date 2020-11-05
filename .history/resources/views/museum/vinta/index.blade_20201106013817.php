@@ -29,7 +29,8 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Balangay.png')">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Vinta.png')">
+
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
                     <a class="navbar-brand" href="/">
@@ -183,6 +184,8 @@
                     </div>
                 </nav>
             </div>
+
+
         </div>
 
 
@@ -190,9 +193,9 @@
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
-            <div class="title">BALANGAY MUSEUM</div>
-            <p class="text-justify">While the small boat has a rich history and diverse significances in the cultures of these islands, the  “Balangay” is a poignant symbol of how Mindanao lost sight of its own histories because of contrived Filipino nationalism. Not content with robbing Butuan of its relic boats, the nation-state imagined from Manila even denied us the right to be who we are. In its eagerness to invent one civilization out of the archipelago, the Philippines imposed the boat as a metaphor for all pre-colonial settlements. In the process, it ignored the completely non-boat related genesis of many ancient settlements in Mindanao (in the case of terms like “ingod,” – both “village” and “world” – so much fruitful discourse needlessly silenced). Worse, the imposition threatened to erase the other beautiful metaphors which Mindanao’s cultures came to form around the boat: for the Obo Monuvu, the “ballangoy” is a gift, given by parents to their estranged children to encourage reconnection; while to the Ata it is the Skyboat of epics, descending from the heavens to take the hero and his chosen people to the realm of the gods. “Balangay” aims to reclaim all of that lost significance, and as it defies oppressive and deceptive Filipino homogenization, it celebrates the many beautiful ways of being Mindanawon.</p>
-
+            <div class="title">VINTA MUSEUM</div>
+            <p class="text-justify">Making use of the iconic symbol of Zamboanga as inspiration, “Vinta” is envisioned to stand in the city’s equally famous boulevard, its coloured glass sails sparkling in the Zamboanga sunset. Zamboanga City with its many Spanish era structures and relic Chavacano culture has a tendency to be stagnant. The eye-catching “Vinta” is intended to stir some life into that stagnation, taking the beautiful local’s colourful culture forward.</p>
+        </div>
 
             {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
@@ -201,27 +204,6 @@
                 </div>
             </div> --}}
 
-            <div class="h-divider" id="featuredGalleries"></div>
-            <div class="title">GALLERIES</div>
-            
-            <div class="row gallery-list-container">
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Agusan Artists Assocciation AAA
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Alampat Gallery
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Lumbayan Artist Collective
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    The Gallery of the Peninsula and the Archipelago
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Good Times Cafe and Art Gallery
-                </a>
-            </div>
-        </div>
 
         <footer class="footer-area footer--light mt-3">
             <div class="footer-big container ">

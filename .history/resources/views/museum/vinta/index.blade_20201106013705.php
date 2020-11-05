@@ -1,42 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{{ asset('/images/nav.ico') }}">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+        {{-- Font --}}
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Sweet Alert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Font Awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"rel="stylesheet"/>
 
-    <!-- Datatables -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    </head>
+    <body>
+        {{-- Navigation --}}
 
-    <!-- Font Awesome -->
-    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"rel="stylesheet"/>
-</head>
-<body>
-    <div id="app">
-
-        <div id="pattern">
-            <img src="/images/spattern.png" alt="">
-        </div>
-
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Vinta.png')">
         <nav class="navbar navbar-expand-lg navbar-light mt-4">
             <div class="container">
 
@@ -71,7 +64,7 @@
                                 Galleries
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/gallerydetails?gallery=Agusan Artist Association (AAA)">Agusan Artists’ Assocciation AAA</a>
+                                <a class="dropdown-item" href="/gallerydetails">Agusan Artists’ Assocciation AAA</a>
                                 <a class="dropdown-item" href="/gallerydetails">Alampat Gallery</a>
                                 <a class="dropdown-item" href="/gallerydetails">Datu Bago Gallery</a>
                                 <a class="dropdown-item" href="/gallerydetails">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
@@ -232,28 +225,23 @@
 
             </div>
         </nav>
-
-        <div class="container">
-            @include('flash::message')
         </div>
 
-        <main class="py-4">
 
-            <div class="container">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-            </div>
+        {{-- Content --}}
+        <div class="container">
+            <div class="h-divider" id="featuredGalleries"></div>
 
-            @yield('content')
-        </main>
+            <div class="title">VINTA MUSEUM</div>
+            <p class="text-justify">Making use of the iconic symbol of Zamboanga as inspiration, “Vinta” is envisioned to stand in the city’s equally famous boulevard, its coloured glass sails sparkling in the Zamboanga sunset. Zamboanga City with its many Spanish era structures and relic Chavacano culture has a tendency to be stagnant. The eye-catching “Vinta” is intended to stir some life into that stagnation, taking the beautiful local’s colourful culture forward.</p>
+        </div>
 
+            {{-- <div class="mt-5" id="appointment">
+                <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
+                    <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
+                    <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
+                </div>
+            </div> --}}
 
 
         <footer class="footer-area footer--light mt-3">
@@ -346,35 +334,7 @@
                 <!-- end /.container -->
             </div>
         </footer>
-    </div>
 
-    @yield('script')
 
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
-    <script src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" defer></script>
-
-    <script>
-        $(document).ready( function () {
-            $('#myTable').DataTable();
-        } );
-
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#imageView')
-                        .attr('src', e.target.result);
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
-
-    <script>
-        $('#flash-overlay-modal').modal();
-    </script>
-
-    @include('sweet::alert')
-</body>
+    </body>
 </html>

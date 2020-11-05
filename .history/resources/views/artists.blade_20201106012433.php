@@ -3,13 +3,13 @@
 @section('content')
     <div class="container mt-5">
 
-        <div class="container-fluid pb-4">
-            <form action="/artist" class="flex flex-row">
+        <div class="container-fluid pb-4 row">
+            <form action="/artist" class="col-md">
                 <input
                     value="{{ $search }}"
                     type="search"
                     name="search"
-                    class="w-1/3 border-2 px-1 rounded-r-none rounded-l"
+                    class="border-2 px-1 rounded-r-none rounded-l"
                     placeholder="search artist"
                     onchange="this.form.submit()"
                 >

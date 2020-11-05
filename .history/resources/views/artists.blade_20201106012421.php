@@ -3,8 +3,8 @@
 @section('content')
     <div class="container mt-5">
 
-        <div class="container-fluid pb-4">
-            <form action="/artist" class="flex flex-row">
+        <div class="container-fluid pb-4 row">
+            <form action="/artist" class="col-md">
                 <input
                     value="{{ $search }}"
                     type="search"

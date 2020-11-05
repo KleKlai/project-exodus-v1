@@ -131,11 +131,10 @@ Route::get('galleries', function() {
 });
 
 Route::get('gallerydetails', function(Request $gallery) {
-    $chosenGallery = $gallery->get('gallery');
     $users = User::where('gallery', $gallery->get('gallery'))->pluck('id');
     $art = Art::whereIn('user_id', $users)->get();
-    // dd($art);
-    return view('gallerydetails', compact('art', 'chosenGallery'));
+    dd($art);
+    return view('gallerydetails');
 });
 
 Route::get('artworks', 'Landing\LandingController@artwork')->name('landing.artworks');

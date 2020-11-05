@@ -71,7 +71,7 @@
                                 Galleries
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/gallerydetails?gallery=Agusan Artist Association (AAA)">Agusan Artists’ Assocciation AAA</a>
+                                <a class="dropdown-item" href="/gallerydetails?gallery=Agusan Artists’ Assocciation AAA">Agusan Artists’ Assocciation AAA</a>
                                 <a class="dropdown-item" href="/gallerydetails">Alampat Gallery</a>
                                 <a class="dropdown-item" href="/gallerydetails">Datu Bago Gallery</a>
                                 <a class="dropdown-item" href="/gallerydetails">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>

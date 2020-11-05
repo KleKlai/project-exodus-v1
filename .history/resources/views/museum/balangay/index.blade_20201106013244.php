@@ -29,9 +29,10 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Balangay.png')">
-            <div class="nav-container">
-                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Bakaw.png')">
+            <nav class="navbar navbar-expand-lg navbar-light mt-4">
+                <div class="container">
+
                     <a class="navbar-brand" href="/">
                         <img src="{{ asset('images/logo/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
                     </a>
@@ -40,17 +41,20 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
 
-                        <ul class="navbar-nav mr-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav">
                             @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Home<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('home') }}">Home</a>
                             </li>
                             @endauth
+
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{ route('landing.artworks') }}">Artworks</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('landing.artists') }}">Artists</a>
                             </li>
@@ -105,6 +109,44 @@
                                     <a class="dropdown-item" href="/files/Min-art Catalog.pdf" download>Davao Region Catalogue</a>
                                 </div>
                             </li>
+
+                            @canany(['read util','create util','delete util'])
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Art Component
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('art.category.index') }}">Category</a>
+                                    <a class="dropdown-item" href="{{ route('art.material.index') }}">Material</a>
+                                    <a class="dropdown-item" href="{{ route('art.medium.index') }}">Medium</a>
+                                    <a class="dropdown-item" href="{{ route('art.size.index') }}">Size</a>
+                                    <a class="dropdown-item" href="{{ route('art.style.index') }}">Style</a>
+                                    <a class="dropdown-item" href="{{ route('art.subject.index') }}">Subject</a>
+                                    <a class="dropdown-item" href="{{ route('art.status.index') }}">Status</a>
+                                </div>
+                            </li>
+                            @endcan
+
+                            @canany(['read user', 'update user', 'delete user', 'recover user'])
+                                <li class="nav-item dropdown">
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Management
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="{{ route('user.index') }}">User</a>
+                                        @can('recover user')
+                                            <a class="dropdown-item" href="{{ route('user.trash') }}">Garbage</a>
+                                        @endcan
+                                        <a class="dropdown-item" href="{{ url('syslog') }}">System Log</a>
+                                        <a class="dropdown-item" href="{{ route('artist.category.index') }}">Profile Category</a>
+                                        <a class="dropdown-item" href="{{ route('export') }}">Export</a>
+                                    </div>
+
+                                </li>
+                            @endcan
+
                         </ul>
 
                         <!-- Right Side Of Navbar -->
@@ -141,7 +183,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         <i class="fa fa-bell"></i>
-                                        <span class="badge badge-secondary">{{ auth()->user()->unreadNotifications->count() }}</span>
+                                        <span class="badge badge-light">{{ auth()->user()->unreadNotifications->count() }}</span>
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -179,10 +221,10 @@
                             @endif
                             @endauth
                         </ul>
-
                     </div>
-                </nav>
-            </div>
+
+                </div>
+            </nav>
         </div>
 
 

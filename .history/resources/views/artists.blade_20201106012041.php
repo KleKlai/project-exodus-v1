@@ -3,20 +3,22 @@
 @section('content')
     <div class="container mt-5">
 
-        <div class="container-fluid pb-4">
-            <form action="/artist" class="flex flex-row">
-                <input
-                    value="{{ $search }}"
-                    type="search"
-                    name="search"
-                    class="w-1/3 border-2 px-1 rounded-r-none rounded-l"
-                    placeholder="search artist"
-                    onchange="this.form.submit()"
-                >
-                <button style="border-radius: 0 0.25rem 0.25rem 0;" class="btn btn-outline-secondary" type="button" onclick="this.form.submit()">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+        <div class="row container-fluid pb-4">
+            <div class="col-md">
+                <form action="/artist" class="flex flex-row">
+                    <input
+                        value="{{ $search }}"
+                        type="search"
+                        name="search"
+                        class="w-1/3 border-2 px-1 rounded-r-none rounded-l"
+                        placeholder="search artist"
+                        onchange="this.form.submit()"
+                    >
+                    <button style="border-radius: 0 0.25rem 0.25rem 0;" class="btn btn-outline-secondary" type="button" onclick="this.form.submit()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </div>
 
         <div id="artist-cards" class="row">
