@@ -10,6 +10,15 @@ use App\User;
 
 class UsersImportController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+        $this->middleware('permission:import art');
+
+    }
+
     public function import(Request $request)
     {
 

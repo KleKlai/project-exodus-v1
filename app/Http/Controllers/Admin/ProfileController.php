@@ -35,7 +35,6 @@ class ProfileController extends Controller
 
     public function updateUser(ProfileUpdateRequest $request, User $user)
     {
-
         $user->update($request->all());
 
         flash('Profile save successfully.')->success()->important();
