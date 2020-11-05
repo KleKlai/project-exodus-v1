@@ -137,7 +137,6 @@ Route::get('artist/profile/{user}', 'Landing\LandingController@artistProfile')->
 
 
 Route::get('Bakaw', 'Museum\BakawController@index')->name('bakaw.index');
-
 Route::get('Bakaw/{gallery}', 'Museum\BakawController@gallery')->name('bakaw.gallery');
 
 Route::get('Balangay', 'Museum\BalangayController@index')->name('balangay.index');

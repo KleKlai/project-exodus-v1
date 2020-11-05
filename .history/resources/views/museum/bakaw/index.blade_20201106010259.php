@@ -161,7 +161,7 @@
 
             <div class="title">BAKAW MUSEUM</div>
             <p class="text-justify">“Bakaw” explores an image rich in symbolic potential but hardly utilized in the arts – the mangrove. Exposed rootedness is the most evident idea, the usually hidden roots revealed to form an image that arrests attention. This exposure has allowed an entire ecosystem to thrive: their rootedness has allowed mangroves to survive in harsh conditions, and their survival has benefited their areas, an approach which people would hopefully emulate. Mangroves once lined the banks of the Davao river and the shores of the gulf, and like the city’s great hero Datu Bago, it served to protect the area, blocking houses from storm surges. But coloniality came, and like the memory of Datu Bago, the mangrove began disappearing. This rich narrative has inspired the designer in many other designs, including office tables and lamps.</p>
-
+        </div>
             {{--
             <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
@@ -170,28 +170,39 @@
                 </div>
             </div> --}}
 
-            
-            <div class="h-divider" id="featuredGalleries"></div>
-            <div class="title">GALLERIES</div>
-            
+            <div class="row gallery-list-container">
+                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Gallery Down South
+                </a>
+            </div>
+
             <div class="row gallery-list-container">
                 <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
                     Datu Bago Gallery
                 </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Gallery Down South
-                </a>
-                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Kulit Kultura
-                </a>
+            </div>
+
+            <div class="row gallery-list-container">
                 <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
                     TheBauHaus Gallery
                 </a>
+            </div>
+
+            <div class="row gallery-list-container">
                 <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
                     Sining Mata Visual Art and Music School
+                </a>
+            </div>
+
+            <div class="row gallery-list-container">
+                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.
+                </a>
+            </div>
+
+            <div class="row gallery-list-container">
+                <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Kulit Kultura
                 </a>
             </div>
         </div>

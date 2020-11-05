@@ -170,10 +170,6 @@
                 </div>
             </div> --}}
 
-            
-            <div class="h-divider" id="featuredGalleries"></div>
-            <div class="title">GALLERIES</div>
-            
             <div class="row gallery-list-container">
                 <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
                     Datu Bago Gallery

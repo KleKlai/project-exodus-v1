@@ -113,7 +113,7 @@ Route::get('/', function () {
         "TheBauHaus Gallery",
         "The Gallery of the Peninsula and the Archipelago",
         "TINTA Artist Iligan"
-    ];
+    ]
     return view('welcome', compact('galleryList'));
 })->name('welcome');
 
@@ -137,7 +137,6 @@ Route::get('artist/profile/{user}', 'Landing\LandingController@artistProfile')->
 
 
 Route::get('Bakaw', 'Museum\BakawController@index')->name('bakaw.index');
-
 Route::get('Bakaw/{gallery}', 'Museum\BakawController@gallery')->name('bakaw.gallery');
 
 Route::get('Balangay', 'Museum\BalangayController@index')->name('balangay.index');

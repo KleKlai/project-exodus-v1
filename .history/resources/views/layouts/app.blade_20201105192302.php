@@ -71,22 +71,22 @@
                                 Galleries
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/gallerydetails">Agusan Artists’ Assocciation AAA</a>
-                                <a class="dropdown-item" href="/gallerydetails">Alampat Gallery</a>
-                                <a class="dropdown-item" href="/gallerydetails">Datu Bago Gallery</a>
-                                <a class="dropdown-item" href="/gallerydetails">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
-                                <a class="dropdown-item" href="/gallerydetails">Gallery Down South</a>
-                                <a class="dropdown-item" href="/gallerydetails">Good Times Café and Art Gallery (Zambo Norte)</a>
-                                <a class="dropdown-item" href="/gallerydetails">Hini-GALAay</a>
-                                <a class="dropdown-item" href="/gallerydetails">Irinugyun Artist Group</a>
-                                <a class="dropdown-item" href="/gallerydetails">Likha-KARAGA</a>
-                                <a class="dropdown-item" href="/gallerydetails">Lumbayao Artist Collective</a>
-                                <a class="dropdown-item" href="/gallerydetails">Sining Mata Visual Art & Music School</a>
-                                <a class="dropdown-item" href="/gallerydetails">Studio One Art Iligan</a>
-                                <a class="dropdown-item" href="/gallerydetails">Talaandig Soil Painters</a>
-                                <a class="dropdown-item" href="/gallerydetails">TheBauHaus Gallery</a>
-                                <a class="dropdown-item" href="/gallerydetails">The Gallery of the Peninsula and the Archipelago</a>
-                                <a class="dropdown-item" href="/gallerydetails">TINTA Artist Iligan</a>
+                                <a class="dropdown-item" href="{{ route('bakaw.index') }}">Agusan Artists’ Assocciation AAA</a>
+                                <a class="dropdown-item" href="{{ route('balangay.index') }}">Alampat Gallery</a>
+                                <a class="dropdown-item" href="{{ route('dabakan.index') }}">Datu Bago Gallery</a>
+                                <a class="dropdown-item" href="{{ route('heart.index') }}">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</a>
+                                <a class="dropdown-item" href="{{ route('kaban.index') }}">Gallery Down South</a>
+                                <a class="dropdown-item" href="{{ route('kulintang.index') }}">Good Times Café and Art Gallery (Zambo Norte)</a>
+                                <a class="dropdown-item" href="{{ route('lamin.index') }}">Hini-GALAay</a>
+                                <a class="dropdown-item" href="{{ route('tambol.index') }}">Irinugyun Artist Group</a>
+                                <a class="dropdown-item" href="{{ route('lullaby.index') }}">Likha-KARAGA</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">Lumbayao Artist Collective</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">Sining Mata Visual Art & Music School</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">Studio One Art Iligan</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">Talaandig Soil Painters</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">TheBauHaus Gallery</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">The Gallery of the Peninsula and the Archipelago</a>
+                                <a class="dropdown-item" href="{{ route('vinta.index') }}">TINTA Artist Iligan</a>
                             </div>
                         </li>
 
@@ -105,15 +105,6 @@
                                 <a class="dropdown-item" href="{{ route('tambol.index') }}">Tambol</a>
                                 <a class="dropdown-item" href="{{ route('lullaby.index') }}">Uyayi</a>
                                 <a class="dropdown-item" href="{{ route('vinta.index') }}">Vinta</a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Download
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/files/Min-art Catalog.pdf" download>Davao Region Catalogue</a>
                             </div>
                         </li>
 

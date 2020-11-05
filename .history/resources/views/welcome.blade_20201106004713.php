@@ -10,10 +10,10 @@
     <div class="text-center font-bold text-2xl">
         <h1 class="uppercase text-4xl">Catalogue</h1>
         <div class="leading-7">
-            <div>Download artwork catalogue to view artwork listings</div>
+            <div>Download artwork catalogs to view artwork listings</div>
             <div>and details of six different galleries in the Davao Region.</div>
         </div>
-        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalogue</a>
+        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalog</a>
     </div>
 
     <div class="mt-5" id="appointment">

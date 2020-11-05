@@ -113,7 +113,7 @@
                                 Download
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/files/Min-art Catalog.pdf" download>Davao Region Catalogue</a>
+                                <a class="dropdown-item" href="/files/Min-art Catalog.pdf">Davao Region Catalogue</a>
                             </div>
                         </li>
 

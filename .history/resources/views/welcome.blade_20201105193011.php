@@ -10,10 +10,10 @@
     <div class="text-center font-bold text-2xl">
         <h1 class="uppercase text-4xl">Catalogue</h1>
         <div class="leading-7">
-            <div>Download artwork catalogue to view artwork listings</div>
+            <div>Download artwork catalogs to view artwork listings</div>
             <div>and details of six different galleries in the Davao Region.</div>
         </div>
-        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalogue</a>
+        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalog</a>
     </div>
 
     <div class="mt-5" id="appointment">
@@ -29,129 +29,51 @@
     <div class="container">
                 <div class="h-divider" id="featuredGalleries"></div>
 
-                <div class="title">GALLERIES</div>
-                <!-- <div class="row">
+                <div class="title">BAKAW GALLERIES</div>
+                <div class="row">
                     <div class="col-md-4 mb-4">
                         <a href="{{ route('bakaw.gallery', 'gallery-down-south') }}">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Agusan Artists’ Assocciation AAA</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="{{ route('bakaw.gallery', 'datu-bago-gallery') }}">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Alampat Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="{{ route('bakaw.gallery', 'thebauhaus-gallery') }}">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Datu Bago Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="{{ route('bakaw.gallery', 'sining-mata-visual-art-and-music-school') }}">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="{{ route('bakaw.gallery', 'deanna-sipaco-foundation-for-the-differently-abled') }}">
                             <div class="picture-container background-image" style="background-image: url('/images/covers/');">
                                 <p class="picture-inner-title">Gallery Down South</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
+                        <a href="{{ route('bakaw.gallery', 'datu-bago-gallery') }}">
                             <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Good Times Café and Art Gallery (Zambo Norte)</p>
+                                <p class="picture-inner-title">Datu Bago Gallery</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Hini-GALAay</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Irinugyun Artist Group</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Likha-KARAGA</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Lumbayao Artist Collective</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Sining Mata Visual Art & Music School</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Studio One Art Iligan</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
-                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">Talaandig Soil Painters</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
+                        <a href="{{ route('bakaw.gallery', 'thebauhaus-gallery') }}">
                             <div class="picture-container background-image" style="background-image: url('/images/covers/');">
                                 <p class="picture-inner-title">TheBauHaus Gallery</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 mb-4">
-                        <a href="/gallerydetails">
+                        <a href="{{ route('bakaw.gallery', 'sining-mata-visual-art-and-music-school') }}">
                             <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">The Gallery of the Peninsula and the Archipelago</p>
+                                <p class="picture-inner-title">Sining Mata Visual Art and Music School</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="{{ route('bakaw.gallery', 'deanna-sipaco-foundation-for-the-differently-abled') }}">
+                            <div class="picture-container background-image" style="background-image: url('/images/covers/');">
+                                <p class="picture-inner-title">Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 mb-4">
                         <a href="/gallerydetails">
                             <div class="picture-container background-image" style="background-image: url('/images/covers/');">
-                                <p class="picture-inner-title">TINTA Artist Iligan</p>
+                                <p class="picture-inner-title">Kulit Kultura</p>
                             </div>
                         </a>
                     </div>
-                </div> -->
-            </div>
-
-            <div class="row gallery-list-container">
-            @foreach($galleryList as $gallery)
-                    <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                        {{ $gallery }}
-                    </a>
-            @endforeach
+                </div>
             </div>
 
         <div class="h-divider"></div>

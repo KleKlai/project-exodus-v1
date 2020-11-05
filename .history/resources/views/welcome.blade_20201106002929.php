@@ -10,10 +10,10 @@
     <div class="text-center font-bold text-2xl">
         <h1 class="uppercase text-4xl">Catalogue</h1>
         <div class="leading-7">
-            <div>Download artwork catalogue to view artwork listings</div>
+            <div>Download artwork catalogs to view artwork listings</div>
             <div>and details of six different galleries in the Davao Region.</div>
         </div>
-        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalogue</a>
+        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalog</a>
     </div>
 
     <div class="mt-5" id="appointment">
@@ -30,7 +30,7 @@
                 <div class="h-divider" id="featuredGalleries"></div>
 
                 <div class="title">GALLERIES</div>
-                <!-- <div class="row">
+                <div class="row">
                     <div class="col-md-4 mb-4">
                         <a href="{{ route('bakaw.gallery', 'gallery-down-south') }}">
                             <div class="picture-container background-image" style="background-image: url('/images/covers/');">
@@ -143,16 +143,33 @@
                             </div>
                         </a>
                     </div>
-                </div> -->
+                </div>
             </div>
 
-            <div class="row gallery-list-container">
             @foreach($galleryList as $gallery)
-                    <a href="/gallerydetails" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                <div class="col-md-4">
+                    <a href="/gallerydetails" class="art-categories-btn hover:no-underline hover:text-white text-black text-center">
                         {{ $gallery }}
                     </a>
+                </div>
             @endforeach
+
+            <div data-v-d951d2ca="" class="flex flex-col sm:flex-row sm:justify-center font-bold">
+                <a data-v-d951d2ca="" href="/shop/furniture" class="art-categories-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center">
+                    Furniture
+                </a>
+                <a data-v-d951d2ca="" href="/shop/sculpture" class="art-categories-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center">
+                    Sculpture
+                </a>
             </div>
+
+            
+            <a data-v-d951d2ca="" href="/shop/sculpture" class="art-categories-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center">
+                    Sculpture
+                </a>
+            <a data-v-d951d2ca="" href="/shop/sculpture" class="art-categories-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center">
+                    Sculpture
+                </a>
 
         <div class="h-divider"></div>
 
