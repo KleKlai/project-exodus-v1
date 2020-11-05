@@ -29,7 +29,7 @@ class ProfileUpdateRequest extends FormRequest
             'email'     => 'required', 'string', 'email', 'max:255', 'unique:users', 'email,'. Auth::user()->id,
             'mobile'    => 'required', 'min:10', 'max:10', 'string',
             'bio'       => 'nullable', 'max:255',
-            'category'  => 'required',
+            'gallery'  => 'required',
         ];
     }
 

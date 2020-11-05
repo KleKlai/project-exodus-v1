@@ -23,7 +23,7 @@ class LandingController extends Controller
     public function artwork(Request $request)
     {
         $art = Art::paginate(8);
-        
+
         $museum = $request->get('museum', 0);
         $gallery = urldecode($request->get('gallery', 'Gall Down South'));
 
@@ -59,6 +59,10 @@ class LandingController extends Controller
 
         $galleries = $galleries_arr[$museum];
 
+        if (!in_array($gallery, $galleries)) {
+            $gallery = $galleries[0];
+        }
+
         // $art = Art::all();
         $users = User::where('gallery', $gallery)->pluck('id');
         $art = Art::whereIn('user_id', $users)->paginate(8);
@@ -71,11 +75,19 @@ class LandingController extends Controller
         ));
     }
 
-    public function artist()
+    public function artist(Request $request)
     {
-        $user   = User::with('art')->has('art')->role('Artist')->latest()->get();
+        $search = $request->get('search', 'all');
 
-        return view('artists', compact('user'));
+        // $user = User::with('art')->has('art')->role('Artist')->latest()->get();
+
+        if ($search == 'all') {
+            $user = User::with('art')->has('art')->role('Artist')->paginate(6);
+        } else {
+            $user = User::where('name', 'like', '%' . $request->get('search') . '%')->with('art')->has('art')->role('Artist')->paginate(6);
+        }
+
+        return view('artists', compact('user', 'search'));
     }
 
     public function artistProfile(User $user)
