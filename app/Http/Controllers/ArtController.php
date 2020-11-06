@@ -13,6 +13,7 @@ use App\Services\UserServices;
 use Log;
 use DB;
 use Auth;
+use App\User;
 
 /**
  * @param App\Model\Art components
@@ -76,6 +77,7 @@ class ArtController extends Controller
         $medium     = Medium::all('name');
         $material   = Material::all('name');
         $size       = Size::all('name');
+        $artist     = User::role('Artist')->get();
 
         return view('art.create', compact(
             'subject',
@@ -83,7 +85,8 @@ class ArtController extends Controller
             'style',
             'medium',
             'material',
-            'size'
+            'size',
+            'artist'
         ));
     }
 
@@ -105,8 +108,11 @@ class ArtController extends Controller
                 $file_name = Upload::ArtUploadFile($request);
                 $request->merge(['attachment' => $file_name]);
             }
-
-            $request->request->add(['user_id' => \Auth::user()->id]);
+            if(!empty($request->artist)){
+                $request->request->add(['user_id' => $request->artist]);
+            } else {
+                $request->request->add(['user_id' => \Auth::user()->id]);
+            }
             $request->request->add(['status' => 'Pending']);
 
             // Send to database

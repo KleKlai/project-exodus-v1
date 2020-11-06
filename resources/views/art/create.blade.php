@@ -5,6 +5,24 @@
     <form action="{{ route('art.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
 
+        @role('Admin')
+            <div class="form-group">
+                <label for="subject">Artist</label>
+                <select name="artist" class="form-control @error('artist') is-invalid @enderror" value="{{ old('artist') }}">
+                    <option value="">-</option>
+                    @foreach($artist as $artist)
+                        <option value="{{ $artist->id }}">{{ $artist->name }}</option>
+                    @endforeach
+                </select>
+
+                @error('artist')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        @endrole
+
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" name="title" required>
