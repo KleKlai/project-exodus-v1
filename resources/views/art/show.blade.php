@@ -16,7 +16,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    @canany(['update art', 'update art-status', 'delete art'])
+                    @can(['update art-status', 'delete art'])
                     <div class="dropdown float-right">
                         <a href="javascript:void();" class="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-ellipsis-v"></i>
@@ -26,12 +26,14 @@
                             @can('update art-status')
                                 <a class="dropdown-item" href="javascript();" data-toggle="modal" data-target="#updateArtModal">Update</a>
                             @endcan
-                            @can('update art')
-                                <a class="dropdown-item" href="{{ route('art.edit', $art) }}">Edit</a>
-                            @endcan
-                            @can('delete art')
-                                <a class="dropdown-item" href="javascript();" data-toggle="modal" data-target="#deleteArtModal">Delete</a>
-                            @endcan
+                            @if($art->status != 'Approve')
+                                @can('update art')
+                                    <a class="dropdown-item" href="{{ route('art.edit', $art) }}">Edit</a>
+                                @endcan
+                                @can('delete art')
+                                    <a class="dropdown-item" href="javascript();" data-toggle="modal" data-target="#deleteArtModal">Delete</a>
+                                @endcan
+                            @endif
                         </div>
                     </div>
                     @endcan
@@ -165,7 +167,7 @@
             </figcaption>
         </figure>
     @empty
-        
+
     @endforelse
 </div>
 

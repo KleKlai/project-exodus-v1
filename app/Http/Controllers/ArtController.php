@@ -37,7 +37,7 @@ class ArtController extends Controller
 
         $this->middleware('permission:update art', ['only' => ['edit', 'update']]);
 
-        $this->middleware('permission:delete art', ['only' => ['destroy']]);
+        // $this->middleware('permission:delete art', ['only' => ['destroy']]);
     }
 
     /**
@@ -217,7 +217,7 @@ class ArtController extends Controller
             //Delete method
             $art->delete();
 
-            flash($art->name . ' has been deleted.')->success(); // Flash Message
+            flash($art->title . ' has been deleted.')->success(); // Flash Message
 
             return redirect()->route('art.index');
         }

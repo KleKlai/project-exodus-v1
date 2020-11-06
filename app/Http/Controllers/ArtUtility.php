@@ -33,7 +33,7 @@ class ArtUtility extends Controller
         $art->update($request->all());
 
         //Flash Message to view
-        flash($art->name . ' has been approved.')->success();
+        flash($art->title . ' has been approved.')->success();
 
         //Notify Artist for this art
         Notify::User($art->user_id, 'System', 'Your artwork has been approved.');

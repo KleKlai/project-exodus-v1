@@ -1,4 +1,4 @@
-<!-- Import User -->
+<!-- Import Art -->
 <div class="modal fade" id="artImport" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -82,3 +82,29 @@
         </div>
     </div>
 </div>
+
+<!-- Delete Art Modal -->
+<div class="modal fade" id="deleteArtModal" tabindex="-1" aria-labelledby="deleteArtModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteArtModal">Are you sure?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="card-text">Do you really want to delete these record? This process cannot be undone.</p>
+        <form action="{{ route('art.destroy', $art ?? 'null') }}" method="post">
+            @csrf
+            @method('DELETE')
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-danger">Proceed</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

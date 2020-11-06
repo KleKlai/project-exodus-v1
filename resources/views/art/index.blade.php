@@ -39,7 +39,17 @@
                         <td>{{ $data->status }}</td>
                         <td>{{ $data->category }}</td>
                         <td>
-                            <a href="{{ route('art.show', $data) }}" class="btn btn-primary btn-sm">View</a>
+                            <form action="{{ route('art.destroy', $data) }}" method="post">
+
+                                <a href="{{ route('art.show', $data) }}" class="btn btn-primary btn-sm">View</a>
+                                @if($data->status != 'Approve')
+                                    <a href="{{ route('art.edit', $data) }}" class="btn btn-primary btn-sm">Modify</a>
+                                @endif
+
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @empty
