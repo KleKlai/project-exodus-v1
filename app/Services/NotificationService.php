@@ -64,7 +64,7 @@ class NotificationService {
         $data = [
             'header'    => Auth::user()->name,
             'subject'   => $subject,
-            'body'      => $message,
+            'body'      => $message
         ];
 
         $user->notify(new \App\Notifications\ArtNotification($data));
