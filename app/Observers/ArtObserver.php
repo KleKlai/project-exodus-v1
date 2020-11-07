@@ -54,7 +54,7 @@ class ArtObserver
 
         // Todo: Make Notification
         $message = 'Your artwork ' . $art->name . ' has been delete.';
-        Notify::User($art->user_id, Auth::user()->name, $message); //Notify Artist for submission
+        // Notify::User($art->user_id, Auth::user()->name, $message); //Notify Artist for submission
     }
 
     /**
