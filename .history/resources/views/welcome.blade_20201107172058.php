@@ -1,35 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Cover -->
-    <div id="captioned-gallery">
-        <figure class="slider row">
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover1.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover2.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover3.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover4.jpg') }}" class="img-fluid" alt>
-            </figure>
-            <figure class="col-md">
-                <img src="{{ asset('/images/covers/cover5.jpg') }}" class="img-fluid" alt>
-            </figure>
-        </figure>
-    </div>
-    <!-- <img src="/images/covers/cover6.png" alt="cover" class="w-screen"> -->
+    <img src="/images/covers/cover6.png" alt="cover" class="w-screen">
 
     <div class="container mt-5 mb-4 px-24" id="catalogs">
         <div class="border-b border-minart-color-1 h-1"></div>
     </div>
+<!-- 
+    <div class="text-center font-bold text-2xl">
+        <h1 class="uppercase text-4xl">Catalogue</h1>
+        <div class="leading-7">
+            <div>Download artwork catalogue to view artwork listings</div>
+            <div>and details of six different galleries in the Davao Region.</div>
+        </div>
+        <a href="/files/Min-art Catalog.pdf" class="btn btn-outline-dark mt-4 px-10" role="button" aria-disabled="true" download>Download Catalogue</a>
+    </div> -->
 
     <div class="mt-5" id="appointment">
         <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
-            <div class="text-4xl leading-9 text-white">Visit Mindanao Art 2020 Exhibit via Appointment. <br> Now Extended Until November 15, 2020!</div>
+            <div class="text-4xl leading-9 text-white">Visit Mindanao Art 2020 Exhibit via Appointment. Now Extended Until November 15, 2020!</div>
             <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Schedule Appointment</a>
         </div>
     </div>

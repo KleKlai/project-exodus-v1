@@ -29,7 +29,7 @@
     <body>
         {{-- Navigation --}}
 
-        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Bakaw.png')">
+        <div class="container-fluid cover-picture background-image" style="background-image: url('/images/museums/Balangay.png')">
             <div class="nav-container">
                 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.40);">
                     <a class="navbar-brand" href="/">
@@ -190,39 +190,35 @@
         <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
 
-            <div class="title">BAKAW MUSEUM</div>
-            <p class="text-justify">“Bakaw” explores an image rich in symbolic potential but hardly utilized in the arts – the mangrove. Exposed rootedness is the most evident idea, the usually hidden roots revealed to form an image that arrests attention. This exposure has allowed an entire ecosystem to thrive: their rootedness has allowed mangroves to survive in harsh conditions, and their survival has benefited their areas, an approach which people would hopefully emulate. Mangroves once lined the banks of the Davao river and the shores of the gulf, and like the city’s great hero Datu Bago, it served to protect the area, blocking houses from storm surges. But coloniality came, and like the memory of Datu Bago, the mangrove began disappearing. This rich narrative has inspired the designer in many other designs, including office tables and lamps.</p>
+            <div class="title">BALANGAY MUSEUM</div>
+            <p class="text-justify">While the small boat has a rich history and diverse significances in the cultures of these islands, the  “Balangay” is a poignant symbol of how Mindanao lost sight of its own histories because of contrived Filipino nationalism. Not content with robbing Butuan of its relic boats, the nation-state imagined from Manila even denied us the right to be who we are. In its eagerness to invent one civilization out of the archipelago, the Philippines imposed the boat as a metaphor for all pre-colonial settlements. In the process, it ignored the completely non-boat related genesis of many ancient settlements in Mindanao (in the case of terms like “ingod,” – both “village” and “world” – so much fruitful discourse needlessly silenced). Worse, the imposition threatened to erase the other beautiful metaphors which Mindanao’s cultures came to form around the boat: for the Obo Monuvu, the “ballangoy” is a gift, given by parents to their estranged children to encourage reconnection; while to the Ata it is the Skyboat of epics, descending from the heavens to take the hero and his chosen people to the realm of the gods. “Balangay” aims to reclaim all of that lost significance, and as it defies oppressive and deceptive Filipino homogenization, it celebrates the many beautiful ways of being Mindanawon.</p>
 
-            {{--
-            <div class="mt-5" id="appointment">
+
+            {{-- <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                     <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
                     <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
             </div> --}}
 
-            
             <div class="h-divider" id="featuredGalleries"></div>
             <div class="title">GALLERIES</div>
             
             <div class="row gallery-list-container">
-                <a href="/gallerydetails?gallery=Datu Bago" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Datu Bago Gallery
+                <a href="/gallerydetails?gallery=Agusan Artist Association (AAA)" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Agusan Artists Assocciation AAA
                 </a>
-                <a href="/gallerydetails?gallery=Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc." class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.
+                <a href="/gallerydetails?gallery=Alampat Gallery" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Alampat Gallery
                 </a>
-                <a href="/gallerydetails?gallery=Gall Down South" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Gallery Down South
+                <a href="/gallerydetails?gallery=Lumbayao Artist Collective" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Lumbayan Artist Collective
                 </a>
-                <a href="/gallerydetails?gallery=Kulit Kultura" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Kulit Kultura
+                <a href="/gallerydetails?gallery=The Gallery of the Peninsula and the Archipelago" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    The Gallery of the Peninsula and the Archipelago
                 </a>
-                <a href="/gallerydetails?gallery=TheBauHaus" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    TheBauHaus Gallery
-                </a>
-                <a href="/gallerydetails?gallery={{ urlencode('Sining Mata Visual Art & Music School') }}" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
-                    Sining Mata Visual Art and Music School
+                <a href="/gallerydetails?gallery=Good Times Café and Art Gallery (Zambo Norte)" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    Good Times Cafe and Art Gallery
                 </a>
             </div>
         </div>
