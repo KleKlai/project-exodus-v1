@@ -43,7 +43,13 @@
                     @endcan
 
                     <h2 class="card-title">{{ $art->title }}</h2>
-                    <h3 class="card-subtitle mb-2 text-muted">₱ {{ number_format($art->price, 2) }}</h3>
+                    <h3 class="card-subtitle mb-2 text-muted">
+                        @if($art->price == 0)
+                            Price on Request
+                        @else
+                            ₱ {{ number_format($art->price, 2) }}
+                        @endif
+                    </h3>
 
                 </div>
                 <div class="card-body">
@@ -86,19 +92,23 @@
                     </div>
 
                     @auth
-                        @if(empty($art->reserve))
-                            <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn" style="float:right;">
-                                Reserve
-                            </a>
-                        @elseif($art->reserve->user_id == Auth::user()->id)
-                            <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-danger btn float-right">
-                                Cancel Reservation
-                            </a>
-                        @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
-                            <a href="javascript:void();" class="btn btn-warning float-right disabled">
-                                Reserved
-                            </a>
-                        @endif
+                            @if(empty($art->reserve))
+                                <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn" style="float:right;">
+                                    Reserve
+                                </a>
+                            @elseif($art->reserve->sold == true)
+                                <a href="javascript:void();" class="btn btn-success float-right disabled">
+                                    Sold
+                                </a>
+                            @elseif($art->reserve->user_id == Auth::user()->id)
+                                <a href="{{ route('art.reserve.cancel', $art->reserve) }}" class="btn btn-danger btn float-right">
+                                    Cancel Reservation
+                                </a>
+                            @elseif($art->reserve->user_id != Auth::user()->id && !empty($art->reserve))
+                                <a href="javascript:void();" class="btn btn-warning float-right disabled">
+                                    Reserved
+                                </a>
+                            @endif
                     @endauth
                     @guest
                         <a href="{{ route('art.reserve.set', $art) }}" class="btn btn-success btn-lg" style="float:right;">
