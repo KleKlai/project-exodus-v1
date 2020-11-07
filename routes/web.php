@@ -54,6 +54,8 @@ Route::group(['middleware' => ['role_or_permission:Super-admin|read util|create 
     //TODO: Profile Category
     Route::get('artist/category', 'Admin\Profile\TypeController@index')->name('artist.category.index');
     Route::get('artist/category/create', 'Admin\Profile\TypeController@create')->name('artist.category.create');
+    Route::get('artist/category/edit/{type}', 'Admin\Profile\TypeController@edit')->name('artist.category.edit');
+    Route::put('artist/category/update/{type}', 'Admin\Profile\TypeController@update')->name('artist.category.update');
     Route::post('artist/category/show', 'Admin\Profile\TypeController@store')->name('artist.category.store');
     Route::delete('artist/category/destroy/{id}', 'Admin\Profile\TypeController@destroy')->name('artist.category.destroy');
 
@@ -166,7 +168,7 @@ Route::get('/', function () {
             'link' => "/gallerydetails?gallery=TINTA Artists Iligan",
         ],
     ];
-    
+
     return view('welcome', compact('galleryList'));
 })->name('welcome');
 

@@ -26,6 +26,8 @@
                             @csrf
                             @method('DELETE')
 
+                            <a href="{{ route('artist.category.edit', $data) }}" class="btn btn-link">Edit</a>
+
                             <button type="submit" class="btn btn-link">
                                 <i class="fa fa-trash"></i>
                             </button>

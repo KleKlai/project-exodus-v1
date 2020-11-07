@@ -20,6 +20,29 @@ class TypeController extends Controller
         return view('admin.profile_component.create');
     }
 
+    public function edit(Type $type)
+    {
+        return view('admin.profile_component.edit', compact('type'));
+    }
+
+    public function update(Request $request, Type $type)
+    {
+
+        $request->validate([
+            'name'          => 'required',
+            'description'   => 'nullable'
+        ]);
+
+        $res = $type->update([
+            'name'          => $request->name,
+            'description'   => $request->description
+        ]);
+
+        alert()->success($request->name . ' updated successfully.');
+
+        return redirect()->route('artist.category.index');
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -42,7 +65,7 @@ class TypeController extends Controller
         $type = Type::findOrFail($id);
         $type->delete();
 
-        flash('Category deleted successfully')->success()->important();
+        flash('Gallery deleted successfully')->success()->important();
 
         return redirect()->back();
     }
