@@ -10,24 +10,31 @@ class TypeController extends Controller
 {
     public function index()
     {
-        $data = Type::select(['id', 'name'])->get();
+        $data = Type::select(['id', 'name', 'description'])->get();
 
         return view('admin.profile_component.category', compact('data'));
+    }
+
+    public function create()
+    {
+        return view('admin.profile_component.create');
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name'      => 'required',
+            'name'          => 'required',
+            'description'   => 'nullable'
         ]);
 
         Type::create([
             'name'      => ucwords($request->name),
+            'description'   => $request->description
         ]);
 
         flash('Successfully save')->success()->important();
 
-        return redirect()->back();
+        return \redirect()->route('artist.category.index');
     }
 
     public function destroy($id)

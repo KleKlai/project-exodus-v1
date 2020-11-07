@@ -147,7 +147,7 @@
                                         <a class="dropdown-item" href="{{ route('user.trash') }}">Garbage</a>
                                     @endcan
                                     <a class="dropdown-item" href="{{ url('syslog') }}">System Log</a>
-                                    <a class="dropdown-item" href="{{ route('artist.category.index') }}">Profile Category</a>
+                                    <a class="dropdown-item" href="{{ route('artist.category.index') }}">Gallery</a>
                                     <a class="dropdown-item" href="{{ route('export') }}">Export</a>
                                 </div>
 

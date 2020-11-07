@@ -53,6 +53,7 @@ Route::group(['middleware' => ['role_or_permission:Super-admin|read util|create 
 
     //TODO: Profile Category
     Route::get('artist/category', 'Admin\Profile\TypeController@index')->name('artist.category.index');
+    Route::get('artist/category/create', 'Admin\Profile\TypeController@create')->name('artist.category.create');
     Route::post('artist/category/show', 'Admin\Profile\TypeController@store')->name('artist.category.store');
     Route::delete('artist/category/destroy/{id}', 'Admin\Profile\TypeController@destroy')->name('artist.category.destroy');
 
