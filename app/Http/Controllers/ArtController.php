@@ -217,7 +217,8 @@ class ArtController extends Controller
     public function destroy(Art $art)
     {
         //Delete the file first
-        if(\Storage::exists('public/artwork/'.$art->attachment)){
+        if(\Storage::exists('public/artwork/'.$art->attachment))
+        {
             \Storage::delete('public/artwork/'.$art->attachment);
 
             //Delete method
