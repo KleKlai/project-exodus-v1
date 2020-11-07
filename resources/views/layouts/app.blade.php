@@ -369,6 +369,23 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
+
+        function buttonClicked() {
+            document.getElementById("submitButton").style.display = "none"; // to undisplay
+            document.getElementById("loading").style.display = "block"; // to display
+            return true;
+        }
+
+        var FirstLoading = true;
+        function restoreSubmitButton() {
+            if( FirstLoading ) {
+                FirstLoading = false;
+                return;
+            }
+            document.getElementById("submitButton").style.display = ""; // to display
+            document.getElementById("loading").style.display = "none"; // to undisplay
+        }
+        
     </script>
 
     <script>

@@ -101,23 +101,72 @@ Route::resource('conversation', 'Help\Ticket\ConversationController');
 Route::get('/', function () {
     // return view('welcome-temp');
     $galleryList = [
-        "Agusan Artists’ Assocciation AAA",
-        "Alampat Gallery",
-        "Datu Bago Gallery",
-        "Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.",
-        "Gallery Down South",
-        "Good Times Café and Art Gallery (Zambo Norte)",
-        "Hini-GALAay",
-        "Irinugyun Artist Group",
-        "Likha-KARAGA",
-        "Lumbayao Artist Collective",
-        "Sining Mata Visual Art & Music School",
-        "Studio One Art Iligan",
-        "Talaandig Soil Painters",
-        "TheBauHaus Gallery",
-        "The Gallery of the Peninsula and the Archipelago",
-        "TINTA Artist Iligan"
+        [
+            'name' => "Agusan Artists’ Assocciation AAA",
+            'link' => "/gallerydetails?gallery=Agusan Artist Association (AAA)",
+        ],
+        [
+            'name' => "Alampat Gallery",
+            'link' => "/gallerydetails?gallery=Alampat Gallery",
+        ],
+        [
+            'name' => "Datu Bago Gallery",
+            'link' => "/gallerydetails?gallery=Datu Bago",
+        ],
+        [
+            'name' => "Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.",
+            'link' => "/gallerydetails?gallery=Deanna Sipaco (DS) Foundation for the Differently-Abled, Inc.",
+        ],
+        [
+            'name' => "Gallery Down South",
+            'link' => "/gallerydetails?gallery=Gall Down South",
+        ],
+        [
+            'name' => "Good Times Café and Art Gallery (Zambo Norte)",
+            'link' => "/gallerydetails?gallery=Good Times Café and Art Gallery (Zambo Norte)",
+        ],
+        [
+            'name' => "Hini-GALAay",
+            'link' => "/gallerydetails?gallery=Hini-GALAay",
+        ],
+        [
+            'name' => "Irinugyun Artist Group",
+            'link' => "/gallerydetails?gallery=Irinugyun Artist",
+        ],
+        [
+            'name' => "Likha-KARAGA",
+            'link' => "/gallerydetails?gallery=Likha KARAGA",
+        ],
+        [
+            'name' => "Lumbayao Artist Collective",
+            'link' => "/gallerydetails?gallery=Lumbayao Artist Collective",
+        ],
+        [
+            'name' => "Sining Mata Visual Art & Music School",
+            'link' => "/gallerydetails?gallery={{ urlencode('Sining Mata Visual Art & Music School') }}",
+        ],
+        [
+            'name' => "Studio One Art Iligan",
+            'link' => "/gallerydetails?gallery=Studio One Art Iligan",
+        ],
+        [
+            'name' => "Talaandig Soil Painters",
+            'link' => "/gallerydetails?gallery=Talaandig Soil Painters",
+        ],
+        [
+            'name' => "TheBauHaus Gallery",
+            'link' => "/gallerydetails?gallery=TheBauHaus",
+        ],
+        [
+            'name' => "The Gallery of the Peninsula and the Archipelago",
+            'link' => "/gallerydetails?gallery=The Gallery of the Peninsula and the Archipelago",
+        ],
+        [
+            'name' => "TINTA Artist Iligan",
+            'link' => "/gallerydetails?gallery=TINTA Artists Iligan",
+        ],
     ];
+    
     return view('welcome', compact('galleryList'));
 })->name('welcome');
 

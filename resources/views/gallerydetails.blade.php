@@ -8,7 +8,7 @@
         <p class="text-justify">{{ $chosenGallery }}</p>
 
         <div class="h-divider"></div>
-        <div class="title">Artworks in this Gallery</div>
+        <div class="title">Artworks on Sale in this Gallery</div>
 
         <div id="columns">
             @foreach ($art as $artwork)

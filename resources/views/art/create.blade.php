@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <form action="{{ route('art.store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('art.store')}}" class="form-one-submit" method="POST" enctype="multipart/form-data">
         @csrf
 
         @role('Admin')
@@ -222,14 +222,14 @@
                     @enderror
                 </div>
 
-                <div class="mt-2 button-group">
+                <div class="mt-2 button-group" id="submitButton">
                     <a href="/art" class="btn border-none">Cancel</a>
-                    <button type="submit" class="btn btn-primary button-one-submit">
+                    <button type="submit" onclick="buttonClicked()" class="btn btn-primary">
                         Save
                     </button>
                 </div>
 
-                <div class="loading mt-2 alert alert-success" role="alert">
+                <div class="mt-2 alert alert-success" role="alert" id="loading">
                     <i class="spinner fa fa-spinner fa-spin"></i> Saving... Please Wait.
                 </div>
             </div>

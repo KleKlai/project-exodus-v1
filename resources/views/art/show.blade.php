@@ -4,7 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5 mb-3">
-            <img class="picture mb-1 mx-auto d-block artwork-picture" src="{{ url('storage/artwork/'.$art->attachment) }}" alt="art Picture" style="">
+            @if ($art->attachment)
+                <img class="picture mb-1 mx-auto d-block artwork-picture" src="{{ url('storage/artwork/'.$art->attachment) }}" alt="art Picture" style="">
+            @else
+                <img class="picture mb-1 mx-auto d-block artwork-picture" src="https://via.placeholder.com/300x300?text={{ $art->title }}" alt="art Picture" style="">
+            @endif
         </div>
         <div class="col">
 
@@ -160,10 +164,13 @@
 
     @forelse($recommended_art as $artwork)
         <figure>
-            <a href="{{ route('art.show', $artwork) }}"><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
+             @if ($artwork->attachment)
+                <a href="{{ route('art.show', $artwork) }}"><img src="{{ url('storage/artwork/'.$artwork->attachment) }}"></a>
+            @else
+                <img class="picture mb-1 mx-auto d-block artwork-picture" src="https://via.placeholder.com/300x300?text={{ $artwork->title }}" alt="art Picture" style="">
+            @endif
             <figcaption>
                 {{ $artwork->title }}
-                <div>₱{{ number_format($artwork->price, 2) }}</div>
             </figcaption>
         </figure>
     @empty
