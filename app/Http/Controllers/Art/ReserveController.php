@@ -89,4 +89,34 @@ class ReserveController extends Controller
 
         return redirect()->back();
     }
+
+    public function adminSold(Art $art)
+    {
+        try {
+
+            DB::beginTransaction();
+
+            Reserve::create([
+                'art_id'    => $art->id,
+                'user_id'   => Auth::user()->id,
+                'sold'      => true,
+                'validity'  => Carbon::now()->format('Y-m-d H:i:s'),
+            ]);
+
+            DB::commit();
+
+            flash('Art mark sold successfully')->success();
+
+            return redirect()->back();
+
+        } catch (Exception $e) {
+
+            Log::error($e);
+            DB::rollback();
+
+            flash('Item reserve failed!')->error();
+
+            return redirect()->back();
+        }
+    }
 }

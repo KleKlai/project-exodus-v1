@@ -27,6 +27,11 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            @if(empty($art->reserve))
+                                @can('sold reservation')
+                                    <a class="dropdown-item" href="{{ route('art.reserve.set.bypass', $art) }}">Sold</a>
+                                @endcan
+                            @endif
                             @can('update art-status')
                                 <a class="dropdown-item" href="javascript();" data-toggle="modal" data-target="#updateArtModal">Update</a>
                             @endcan

@@ -66,6 +66,7 @@ Route::patch('art/status/{art}', 'ArtUtility@status');
 Route::get('art/watch/{id}', 'ArtUtility@watch')->name('art.watch');
 Route::get('art/reserve/list', 'Art\ReserveController@index')->name('art.reserve.index');
 Route::get('art/reservation/{art}', 'Art\ReserveController@reserve')->name('art.reserve.set');
+Route::get('art/reservation/admin/{art}', 'Art\ReserveController@adminSold')->name('art.reserve.set.bypass');
 Route::get('art/reserve/cancel{reserve}', 'Art\ReserveController@cancelReservation')->name('art.reserve.cancel');
 
 Route::get('art/reserve/sold/{reserve}', 'Art\ReserveController@sold')->name('art.sold');
