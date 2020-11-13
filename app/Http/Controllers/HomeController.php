@@ -49,6 +49,8 @@ class HomeController extends Controller
             alert()->warning('Please complete your profile <a href="/profile/'. Auth::user()->uuid .'">Click me</a>', 'Urgent')->html();
         }
 
+        alert()->info('Please note that we are currently in our beta test phase and we are updating the site on a regular basis. If you encounter any issues, please email us at support@mindanaoart.org')->persistent('Close');
+
         return view('home', compact(
             'user',
             'artwork',

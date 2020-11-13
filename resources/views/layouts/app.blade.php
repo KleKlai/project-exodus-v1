@@ -29,6 +29,8 @@
 
     <!-- Font Awesome -->
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"rel="stylesheet"/>
+
+    @include('services.google-analytics')
 </head>
 <body>
     <div id="app">
