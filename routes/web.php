@@ -175,9 +175,9 @@ Route::get('/', function () {
 
 
 
-Route::get('/appointment', function () {
-    return view('appointment');
-});
+// Route::get('/appointment', function () {
+//     return view('appointment');
+// });
 
 Route::get('galleries', function() {
     return view('galleries');
