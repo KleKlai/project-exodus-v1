@@ -192,18 +192,20 @@
 
             <div class="title">KULINTANG MUSEUM</div>
             <p class="text-justify">A feature which links Mindanao to the musical traditions of many Southeast Asian cultures, the Kulintang is a set of many individual instruments which play as one, the musician himself becoming part of the set. This traditional percussion set will resonate with many cultures in Mindanao, and using it as design inspiration will hopefully elicit more insights from communities about its significance. The design of the structure in particular has connections with Davao’s Kalumon Performance Collective, one of whose performers shared with the designer his dream of a Kulintang-shaped building. If built, it will also be an expansion of the vision started by Kublai Milan in his Agong House.</p>
+        </div>
 
 
-            {{-- <div class="mt-5" id="appointment">
+            <div class="mt-5" id="appointment">
                 <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
-                    <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
-                    <a href="/appointment" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
+                    <div class="text-2xl leading-3 text-white">Come and visit the Virtual Museum!</div>
+                    <a href="https://kulintang.min-art.org/" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
                 </div>
-            </div> --}}
-            
+            </div>
+
+        <div class="container">
             <div class="h-divider" id="featuredGalleries"></div>
             <div class="title">GALLERIES</div>
-            
+
             <div class="row gallery-list-container">
                 <a href="/gallerydetails?gallery=Hini-GALAay" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
                     Hini-GALAay
@@ -222,7 +224,6 @@
                 </a>
             </div>
         </div>
-
 
         <footer class="footer-area footer--light mt-3">
             <div class="footer-big container ">

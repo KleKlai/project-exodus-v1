@@ -198,6 +198,11 @@ a:hover {
         background-attachment: scroll;
     }
 
+    .galleries-btn{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 
 }
 
