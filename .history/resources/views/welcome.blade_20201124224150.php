@@ -23,28 +23,12 @@
     </div>
     <!-- <img src="/images/covers/cover6.png" alt="cover" class="w-screen"> -->
     <div class="container">
-
         <div class="h-divider" id="featuredGalleries"></div>
-        <div class="title">VISIT VIRTUAL MUSEUMS</div>
-        
-        <div class="row">
-            <div class="col-md">
-                <a href="https://kulintang.min-art.org/">
-                    <div class="picture-container background-image" style="background-image: url('/images/covers/KulintangCover.png');">
-                        <p class="picture-inner-title">KULINTANG</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-md">
-                <a href="https://balangay.min-art.org/">
-                    <div class="picture-container background-image" style="background-image: url('/images/covers/BalangayCover.png');">
-                        <p class="picture-inner-title">BALANGAY</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <div class="title">VIRTUAL MUSEUMS</div>
+    </div>
 
+    <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
+        <a href="https://kulintang.min-art.org/" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
     </div>
 
     <div class="container">

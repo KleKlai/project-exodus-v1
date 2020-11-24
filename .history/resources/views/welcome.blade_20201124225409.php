@@ -25,24 +25,29 @@
     <div class="container">
 
         <div class="h-divider" id="featuredGalleries"></div>
-        <div class="title">VISIT VIRTUAL MUSEUMS</div>
+        <div class="title">VIRTUAL MUSEUMS</div>
+
+        <div class="col-md-4">
+            <a href="https://kulintang.min-art.org/">
+                <div class="picture-container background-image" style="background-image: url('/images/covers/KulintangCover.png');">
+                    <p class="picture-inner-title">KULINTANG</p>
+                </div>
+            </a>
+        </div>
         
-        <div class="row">
-            <div class="col-md">
-                <a href="https://kulintang.min-art.org/">
-                    <div class="picture-container background-image" style="background-image: url('/images/covers/KulintangCover.png');">
-                        <p class="picture-inner-title">KULINTANG</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-md">
-                <a href="https://balangay.min-art.org/">
-                    <div class="picture-container background-image" style="background-image: url('/images/covers/BalangayCover.png');">
-                        <p class="picture-inner-title">BALANGAY</p>
-                    </div>
-                </a>
-            </div>
+        <div class="col-md-4">
+            <a href="https://balangay.min-art.org/">
+                <div class="picture-container background-image" style="background-image: url('/images/covers/BalangayCover.png');">
+                    <p class="picture-inner-title">BALANGAY</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="https://balangay.min-art.org/">
+                <div class="picture-container background-image" style="background-image: url('/images/covers/BalangayCover.png');">
+                    <p class="picture-inner-title">BALANGAY</p>
+                </div>
+            </a>
         </div>
 
     </div>

@@ -25,7 +25,7 @@
     <div class="container">
 
         <div class="h-divider" id="featuredGalleries"></div>
-        <div class="title">VISIT VIRTUAL MUSEUMS</div>
+        <div class="title">VIRTUAL MUSEUMS</div>
         
         <div class="row">
             <div class="col-md">
