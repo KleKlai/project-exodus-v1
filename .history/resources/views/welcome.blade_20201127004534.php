@@ -66,7 +66,10 @@
 
         <div class="row gallery-list-container">
         @foreach($galleryList as $gallery)
-                <div class="col-md-4 mb-4">
+                <a href="{{ $gallery['link'] }}" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    {{ $gallery['name'] }}
+                </a>
+                <div class="col-md-4">
                     <a href="{{ $gallery['link'] }}">
                         <div class="picture-container background-image" style="background-image: url('');">
                         <p>{{ $gallery['name'] }}</p>

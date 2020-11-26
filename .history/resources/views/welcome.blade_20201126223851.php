@@ -28,15 +28,14 @@
         <div class="title">VISIT VIRTUAL MUSEUMS</div>
         
         <div class="row">
-            
             <div class="col-md-4 mb-4">
-                <a href="{{ route('bakaw.index') }}">
-                    <div class="picture-container background-image" style="background-image: url('/images/covers/BakawCover.png');">
-                        <p class="picture-inner-title">BAKAW</p>
+                <a href="{{ route('kulintang.index') }}">
+                    <div class="picture-container background-image" style="background-image: url('/images/covers/KulintangCover.png');">
+                        <p class="picture-inner-title">KULINTANG</p>
                     </div>
                 </a>
             </div>
-
+            
             <div class="col-md-4 mb-4">
                 <a href="{{ route('balangay.index') }}">
                     <div class="picture-container background-image" style="background-image: url('/images/covers/BalangayCover.png');">
@@ -46,13 +45,12 @@
             </div>
 
             <div class="col-md-4 mb-4">
-                <a href="{{ route('kulintang.index') }}">
-                    <div class="picture-container background-image" style="background-image: url('/images/covers/KulintangCover.png');">
-                        <p class="picture-inner-title">KULINTANG</p>
+                <a href="{{ route('bakaw.index') }}">
+                    <div class="picture-container background-image" style="background-image: url('/images/covers/BakawCover.png');">
+                        <p class="picture-inner-title">BAKAW</p>
                     </div>
                 </a>
             </div>
-
         </div>
 
     </div>
@@ -66,13 +64,9 @@
 
         <div class="row gallery-list-container">
         @foreach($galleryList as $gallery)
-                <div class="col-md-4 mb-4">
-                    <a href="{{ $gallery['link'] }}">
-                        <div class="picture-container background-image" style="background-image: url('');">
-                        <p>{{ $gallery['name'] }}</p>
-                        </div>
-                    </a>
-                </div>
+                <a href="{{ $gallery['link'] }}" class="galleries-btn hover:no-underline hover:text-white text-black sm:mx-5 mb-3 sm:mb-0 sm:w-auto w-full text-center p-3">
+                    {{ $gallery['name'] }}
+                </a>
         @endforeach
         </div>
 
