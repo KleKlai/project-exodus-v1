@@ -69,6 +69,11 @@ class ArtController extends Controller
      */
     public function create()
     {
+
+        if(empty(Auth::user()->gallery)){
+            flash("Whoops! Looks like your profile gallery is empty. Please go to your profile and set your gallery.")->error();
+            return back();
+        }
         // Specify which column to get to optimize loading time
 
         $subject    = Subject::all('name');

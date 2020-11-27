@@ -26,9 +26,9 @@
 
         <div class="h-divider" id="featuredGalleries"></div>
         <div class="title">VISIT VIRTUAL MUSEUMS</div>
-        
+
         <div class="row">
-            
+
             <div class="col-md-4 mb-4">
                 <a href="{{ route('bakaw.index') }}">
                     <div class="picture-container background-image" style="background-image: url('/images/covers/BakawCover.png');">
@@ -65,14 +65,14 @@
         </div>
 
         <div class="row gallery-list-container">
-        @foreach($galleryList as $gallery)
-                <div class="col-md-4 mb-4">
-                    <a href="{{ $gallery['link'] }}">
-                        <div class="picture-container background-image" style="background-image: url('');">
-                        <p>{{ $gallery['name'] }}</p>
-                        </div>
-                    </a>
-                </div>
+        @foreach($user as $user)
+            <div class="col-md-4 mb-4">
+                <a href="/gallerydetails?gallery={{ $user->gallery }}">
+                    <div class="picture-container background-image" style="background-image: {{ url('storage/artwork/'.$user->art->first()->attachment) }};">
+                    <p>{{ $user->gallery ?? 'Not Set' }}</p>
+                    </div>
+                </a>
+            </div>
         @endforeach
         </div>
 
