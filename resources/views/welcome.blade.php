@@ -68,7 +68,7 @@
         @foreach($user as $user)
             <div class="col-md-4 mb-4">
                 <a href="/gallerydetails?gallery={{ $user->gallery }}">
-                    <div class="picture-container background-image" style="background-image: {{ url('storage/artwork/'.$user->art->first()->attachment) }};">
+                    <div class="picture-container background-image" style="background-image: url('storage/artwork/{{ $user->art->first()->attachment }}'); ">
                     <p>{{ $user->gallery ?? 'Not Set' }}</p>
                     </div>
                 </a>
