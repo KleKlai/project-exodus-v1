@@ -197,7 +197,7 @@
         <div class="mt-5" id="appointment">
             <div class="text-center bg-minart-color-1 py-5 text-2xl font-bold">
                 <div class="text-4xl leading-3 text-white">Click to visit virtual museum.</div>
-                <a href="https://bakaw.min-art.org/" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
+                <a href="bakaw.min-art.org" class="btn btn-outline-dark mt-4 px-10 text-white border-white" role="button" aria-disabled="true">Visit Museum</a>
             </div>
         </div>
 
