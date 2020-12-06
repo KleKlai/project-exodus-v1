@@ -72,7 +72,6 @@
                     <p>{{ $user->gallery ?? 'Not Set' }}</p>
                     </div>
                 </a>
-                <img src="storage/artwork/{{ $user->art->first()->attachment }}" alt="">
             </div>
         @endforeach
         </div>
