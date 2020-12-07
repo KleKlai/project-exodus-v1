@@ -11,7 +11,7 @@ class LandingController extends Controller
 {
     public function index()
     {
-        $user    = User::with('art')->has('art')->role('Artist')->get()->unique('gallery');
+        $user    = User::groupby('gallery')->distinct()->with('art')->has('art')->role('Artist')->get();
         $arts    = Art::take(6)->get();
 
         return view('welcome', compact(
